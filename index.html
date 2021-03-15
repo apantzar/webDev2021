@@ -52,12 +52,12 @@
             window.addEventListener('scroll',function(){
                 var value = window.scrollY;
 
-                Sky.style.top = value * 0.5  + 'px';
+                Sky.style.top = value * 0.3  + 'px';
                 Mountain.style.top = value * 0.50 +'px'
-                Reflection.style.top = value * 0.40 + 'px'
+                Reflection.style.top = value * 0.45 + 'px'
                 Text1.style.right = value * 0.5 +'px'
                 Text3.style.left = value * 0.5 +'px'
-                Text2.style.top = -value * 0.5 +'px'
+                Text2.style.top = (-value * 0.5)+30 +'px'
                 
             })
             
