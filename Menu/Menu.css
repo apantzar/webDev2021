@@ -73,6 +73,7 @@
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
     background: white;
+    
 }
 
 @media screen and (max-width:768px){
@@ -85,7 +86,7 @@
         grid-template-columns: auto;
         background: rgb(155, 223, 255);
         margin: 0;
-        width: 100%;
+        width: 100%;/*lalala*/
         position: absolute;
         top: 80px;
         left: -100;
