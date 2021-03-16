@@ -34,17 +34,17 @@
     </header>
     <main>
         <section>
-            <img src="images/sky-s4.jpg" id="Sky">
-            <img src="images/reflection-s.png" id="Reflection">
-            <img src="images/mountains-s.png" id="Mountains">
+            <img src="images/Ssandt.png" id="DrySand">
+            <img src="images/sandt.png" id="Sand">
+            <img src="images/seat.png" id="Sea">
             <h2 id="text1">Sea</h2> 
             <h2 id="text2">The</h2>   
             <h2 id="text3">Pollution</h2>              
         </section>
         <script type ="text/javascript">
-            let Sky = document.getElementById("Sky");
-            let Reflection = document.getElementById("Reflection");
-            let Mountain = document.getElementById("Mountains");
+            let drysand = document.getElementById("DrySand");
+            let sand = document.getElementById("Sand");
+            let sea = document.getElementById("Sea");
             let Text1 = document.getElementById("text1");
             let Text2 = document.getElementById("text2");
             let Text3 = document.getElementById("text3");
@@ -52,12 +52,12 @@
             window.addEventListener('scroll',function(){
                 var value = window.scrollY;
 
-                Sky.style.top = value * 0.3  + 'px';
-                Mountain.style.top = value * 0.50 +'px'
-                Reflection.style.top = value * 0.45 + 'px'
+                drysand.style.top = value * 0.3  + 'px';
+                sand.style.top = value * 0.10 +'px'
+                sea.style.top = -value * 0.4 + 'px'
                 Text1.style.right = value * 0.5 +'px'
                 Text3.style.left = value * 0.5 +'px'
-                Text2.style.top = (-value * 0.5)+30 +'px'
+                
                 
             })
             

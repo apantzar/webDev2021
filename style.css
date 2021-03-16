@@ -8,7 +8,7 @@
 }
 body
 {
-    background: #949ba5;
+    background: #04978c;
     min-height: 1500px;
 }
 section
@@ -30,9 +30,9 @@ section:before
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 150px;
-    background: linear-gradient(to top, #949ba5,transparent);
-    z-index: 10000;
+    height: 100px;
+    background: linear-gradient(to top, #04978c,transparent);
+    z-index: 1000;
 }
 
 section img
@@ -45,9 +45,21 @@ section img
     object-fit: cover;
     pointer-events: none;
 }
+
+#Sand
+{
+    z-index: 1;
+}
+#Sea
+{
+    z-index: 2;
+}
+
+
 #text1
 {
     position: relative;
+    top: -20%;
     color: white;
     font-size: 10em;
     z-index: 1;
@@ -55,15 +67,16 @@ section img
 #text2
 {
     position: relative;
-    top: 30px;
+    top: -17.5%;
     color: white;
     font-size: 4em;
     z-index: 1;
-    
 }
+
 #text3
 {
     position: relative;
+    top: -20%;
     color: white;
     font-size: 10em;
     z-index: 1;
