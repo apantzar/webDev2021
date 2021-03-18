@@ -14,7 +14,7 @@
 
 
     <style>
-        #map {position: Absolute; top:80px; bottom: 50%; left: 0%; right: 0%;}
+        #map {position: Absolute; top:80px; bottom: 0%; left: 0%; right: 0%;}
     </style>
 
     <meta charset="UTF-8">
@@ -49,17 +49,45 @@
         <div id="map"></div>
 
         <script>
-            var map = L.map('map').setView([0,0],1);
+            var map = L.map('map').setView([0,0],2.7); //z=2.7
 
             L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=tmIAY714HkSJ3YTHhuQE',{
+                minZoom: 2, //fixed zoom (min zoom)
+                maxZoom: 10,
                 attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
             }).addTo(map);
 
 
-            var map = L.marker([51.5, 23.02]).addTo(map);
+
+            //multiple marks 
+            const packetMarks = L.layerGroup([
+                new L.marker([42.883333, -9.883333]), //mark No1
+                new L.marker([13.083333, -55.466667]),// mark No2
+                new L.marker([-12.027189, 12.230525]),//...
+                new L.marker([-33.275833, 17.504667]),//-33.275833, 17.504667
+                new L.marker([48.6,-4.7]), // 
+                new L.marker([44.366750, 8.700028]),
+                new L.marker([25.3, 57.566667]), //sea Star
+                new L.marker([50.041667, -6.128833]),    
+                new L.marker([28.366700, 125.916700]) //SANCHI
+            ]);
+            packetMarks.addTo(map);
+
+            //42°53′00″N 9°53′00″W
+
+            //test
+            map.addEventListener("tap", event =>{
+
+                alert("Hey you ;)");
+            });
+
+            
             
         </script>
     </main>
     
 </body>
 </html>
+
+
+
