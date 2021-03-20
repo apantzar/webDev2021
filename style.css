@@ -11,7 +11,7 @@ body
     background: #04978c;
     min-height: 1500px;
 }
-section
+.mainpage
 {
     position: relative;
     width: 100%;
@@ -24,7 +24,7 @@ section
     z-index:-1;
     position:relative;
 }
-section::before
+.mainpage::before
 {
     content: '';
     position: absolute;
