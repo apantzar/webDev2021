@@ -88,3 +88,9 @@ section img
     overflow: auto;
    
 }
+.div-texts
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
