@@ -24,7 +24,7 @@ section
     z-index:-1;
     position:relative;
 }
-section:before
+section::before
 {
     content: '';
     position: absolute;
@@ -32,7 +32,7 @@ section:before
     width: 100%;
     height: 100px;
     background: linear-gradient(to top, #04978c,transparent);
-    z-index: 1000;
+    z-index: 10;
 }
 
 section img
@@ -59,7 +59,7 @@ section img
 #text1
 {
     position: relative;
-    top: -20%;
+    margin-top: -22%;
     color: white;
     font-size: 10em;
     z-index: 1;
@@ -67,7 +67,7 @@ section img
 #text2
 {
     position: relative;
-    top: -17.5%;
+    margin-top: -18.5%;
     color: white;
     font-size: 4em;
     z-index: 1;
@@ -76,7 +76,7 @@ section img
 #text3
 {
     position: relative;
-    top: -20%;
+    margin-top: -22%;
     color: white;
     font-size: 10em;
     z-index: 1;

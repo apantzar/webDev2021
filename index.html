@@ -34,9 +34,9 @@
     </header>
     <main>
         <section>
-            <img src="images/Ssandt.png" id="DrySand">
-            <img src="images/sandt.png" id="Sand">
-            <img src="images/seat.png" id="Sea">
+            <img src="images/DrySand.png" id="DrySand">
+            <img src="images/WetSand.png" id="Sand">
+            <img src="images/SeaW.png" id="Sea">
             <h2 id="text1">Sea</h2> 
             <h2 id="text2">The</h2>   
             <h2 id="text3">Pollution</h2>              
@@ -52,11 +52,15 @@
             window.addEventListener('scroll',function(){
                 var value = window.scrollY;
 
-                drysand.style.top = value * 0.3  + 'px';
-                sand.style.top = value * 0.10 +'px'
-                sea.style.top = -value * 0.4 + 'px'
+                drysand.style.top = value * 0.4  + 'px';
+                sand.style.top = value * 0.40 +'px'
+                //sand.style.top = value * 0.10 +'px'
+                //sea.style.top = -value * 0.4 + 'px'
                 Text1.style.right = value * 0.5 +'px'
                 Text3.style.left = value * 0.5 +'px'
+                Text1.style.top = value * 0.4 +'px'
+                Text2.style.top = value * 0.4 +'px'
+                Text3.style.top = value * 0.4 +'px'
             })
         </script>
         <section id="Article">
