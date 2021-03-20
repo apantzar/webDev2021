@@ -30,6 +30,10 @@
 <body>
 
 
+
+    
+
+
     <header>
         
         <div class="nav-container">
@@ -81,18 +85,13 @@
             
         <script>
             
-            var map = L.map('map').setView([0,0],2.7); //z=2.7
+            var map = L.map('map').setView([0,0],2.7); //z=2.7 (zoom)
 
             const arrow = L.icon({
 
-                //   /home/user/webDev2021/webDev2021/Maps
-                //<img src="pic_trulli.jpg" alt="Italian Trulli">
-
-
                 iconUrl: '../Maps/icons/arrow.png',
                 iconSize:     [40, 40], // size of the icon
-               // iconAnchor:   [5, 94], // point of the icon which will correspond to marker's location
-               // popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+               
             })
 
             L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=tmIAY714HkSJ3YTHhuQE',{
@@ -105,7 +104,11 @@
 
             //multiple marks 
             const packetMarks = L.layerGroup([
-                new L.marker([13.083333, -55.466667]).bindPopup("Atlantic Empress"),//Atlantic Empress
+                new L.marker([13.083333, -55.466667]).bindPopup("Atlantic Empress").on('click', function(ev) {// ev is an event object (MouseEvent in this case)
+                //alert("Hello Anna!"); 
+              changeTextWithMarker();
+                }),//Atlantic Empress
+
                 new L.marker([-12.027189, 12.230525]).bindPopup("ABT Summer"),//ABT Summer
                 new L.marker([-33.275833, 17.504667]).bindPopup("Castillo de Bellver"),//Castillo de Bellver
                 new L.marker([48.6,-4.7]).bindPopup("Amoco Cadiz"),            //Amoco Cadiz
@@ -120,23 +123,79 @@
                 new L.marker([41.180765, -8.699863]).bindPopup("Jakob Maersk"), //Jakob Maersk
                 new L.marker([59.883333, -1.35]).bindPopup("Braer"), //Braer
                 new L.marker([43.389, -8.41]).bindPopup("Aegean Sea") //Aegean Sea
+
+
+
+                
                 
 
             ]);
-            packetMarks.addTo(map);
+            packetMarks.addTo(map)
+
+
+
+
+
+     //Function to change html file via click
+
+     function  changeTextWithMarker(ev )
+        {
+
+           var text;
+
+           text = "This is atlantic";
+
+
+            //htmlPath = file's path
+
+            document.getElementById("htmlPath").src = "../Maps/text.html";
+            document.getElementById("htmlPath").style= "position:absolute; top: 100%; bottom: 0%; left: 0%; right: 50%; border:none;";
+            
+
+
+
+
+
+            
+            //Auto scroll the window
+            window.scrollTo(300, 700);
+            
+
+
+
+
+
+           
+            
+            
+            
+ 
+        }
 
            
 
-            
+    
+                
+
+
         </script>
 
-    </iframe>
+
+        
+
+        
 
 
-
-        <iframe width="100%" src="../Maps/text.html" style="position:absolute; top: 100%; bottom: 0%; left: 0%; right: 50%; ">
-    
         </iframe>
+
+
+
+        <!--Frame with text info-->
+
+        <iframe id="htmlPath"  width="100%" height="70%" src="" style="position:absolute; top: 20%; bottom: 0%; left: 0%; right: 50%; "></iframe>
+
+
+        
 
 
 
