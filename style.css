@@ -129,3 +129,10 @@ section img
     height: 30px;
     background-color: darkblue;
 }
+
+.centertitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

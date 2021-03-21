@@ -10,6 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        article{
+            display: grid;
+            grid-template-columns: 1fr minmax(0,10.5in) 1fr;
+            height: 100vh;
+
+        }
+        article *
+        {
+            grid-column: 2/3;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -78,9 +90,9 @@
         <div class="div-texts Dimage-2"><h2>div4</h2></div>
         
         <section id="Section-Article">
-            <article id="Article">
+            <article >
                 <header id="1st Header">
-                    <h2> The <span> Ocean</span></h2>
+                    <h2 class="centertitle"> The  <span> Ocean</span></h2>
                 </header>
                 <p id="1st Paragraph">
                     The ocean covers roughly 71% of our planet’s surface, and is by far the most dominant feature of our world. But what’s in it?
@@ -102,10 +114,11 @@
                     These creatures have built-in gills for breathing and their eyes enable them to look forward as well as sideways. 
                     Some of the creatures found underwater are carnivorous in nature and eat other aquatic animals for their survival. 
                 </p>
-                <p id="4th Paragraph"> <br><br><em>"We need to respect the oceans and take care of them as if our lives depended on it. Because they do."</em>
-                    <br>Sylvia Earle
+                <p class="centertitle"> <br><br><em>"We need to respect the oceans and take care of them as if our lives depended on it. Because they do."</em>
+                <pre class="centertitle">Sylvia Earle 
+                </pre>
                 </p>
-                <h2 id="5th Header">Ocean Pollution</h2>
+                <h2 class="centertitle">Ocean Pollution</h2>
                 <p id="5th Paragraph"> 
                     Pollution is anything that is present or introduced into an environment which causes harm.  
                     In the sea there are many kinds of pollution such as rubbish, oil, chemicals etc. 
