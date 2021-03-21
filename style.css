@@ -98,8 +98,34 @@ section img
 }
 .Dimage-1
 {
-    height: 400px;
+    height: 200px;
     background-image: url(Images/1stpic.jpg);
     background-size: cover;
     background-attachment: fixed;
+}
+
+.Dtext-1
+{
+    height: 400px;
+    content: '';
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #04776f,transparent);
+    z-index: 9;
+}
+.first-header
+{
+    
+    text-align: center;
+    height: 30px;
+    background-color: darkblue;
+}
+.first-paragraph
+{
+    position: relative;
+    text-align: center;
+    height: 30px;
+    background-color: darkblue;
 }
