@@ -101,11 +101,7 @@ section img
     content: '';
     position: absolute;
     width: 100%;
-<<<<<<< HEAD
     height: 170%;
-=======
-    height: 130%;
->>>>>>> a6d7409df9aa42354202ec4487ae84181582d5fb
     background: linear-gradient(to top, black,transparent);
     z-index: 10;
 }
