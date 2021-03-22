@@ -6,11 +6,7 @@
     padding: 0;
     font-family: 'Comfortaa',sans-serif;
 }
-body
-{
-    background: #04978c;
-    min-height: 1500px;
-}
+
 .mainpage
 {
     position: relative;
@@ -97,7 +93,75 @@ section img
     align-items: center;
 }
 
-.header-10
+
+
+.try{
+    font-family: "Proxima Nova",sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background:linear-gradient(-45deg,#04978c,#011f1d,#013330, #04978c);
+    background-size: 400% 400%;
+    color: rgb(245, 245, 245);
+    line-height: 1.45;
+    scroll-padding-top: 70px;
+    scroll-behavior: smooth;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 100.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    animation: change 8s ease-in-out infinite ;
+}
+@keyframes change
 {
-    background-color: floralwhite;
+    0%
+    {
+        background-position: 0% 50%;
+    }
+    50%
+    {
+        background-position: 100% 50%;
+    }
+    100.5%
+    {
+        background-position: 0% 50%;
+    }
+}
+.FirstHeader
+{
+    position: relative;
+}
+.FirstHeader h2{
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+}
+.FirstHeader h2:nth-child(1)
+{
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.FirstHeader h2:nth-child(2)
+{
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%,100%
+    {
+        clip-path: polygon(0% 45%,15% 44%,32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 60%,16% 65%,34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%, 0% 100%);
+    }
 }
