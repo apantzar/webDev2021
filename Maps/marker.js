@@ -1,4 +1,8 @@
-
+        
+       // import atlantic from 'parser.js';
+            
+             //markers for map, texts
+             
              window.addEventListener('scroll',function(){
                 var value = window.scrollY;
     
@@ -10,14 +14,8 @@
                 });
             
            
-    
-    
+
             
-    
-            
-    
-    
-                
             
                 
                 var map = L.map('map').setView([0,0],2.7); //z=2.7 (zoom)
@@ -38,28 +36,23 @@
     
     
                 let popText = "";
+              /*  var para = new URLSearchParams(window.location.search);
+                var pass = para.get("giveMe");
+
+
+                console.log("I am the pass "+ pass); */
     
                 //multiple marks 
                 const packetMarks = L.layerGroup([
                     
                     new L.marker([13.083333, -55.466667]).bindPopup("Atlantic Empress").on('click', function(ev) {// ev is an event object (MouseEvent in this case)
-                    //alert("Hello Anna!"); 
-                  changeTextWithMarker(` Atlantic <br> Empress was a Greek oil tanker that in 1979 collided with the oil tanker Aegean Captain in the Caribbean, and eventually sank, having created the fifth largest oil spill on record and the largest ship-based spill having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea.<br> It was built at the Odense Staalskibsværft shipyard in Odense, Denmark, and launched on 16 February 1974.<br>
-                        On 19 July 1979 Atlantic Empress collided with the Aegean Captain, another fully laden Greek supertanker, 18 nautical miles (33 km) east of the island of Tobago. At the time of the collision Atlantic Empress was sailing from Saudi Arabia to Beaumont, Texas, with a cargo of light crude oil owned by Mobil Oil. Aegean Captain was en route to Singapore from Aruba.[2]
-    
-                        In heavy rain and thick fog the two ships did <br>not sight each other until they were 550 metres (600 yd) apart. Aegean Captain changed course, but it was too late; at 7:15 p.m, the two ships collided, with the Empress tearing a hole in the Captain's starboard bow. Large fires began on each ship, which were soon beyond the control of the crews, who abandoned their ships.[2]
-                        
-                        The collision and fire claimed the lives of 26 of the Empress's crew members, and one crew member on the Captain.[3] The remaining crew from both ships were taken to Tobago for medical treatment, while the Empress's captain was transported to a hospital in Texas, having inhaled fire.[2]
-                        
-                        Firefighters from the Trinidad and <br>Tobago Coast Guard brought the fires aboard the Captain under control the <br>next day, and members of her crew returned to the ship, and were able to bring her into Curaçao, where her cargo was off-loaded. Meanwhile, a five-man specialist emergency crew from the Dutch Salvage organization Smit International [4] and the German Bugsier, managed by a Salvage inspector of Smit International, attempted to control the fire aboard Empress, and contain the spreading oil slick. Two tugs (one of them being the Smit Zwarte Zee) towed the burning ship further out to sea.[2]
-                        
-                        On 24 July, a week after the collision, the Empress was still burning, and also listing, when an explosion <br>occurred that increased the rate of flow. The next day another larger explosion increased the rate to 26 to 57 cubic metres per hour (7,000 to 15,000 gal/h), twice the previous rate. Finally, on 3 August, the Empress sank, having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea.[2]
-                        
-                        By comparison, in the Exxon Valdez spill ten years later<br> 37,000 metric tonnes of oil was released.[5] `);
+                    
+                  changeTextWithMarker(atlantic);
+                  console.log();
                     }),//Atlantic Empress
     
                     new L.marker([-12.027189, 12.230525]).bindPopup("ABT Summer").on('click', function(ev){
-                        changeTextWithMarker("ABT")
+                        changeTextWithMarker(abtSummer)
                     }),//ABT Summer
                     
                     

@@ -1,0 +1,37 @@
+p {
+    text-align:left;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    word-spacing: 7px;
+    
+    
+}
+
+
+h1{
+
+    text-align: center;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    background-color: #dfe6e9;
+  }
+
+
+
+  map{
+
+    scroll-behavior: smooth;
+
+
+  }
+
+
+  .leaflet-container path {
+    transition: fill 0.1s;
+  }
+  

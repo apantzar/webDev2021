@@ -7,7 +7,7 @@
 
 .nav-container {
     width: 100%;
-    background-color: #04978c;
+    background-color: #0b4467;
 }
 
 .navbar{
@@ -46,7 +46,8 @@
 }
 
 .nav-links:hover{
-    color: teal;
+    
+    color:lightslategrey;
     transition:all 0.2s ease-out;
 }
 
