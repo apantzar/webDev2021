@@ -12,13 +12,14 @@
     position: relative;
     width: 100%;
     height: 120vh;
-    top: -50px;
+    margin-top: -50px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index:-1;
     position:relative;
+    
 }
 .mainpage::before
 {
@@ -29,6 +30,7 @@
     height: 100px;
     background: linear-gradient(to top, #04978c,transparent);
     z-index: 10;
+    
 }
 
 section img
@@ -77,24 +79,6 @@ section img
     font-size: 10em;
     z-index: 1;
 }
-
-
-#body {
-
-    overflow: auto;
-   
-}
-
-
-.centertitle
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
 .try{
     font-family: "Proxima Nova",sans-serif;
     font-weight: 400;
@@ -164,4 +148,126 @@ section img
     50%{
         clip-path: polygon(0% 60%,16% 65%,34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%, 0% 100%);
     }
+}
+.quote-div
+{
+    width: 300px;
+    height: 300px;
+    position: relative;
+
+}
+.sylvia
+{
+    background: url(Images/1stpic.jpg);
+}
+.quote
+{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        ellipse at center,
+        #04978c 0%,
+        #04978c 70%,
+        rgba(0, 128, 172, 0) 70.3%
+    );
+    position: relative;
+    margin: 0;
+    color: white;
+}
+.quote p {
+    position: a;
+    height: 100%;
+    font-size: 21px;
+    line-height: 1.25;
+    padding: 0;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+  }
+.quote::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    float: left;
+    shape-outside: polygon(
+        0 0,
+        98% 0,
+        50% 6%,
+        23.4% 17.3%,
+        6% 32.6%,
+        0 50%,
+        6% 65.6%,
+        23.4% 82.7%,
+        50% 94%,
+        98% 100%,
+        0 100%
+    );
+    shape-margin: 7%;
+}
+  
+.quote p::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    float: right;
+    shape-outside: polygon(
+      2% 0%,
+      100% 0%,
+      100% 100%,
+      2% 100%,
+      50% 94%,
+      76.6% 82.7%,
+      94% 65.6%,
+      100% 50%,
+      94% 32.6%,
+      76.6% 17.3%,
+      50% 6%
+    );
+    shape-margin: 7%;
+}
+.quote-div blockquote footer {
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+    font-size: 17px;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+.quote-div::before {
+    content: "\201C";
+    font-size: 270px;
+    height: 82px;
+    line-height: 0.78;
+    line-height: 1;
+    position: absolute;
+    top: -48px;
+    left: 0;
+    z-index: 1;
+    font-family: sans-serif, serif;
+    color: #ccc;
+    opacity: 0.9;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    z-index: 10;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.right {
+    background-color: salmon;
+    margin-left: 50%;
+    margin-top: -40%;
+    background-image:  url(Images/1stpic.jpg);
+    height: 500px;
+    
+}
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
