@@ -84,6 +84,9 @@
     
     
                 console.log(popText);
+
+
+
     
     
     
@@ -127,4 +130,26 @@
                 
      
             }
+
+
+
+
+
+           
     
+            //For close (x) button
+                function closeMe(){
+                    console.log("x is here");
+
+                    resizeMe();
+                   
+
+                  //  document.getElementById("htmlPath").src = "../Maps/index.html";
+
+                    //document.getElementById("htmlPath").style = "position:absolute; top: 20%; bottom: 0%; left: 0%; right: 50%; border:none; ";
+    
+    
+    
+                }
+    
+           
