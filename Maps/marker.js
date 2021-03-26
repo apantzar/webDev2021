@@ -2,6 +2,9 @@
        // import atlantic from 'parser.js';
             
              //markers for map, texts
+
+
+             let isOpen = false;
              
              window.addEventListener('scroll',function(){
                 var value = window.scrollY;
@@ -47,16 +50,29 @@
                     
                     new L.marker([13.083333, -55.466667]).bindPopup("Atlantic Empress").on('click', function(ev) {// ev is an event object (MouseEvent in this case)
                     
-                  changeTextWithMarker(atlantic);
+                      
+                      if(isOpen){
+                        closeMe();
+                        
+                      }else if (!isOpen){
+                        changeTextWithMarker(atlantic);
+
+                       
+                      }
+                  
+                  
                   console.log();
                     }),//Atlantic Empress
     
-                    new L.marker([-12.027189, 12.230525]).bindPopup("ABT Summer").on('click', function(ev){
+                    new L.marker([-12.027189, 12.230525]).bindPopup(`ABT<br> Summer`).on('click', function(ev){
                         changeTextWithMarker(abtSummer)
                     }),//ABT Summer
                     
                     
-                    new L.marker([-33.275833, 17.504667]).bindPopup("Castillo de Bellver"),//Castillo de Bellver
+                    new L.marker([-33.275833, 17.504667]).bindPopup(`In heavy rain and thick fog the two ships did not sight each other until they were 550 metres (600 yd) apart. Aegean Captain changed course, but it was too late; at 7:15 p.m, the two ships collided, with the Empress tearing a hole in the Captain's starboard bow. Large fires began on each ship, which were soon beyond the control of the crews, who abandoned their ships.[2]
+
+                    The collision and fire claimed the lives of 26 of the Empress's crew members, and one crew member on the Captain.[3] The remaining crew from both ships were taken to Tobago for medical treatment, while the Empress's captain was transported to a hospital in Texas, having inhaled fire.[2]
+                    `),//Castillo de Bellver
                     new L.marker([48.6,-4.7]).bindPopup("Amoco Cadiz"),            //Amoco Cadiz
                     new L.marker([44.366750, 8.700028]).bindPopup("Haven"), //Haven
                     new L.marker([25.3, 57.566667]).bindPopup("Sea Star"),    //Sea Star
@@ -98,7 +114,14 @@
     
          function  changeTextWithMarker( text1 )
             {
-    
+
+
+              map.setView([50.083333, -55.466667]);
+              //map.setZoom(2.7);
+
+
+              isOpen = true;
+
                
                var x = text1;
                localStorage.setItem("textvalue", x);
@@ -112,9 +135,10 @@
                 //htmlPath = file's path
     
                 document.getElementById("htmlPath").src = "../Maps/text.html";
+              
                 document.getElementById("htmlPath").style= "position:absolute; top: 100%; bottom: 0%; left: 0%; right: 50%; border:none; ";
                
-                
+                 
     
     
     
@@ -139,17 +163,17 @@
     
             //For close (x) button
                 function closeMe(){
+
+
+                
+
+                    //document.getElementsByName("theFrame").src = "../Maps/index.html";
                     console.log("x is here");
+                    document.getElementById("htmlPath").style= "position:100%; top: 20%; bottom: 0%; left: 0%; right: 50%; border:none; ";
+                   // document.getElementsByName("theFrame").
 
-                    resizeMe();
+                   isOpen = false;
                    
-
-                  //  document.getElementById("htmlPath").src = "../Maps/index.html";
-
-                    //document.getElementById("htmlPath").style = "position:absolute; top: 20%; bottom: 0%; left: 0%; right: 50%; border:none; ";
-    
-    
-    
                 }
     
            
