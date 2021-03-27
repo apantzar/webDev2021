@@ -1,7 +1,9 @@
 let atlantic ="";
 let part1 = "";
 let part2 = "";
- part1 = `<h1 id="h1"><link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+
+`<link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>`
+ part1 = `<h1 id="h1">
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="550px" height="140px" xml:space="preserve">
@@ -65,7 +67,7 @@ By comparison, in the Exxon Valdez spill ten years later 37,000 metric tonnes of
 
 
 
-let abtSummer = `<div class="wrapper"><h1>ABT Summer </h1></div>MV ABT Summer was an oil tanker which was built at the South Korean shipbuilding yard of Ulsan and launched in 1974. The vessel was 344 metres in length and almost 54 metres in breadth. While under a Liberian flag,[1] fully laden with Iranian crude and en route to Rotterdam, she sank 700 nautical miles off the Angolan coast. An unexplained explosion occurred on May 28, 1991, and the ship and its cargo began to burn.Five of the crew of thirty-two were killed in the incident, four of whom were initially reported as missing.[2] The following day, a slick 32 km long and 7 km wide began to form.[1] The ship continued to burn for three days before sinking on June 1. The vessel's 260,000 tonne cargo of oil was lost, leaving a visible slick on the ocean surface of approximately eighty square miles. Attempts to locate the wreck following the incident proved unsuccessful.[3][4] `;
+let abtSummer = part1 + `ABT Summer` + part2 +`MV ABT Summer was an oil tanker which was built at the South Korean shipbuilding yard of Ulsan and launched in 1974. The vessel was 344 metres in length and almost 54 metres in breadth. While under a Liberian flag,[1] fully laden with Iranian crude and en route to Rotterdam, she sank 700 nautical miles off the Angolan coast. An unexplained explosion occurred on May 28, 1991, and the ship and its cargo began to burn.Five of the crew of thirty-two were killed in the incident, four of whom were initially reported as missing.[2] The following day, a slick 32 km long and 7 km wide began to form.[1] The ship continued to burn for three days before sinking on June 1. The vessel's 260,000 tonne cargo of oil was lost, leaving a visible slick on the ocean surface of approximately eighty square miles. Attempts to locate the wreck following the incident proved unsuccessful.[3][4] `;
 
 
 //var para = new URLSearchParams();
