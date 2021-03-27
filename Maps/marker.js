@@ -48,7 +48,7 @@
                 //multiple marks 
                 const packetMarks = L.layerGroup([
                     
-                    new L.marker([13.083333, -55.466667]).bindPopup("Atlantic Empress").on('click', function(ev) {// ev is an event object (MouseEvent in this case)
+                    new L.marker([13.083333, -55.466667]).bindPopup(`<h2>Atlantic Empress</h2> <br> <p>(click marker to close)</p>`).on('click', function(ev) {// ev is an event object (MouseEvent in this case)
                     
                       
                       if(isOpen){
