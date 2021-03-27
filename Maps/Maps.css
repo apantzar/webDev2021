@@ -14,12 +14,20 @@ iframe{
   overflow: overlay;
   scrollbar-color: #000000;
   scroll-behavior:smooth;
+  background:linear-gradient(#0C1827,#0c1827e1, #2C84CB);
+  
   
 }
 
 
 
+
+
+
+
 p {
+
+    color: whitesmoke;
     text-align:left;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -34,12 +42,25 @@ p {
 }
 
 
+svg{
+    font-display:auto;
+    position: relative;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -225px;
+
+}
+ 
+
+
+
 
 
 
 html {
     scroll-behavior: smooth;
-    background-color: #dfe6e9;
+    background-color: transparent;
     
 
     
@@ -105,6 +126,10 @@ a {
 	color: #9ca0b1;
 }
 
+
+
+
+
 .wrapper h1 {
 	  text-align: center;
 	
@@ -114,7 +139,7 @@ a {
 		text-transform: uppercase;
 		font-weight: 700;
 		font-family: "Josefin Sans", sans-serif;
-		background: linear-gradient(to right,#03045e 10%, #0b4467 50%, #0077b6 60%);
+		background: linear-gradient(to right,#2C84CB 10%, #86bbda 50% ,#fff 60% );
 		background-size: auto auto;
 		background-clip: border-box;
 		background-size: 200% auto;
@@ -133,6 +158,8 @@ a {
 		background-position: 150% center;
 	}
 }
+
+
 
 
 
