@@ -9,7 +9,7 @@ let part2 = "";
 	 width="550px" height="140px" xml:space="preserve">
   <defs>
     <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
-      <path fill="#28527a" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+      <path fill="#000" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
     </pattern>
     
     <text id="text" transform="translate(2,75)" font-family="'Cabin Condensed'" font-size="60.047">`;
@@ -45,46 +45,30 @@ part2 = `</text>
 
 
 
- atlantic = part1 + `Atlantic Empress`+ part2 + ` Atlantic Empress was a Greek oil tanker that in 1979 collided with the oil tanker Aegean Captain in the Caribbean, and eventually 
+ atlantic = part1 + `Atlantic Empress`+ part2 + `Atlantic Empress was a Greek oil tanker that in 1979 collided with the oil tanker Aegean Captain in the Caribbean, and eventually 
  sank, having created the fifth largest oil spill on record and the largest ship-based spill having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea. It was built 
  at the Odense Staalskibsværft shipyard in Odense, Denmark, and launched on 16 February 1974. On 19 July 1979 Atlantic Empress collided with the Aegean Captain, another fully laden 
  Greek supertanker, 18 nautical miles (33 km) east of the island of Tobago. At the time of the collision Atlantic Empress was sailing from Saudi Arabia to Beaumont, Texas, with a 
  cargo of light crude oil owned by Mobil Oil. Aegean Captain was en route to Singapore from Aruba. In heavy rain and thick fog the two ships did not sight each other until they were
  550 metres (600 yd) apart. Aegean Captain changed course, but it was too late; at 7:15 p.m, the two ships collided, with the Empress tearing a hole in the Captain's starboard bow. 
  Large fires began on each ship, which were soon beyond the control of the crews, who abandoned their ships. The collision and fire claimed the lives of 26 of the Empress's crew
- members, and one crew member on the Captain. The remaining crew from both ships were taken to Tobago for medical treatment, while the Empress's captain was transported to a 
+ members, and one crew member on the Captain.[3] The remaining crew from both ships were taken to Tobago for medical treatment, while the Empress's captain was transported to a 
  hospital in Texas, having inhaled fire. Firefighters from the Trinidad and Tobago Coast Guard brought the fires aboard the Captain under control the next day, and members of her 
  crew returned to the ship, and were able to bring her into Curaçao, where her cargo was off-loaded. Meanwhile, a five-man specialist emergency crew from the Dutch Salvage 
  organization Smit International and the German Bugsier, managed by a Salvage inspector of Smit International, attempted to control the fire aboard Empress, and contain the spreading 
  oil slick. Two tugs (one of them being the Smit Zwarte Zee) towed the burning ship further out to sea. On 24 July, a week after the collision, the Empress was still burning, and also 
  listing, when an explosion occurred that increased the rate of flow. The next day another larger explosion increased the rate to 26 to 57 cubic metres per hour (7,000 to 15,000 gal/h),
  twice the previous rate. Finally, on 3 August, the Empress sank, having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea. By comparison, in the Exxon Valdez spill
- ten years later 37,000 metric tonnes of oil was released. `;
+ ten years later 37,000 metric tonnes of oil was released.`;
 
 
-
-
-
-
-
-
-
+`sessionStorage.setItem( thId, h1);`
 
 let abtSummer = part1 + `ABT Summer` + part2 +`On 28th May 1991, while en route from the Gulf terminal at Kharg Island, Iran to Rotterdam the tanker ABT SUMMER, fully laden with a cargo of 260,000 tonnes 
 of Iranian heavy crude oil, experienced an explosion and a fire about 900 miles off the coast of Angola. Five of the 32 crew members on board died as a result of the incident. A large 
 slick covering an area of 80 square miles spread around the tanker and burnt fiercely. The ship burned for three days before it sank on 1st June and subsequent efforts to locate the 
 wreckage were unsuccessful. It is not clear how much of the oil sank or burned. However, as the incident occurred very far off-shore, most of the oil was expected to be broken up by 
-high seas with little or no environmental impact. `;
-
-
-//var para = new URLSearchParams();
-//para.append("giveMe", atlantic);
-//location.href = "http://Maps/index.html" ;
-
-
-
-
-
+high seas with little or no environmental impact.`;
 
 let castilloDeBellvre = part1 + `Castillo de Bellvre` + part2 + `Castillo de Bellvre, carrying 252,000 tonnes of light crude oil (Murban and Upper Zakum), caught fire about 70 miles 
 north-west of Cape Town, South Africa on 6th August 1983. The blazing ship drifted off shore and broke in two. The stern section - possibly with as much as 100,000 tonnes of oil 
@@ -173,3 +157,46 @@ casualty grounded close to the port with the fire eventually burning itself out 
 reported to have been consumed in the fire, with only minor contamination of nearby shorelines. Some oil did enter the port of Haydarpasa despite a boom being present across the port 
 entrance. The wreck was removed by local salvors following an allision by a local ferry in 1983.`;
 
+let jakobMaersk = part1 + `Jakob Maersk` + part2 + `On 29th January 1975 the Danish tanker Jakob Maersk struck bottom while manoeuvring onto the berth with the aid of tugs at the port 
+of Leixoes, northern Portugal. It was carrying ~88,000 tonnes of oil, comprising Iranian light crude oil cargo and bunker fuel oil when the incident occurred. Heavy swell caused the 
+vessel to repeatedly rise and fall onto the rocky seabed resulting in damage to the cargo tanks. Oil entered the engine room causing explosions and a fire which spread to the cargo 
+holds and to oil floating on the water. 7 crew members were killed and the rest abandoned ship. The vessel and floating oil continued to burn for two days with clouds of black smoke 
+affecting the nearby city of Porto. Schools and colleges were closed and a number of residents were taken to hospital suffering from smoke inhalation. After further explosions on 31st 
+January caused by burning floating oil, the vessel broke into two parts. The stern section sank while the bow was washed onto shore. It was estimated that between 40,000 and 50,000 
+tonnes of oil was consumed by fire. Much of the spilled oil was blown out to sea and 25,000 tonnes were estimated to have dispersed as a result. The remaining oil washed up on the 
+shoreline with the heaviest contamination found in a 3-4 kilometre stretch immediately adjacent to the vessel. Traces of oil were found up to 15-20 km north and south of the wreck 
+site.<br> The entrance to the harbour was boomed with some success, although some oil did enter when the boom was opened to allow vessels to pass through. A barrier improvised from 
+netting and straw was used to encircle the wreck and while successful initially in absorbing the oil and preventing further spreading, this became waterlogged and broke up causing 
+secondary contamination. Dispersant was sprayed from vessels but was considered to be largely ineffective due to minimal mixing as a result of calm seas. Both manual and mechanical 
+shoreline clean-up were undertaken with local inhabitants, the army, navy and fire service cleaning some areas. Heavily oiled sand was removed using bulldozers. More lightly oiled 
+sand was pushed into the sea and treated with dispersants.<br> Very few birds were observed to have been affected as a result of the spill and local fisheries were relatively 
+unaffected other than short term tainting. However, significant mortalities of seaweed and molluscs were recorded in the heavily contaminated areas.`;
+
+let braer = part1 + `Braer` + part2 + `Following engine failure, Braer ran aground in severe weather conditions on Garth's Ness, Shetland on 5th January 1993. Over a period of 12 days 
+the entire cargo of 84,700 tonnes of Norwegian Gullfaks crude oil, plus up to 1,500 tonnes of heavy bunker oil, were lost as almost constant storm force winds and heavy seas broke the 
+ship apart. Weather conditions prevented the use of mechanical recovery equipment at sea, although about 130 tonnes of chemical dispersant was applied from aircraft during periods when 
+the wind abated slightly and some oil remained on the surface. Oiling of shorelines was minimal relative to the size of the spill and cleanup involved the collection of oily debris and 
+seaweed by a small workforce. The Braer spill was very unusual in that a surface slick was not produced. A combination of the light nature of the oil and the exceptionally strong wind 
+and wave energy naturally dispersed the oil throughout the water column. The oil droplets were adsorbed onto sediment particles which eventually sank to the sea bed. Sub-surface currents 
+led to this oil being spread over a very wide area, although a significant portion eventually ended up in two deep, fine sediment 'sinks'. A wide range of fish and shellfish over a fairly 
+large area became contaminated with oil, resulting in the imposition of a Fisheries Exclusion Zone. Farmed salmon held in sea cages in the surface waters within this zone bore the brunt of 
+the contamination since they could not escape the cloud of dispersed oil. Although this contamination was lost quickly once clean water conditions returned, millions of salmon that could 
+not be marketed had to be destroyed. The Exclusion Zone was progressively lifted as fish and shellfish species were found by chemical analysis and taste testing to be free of contamination, 
+although it was still in place over 6 years after the spill for mussels and Norway lobsters at some sites within the closure area. The Braer spill was unusual in that a significant amount 
+of oil was blown on to land adjacent to the wreck site. The effects of this airborne oil were localised and had no more than a temporary impact on vegetation and livestock. Seabird casualties 
+were also relatively low. Considering the size of the spill, the environmental impacts were surprisingly limited.`;
+
+let aegeanSea = part1 + `Aegean Sea` + part2 + `On 3rd December 1992 the Greek OBO carrier (ore/bulk/oil) Aegean Sea, laden with 80,000 tonnes of North Sea Brent crude oil, ran aground 
+during heavy weather while approaching the port of La Coruña on the Galician coast, north-west Spain. The vessel broke in two and caught fire which, together with spilled cargo, burned 
+for several days. Dense clouds of black smoke threatened the city of La Coruña, resulting in a temporary mass evacuation. The forward section of Aegean Sea sank in shallow water, some 50 
+metres from the coast. The stern section remained largely intact and was found to contain 6,500 tonnes of remaining cargo and 1,700 tonnes of bunker fuel, which was eventually pumped 
+ashore by salvors. <br>The quantity of oil spilt was estimated at about 73,000 tonnes, much of which either dispersed at sea or was consumed by the fire on board the vessel. Strong winds 
+during the initial five days assisted in dispersing much of the remaining light crude naturally, but also hampered recovery of oil at sea. Attempts were made to protect sensitive areas 
+using government-owned equipment. However, oil impacted rocky shores, sand beaches and a salt marsh/mud flat area. In total, over 300km of shoreline were contaminated to varying degrees. 
+Manual cleaning of shorelines began in late December and continued sporadically for several months. In areas where access from the shore was possible, some oil was recovered using locally 
+available vacuum trucks, skimmers and pumps. Approximately 5,000 tonnes of oil/water mixture was collected and delivered to local oil reception facilities for processing. In addition, 1,200m3 
+of contaminated sand and debris was processed at a local ceramics factory. A variety of commercially important species, including mussels, were tainted and a comprehensive fishing and 
+harvesting ban was imposed to protect a thriving fishing and mariculture industry. In August 1993 the fisheries authorities began destroying cultivated produce within a specified area, 
+with mussels and salmon dumped in an inland quarry. Claims totaling Pts48,187 million or €289.6 million, were submitted before the criminal and civil courts. In October 2002, an agreement 
+was concluded between the Spanish Government, the shipowner, the P&I Club and the International Oil Pollution Compensation (IOPC) Funds for compensation amounting to Pts9, 000 million or 
+€54 million.`;
