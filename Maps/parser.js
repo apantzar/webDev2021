@@ -9,7 +9,7 @@ let part2 = "";
 	 width="550px" height="140px" xml:space="preserve">
   <defs>
     <pattern id="water" width=".25" height="1.1" patternContentUnits="objectBoundingBox">
-      <path fill="#000" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
+      <path fill="#28527a" d="M0.25,1H0c0,0,0-0.659,0-0.916c0.083-0.303,0.158,0.334,0.25,0C0.25,0.327,0.25,1,0.25,1z"/>
     </pattern>
     
     <text id="text" transform="translate(2,75)" font-family="'Cabin Condensed'" font-size="60.047">`;
