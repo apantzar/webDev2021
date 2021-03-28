@@ -72,22 +72,43 @@
                     }),//ABT Summer
                     
                     
-                    new L.marker([-33.275833, 17.504667]).bindPopup(`In heavy rain and thick fog the two ships did not sight each other until they were 550 metres (600 yd) apart. Aegean Captain changed course, but it was too late; at 7:15 p.m, the two ships collided, with the Empress tearing a hole in the Captain's starboard bow. Large fires began on each ship, which were soon beyond the control of the crews, who abandoned their ships.[2]
-
-                    The collision and fire claimed the lives of 26 of the Empress's crew members, and one crew member on the Captain.[3] The remaining crew from both ships were taken to Tobago for medical treatment, while the Empress's captain was transported to a hospital in Texas, having inhaled fire.[2]
-                    `),//Castillo de Bellver
-                    new L.marker([48.6,-4.7]).bindPopup("Amoco Cadiz"),            //Amoco Cadiz
-                    new L.marker([44.366750, 8.700028]).bindPopup("Haven"), //Haven
-                    new L.marker([25.3, 57.566667]).bindPopup("Sea Star"),    //Sea Star
+                    new L.marker([-33.275833, 17.504667]).bindPopup("Castillo de Bellver").on('click', function(ev){
+                      changeTextWithMarker(castilloDeBellvre)
+                  }),//Castillo de Bellver
+                    new L.marker([48.6,-4.7]).bindPopup("Amoco Cadiz").on('click', function(ev){
+                      changeTextWithMarker(amocoCadiz)
+                  }),           //Amoco Cadiz
+                    new L.marker([44.366750, 8.700028]).bindPopup("Haven").on('click', function(ev){
+                      changeTextWithMarker(haven)
+                  }), //Haven
+                    new L.marker([25.3, 57.566667]).bindPopup("Sea Star").on('click', function(ev){
+                      changeTextWithMarker(seaStar)
+                  }),    //Sea Star
                     //new L.marker([50.041667, -6.128833]).bindPopup("None"),    
-                    new L.marker([28.366700, 125.916700]).bindPopup("Sanchi"),     //SANCHI           
-                    new L.marker([43.369462, -8.381184]).bindPopup("Urquiola"),   //Urquiola    
-                    new L.marker([51.638665, -40.486299]).bindPopup("Odyssey"), //Odyssey
-                    new L.marker([21.201243, -162.895969]).bindPopup("Hawaiian Patriot"), //Hawaiian Patriot  
-                    new L.marker([40.994167, 29.007778]).bindPopup("Independenta"), //Independenta
-                    new L.marker([41.180765, -8.699863]).bindPopup("Jakob Maersk"), //Jakob Maersk
-                    new L.marker([59.883333, -1.35]).bindPopup("Braer"), //Braer
-                    new L.marker([43.389, -8.41]).bindPopup("Aegean Sea"), //Aegean Sea   
+                    new L.marker([28.366700, 125.916700]).bindPopup("Sanchi").on('click', function(ev){
+                      changeTextWithMarker(sanchi)
+                  }),     //SANCHI           
+                    new L.marker([43.369462, -8.381184]).bindPopup("Urquiola").on('click', function(ev){
+                      changeTextWithMarker(urquiola)
+                  }),   //Urquiola    
+                    new L.marker([51.638665, -40.486299]).bindPopup("Odyssey").on('click', function(ev){
+                      changeTextWithMarker(odyssey)
+                  }), //Odyssey
+                    new L.marker([21.201243, -162.895969]).bindPopup("Hawaiian Patriot").on('click', function(ev){
+                      changeTextWithMarker(hawaiianPatriot)
+                  }), //Hawaiian Patriot  
+                    new L.marker([40.994167, 29.007778]).bindPopup("Independenta").on('click', function(ev){
+                      changeTextWithMarker(independenta)
+                  }), //Independenta
+                    new L.marker([41.180765, -8.699863]).bindPopup("Jakob Maersk").on('click', function(ev){
+                      changeTextWithMarker(amocoCadiz)
+                  }), //Jakob Maersk
+                    new L.marker([59.883333, -1.35]).bindPopup("Braer").on('click', function(ev){
+                      changeTextWithMarker(amocoCadiz)
+                  }), //Braer
+                    new L.marker([43.389, -8.41]).bindPopup("Aegean Sea").on('click', function(ev){
+                      changeTextWithMarker(amocoCadiz)
+                  }), //Aegean Sea   
                     
                     //Red arrow starting point
                     new L.marker([35, 103], {icon: arrow}).bindPopup("China"), 
