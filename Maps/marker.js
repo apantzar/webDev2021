@@ -53,22 +53,23 @@
                     
                     new L.marker([13.083333, -55.466667]).bindPopup(`<h2>Atlantic Empress</h2> <br> <p>(click marker to close)</p>`).on('click', function(ev) {// ev is an event object (MouseEvent in this case)
                     
-                      
+                     /*
                       if(isOpen){
                         closeMe();
                         
-                      }else if (!isOpen){
+                      }else if (!isOpen){*/
                         changeTextWithMarker(atlantic);
 
                        
-                      }
+                     // }
                   
                   
                   console.log();
                     }),//Atlantic Empress
     
                     new L.marker([-12.027189, 12.230525]).bindPopup(`ABT<br> Summer`).on('click', function(ev){
-                        changeTextWithMarker(abtSummer)
+                      changeTextWithMarker(abtSummer);
+                     
                     }),//ABT Summer
                     
                     

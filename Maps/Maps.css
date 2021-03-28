@@ -15,6 +15,9 @@ iframe{
   scrollbar-color: #000000;
   scroll-behavior:smooth;
   background:linear-gradient(#0C1827,#0c1827e1, #2C84CB);
+
+  overflow: auto;
+ -webkit-overflow-scrolling:touch;
   
   
 }
