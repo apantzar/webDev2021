@@ -1,9 +1,4 @@
-
-
-
 body{
-
-  
   overflow: overlay;
   scroll-behavior: smooth;
 }
@@ -15,16 +10,9 @@ iframe{
   scrollbar-color: #000000;
   scroll-behavior:smooth;
   background:linear-gradient(#0C1827,#0c1827e1, #2C84CB);
-
-  overflow: auto;
- -webkit-overflow-scrolling:touch;
   
   
 }
-
-
-
-
 
 
 
@@ -57,10 +45,6 @@ svg{
  
 
 
-
-
-
-
 html {
     scroll-behavior: smooth;
     background-color: transparent;
@@ -80,12 +64,6 @@ html {
 
 
   }
-
-  
-
-
-
-
 
   .leaflet-container path {
     transition: fill 0.1s;
@@ -161,16 +139,6 @@ a {
 		background-position: 150% center;
 	}
 }
-
-
-
-
-
-
-
-
-
-
 
 
   
