@@ -1,23 +1,23 @@
 body{
+  
   overflow: overlay;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
-
-
 iframe{
-
   overflow: overlay;
   scrollbar-color: #000000;
   scroll-behavior:smooth;
   background:linear-gradient(#0C1827,#0c1827e1, #2C84CB);
-  
-  
+
+  /*overflow: auto;
+ -webkit-overflow-scrolling:touch;*/
+
+ scrollbar-width: none;
+
+
 }
-
-
-
 p {
-
     color: whitesmoke;
     text-align:left;
     margin-top: 50px;
@@ -27,12 +27,9 @@ p {
     word-spacing: 7px;
     font-family: sans-serif;
     font-size: 16px;
-
     
     
 }
-
-
 svg{
     font-display:auto;
     position: relative;
@@ -40,58 +37,33 @@ svg{
     margin-top: -20px;
     left: 50%;
     margin-left: -225px;
-
 }
  
-
-
 html {
     scroll-behavior: smooth;
     background-color: transparent;
     
-
     
   }
-
-
-
   #map{
-
     scroll-behavior: smooth;
-
     
     
-
-
   }
-
+  
   .leaflet-container path {
     transition: fill 0.1s;
   }
-
   #map:hover{
     background-size:auto;
   }
-
-
   
-
-
   .marker{
-
     color: blueviolet;
   }
-
-
   .frameClass{
-
     overflow-y: scroll;
   }
-
-
-
-
-
 @font-face {
 	font-family: "ubuntu";
 	font-style: italic;
@@ -100,17 +72,10 @@ html {
 		url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2)
 			format("woff2");
 }
-
-
 a {
 	text-decoration: none;
 	color: #9ca0b1;
 }
-
-
-
-
-
 .wrapper h1 {
 	  text-align: center;
 	
@@ -132,41 +97,30 @@ a {
 		animation: textclip 5s linear infinite;
 		display: inline-block;
 	}
-
-
 @keyframes textclip {
 	to {
 		background-position: 150% center;
 	}
 }
-
-
   
 /*
   .iframe::-webkit-scrollbar {
     display: none;
 }*/
-
 /* Hide scrollbar for IE, Edge and Firefox */
 /*.iframe {
   -ms-overflow-style: none;  /* IE and Edge */
  /* scrollbar-width: none;  /* Firefox */
 /*}
   */
-
-
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #dfe6e9;
 }
-
 ::-webkit-scrollbar-track {
-  background: #dfe6e9;
+  background: #959797;
+  
 }
-
-
-
