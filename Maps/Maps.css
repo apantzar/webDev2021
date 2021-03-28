@@ -76,32 +76,7 @@ a {
 	text-decoration: none;
 	color: #9ca0b1;
 }
-.wrapper h1 {
-	  text-align: center;
-	
-		color: #fff;
-		font-size: 50px;
-		font-family: "ubuntu";
-		text-transform: uppercase;
-		font-weight: 700;
-		font-family: "Josefin Sans", sans-serif;
-		background: linear-gradient(to right,#2C84CB 10%, #86bbda 50% ,#fff 60% );
-		background-size: auto auto;
-		background-clip: border-box;
-		background-size: 200% auto;
-		color: #fff;
-		background-clip: text;
-		text-fill-color: transparent;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		animation: textclip 5s linear infinite;
-		display: inline-block;
-	}
-@keyframes textclip {
-	to {
-		background-position: 150% center;
-	}
-}
+
   
 /*
   .iframe::-webkit-scrollbar {
