@@ -53,7 +53,7 @@
                         closeMe();
                         
                       }else if (!isOpen){*/
-                        changeTextWithMarker(atlantic);
+                        changeTextWithMarker(atlantic , 50.083333, -55.466667 );
 
                        
                      // }
@@ -63,59 +63,89 @@
                     }),//Atlantic Empress
     
                     new L.marker([-12.027189, 12.230525]).bindPopup(`<h2>ABT Summer</h2>`).on('click', function(ev){
-                      changeTextWithMarker(abtSummer);
+                      changeTextWithMarker(abtSummer, 30.027189 ,  12.230525);
                      
                     }),//ABT Summer
                     
                     
                     new L.marker([-33.275833, 17.504667]).bindPopup(`<h2>Castillo de Bellver</h2>`).on('click', function(ev){
-                      changeTextWithMarker(castilloDeBellvre)
+                      changeTextWithMarker(castilloDeBellvre, 5.275833, 17.504667)
                   }),//Castillo de Bellver
                     new L.marker([48.6,-4.7]).bindPopup(`<h2>Amoco Cadiz</h2`).on('click', function(ev){
-                      changeTextWithMarker(amocoCadiz)
+                      changeTextWithMarker(amocoCadiz,76.6,-4.7)
                   }),           //Amoco Cadiz
                     new L.marker([44.366750, 8.700028]).bindPopup(`<h2>Haven</h2`).on('click', function(ev){
-                      changeTextWithMarker(haven)
+                      changeTextWithMarker(haven , 75.366750, 8.700028)
                   }), //Haven
                     new L.marker([25.3, 57.566667]).bindPopup(`<h2>Sea Star</h2`).on('click', function(ev){
-                      changeTextWithMarker(seaStar)
+                      changeTextWithMarker(seaStar,58.3, 57.566667)
                   }),    //Sea Star   
                     new L.marker([28.366700, 125.916700]).bindPopup(`<h2>Sanchi</h2`).on('click', function(ev){
-                      changeTextWithMarker(sanchi)
+                      changeTextWithMarker(sanchi, 62.366700, 125.916700)
                   }),     //SANCHI           
                     new L.marker([43.369462, -8.381184]).bindPopup(`<h2>Urquiola</h2>`).on('click', function(ev){
-                      changeTextWithMarker(urquiola)
+                      changeTextWithMarker(urquiola,75.369462, -8.381184)
                   }),   //Urquiola    
                     new L.marker([51.638665, -40.486299]).bindPopup(`<h2>Odyssey</h2>`).on('click', function(ev){
-                      changeTextWithMarker(odyssey)
+                      changeTextWithMarker(odyssey,75.638665, -40.486299 )
                   }), //Odyssey
                     new L.marker([21.201243, -162.895969]).bindPopup(`<h2>Hawaiian Patriot</h2>`).on('click', function(ev){
-                      changeTextWithMarker(hawaiianPatriot)
+                      changeTextWithMarker(hawaiianPatriot, 57.201243, -162.895969)
                   }), //Hawaiian Patriot  
                     new L.marker([40.994167, 29.007778]).bindPopup(`<h2>Independenta</h2`).on('click', function(ev){
-                      changeTextWithMarker(independenta)
+                      changeTextWithMarker(independenta , 75.994167, 29.007778)
                   }), //Independenta
                     new L.marker([41.180765, -8.699863]).bindPopup(`<h2>Jakob Maersk</h2>`).on('click', function(ev){
-                      changeTextWithMarker(jakobMaersk)
+                      changeTextWithMarker(jakobMaersk, 75.180765, -8.699863 )
                   }), //Jakob Maersk
                     new L.marker([59.883333, -1.35]).bindPopup(`<h2>Braer</h2>`).on('click', function(ev){
-                      changeTextWithMarker(braer)
+                      changeTextWithMarker(braer,75.883333, -1.35)
                   }), //Braer
                     new L.marker([43.389, -8.41]).bindPopup(`<h2>Aegean Sea</h2>`).on('click', function(ev){
-                      changeTextWithMarker(aegeanSea)
+                      changeTextWithMarker(aegeanSea,75.389, -8.41)
                   }), //Aegean Sea   
                     
                     //Red arrow starting point
-                    new L.marker([35, 103], {icon: arrow}).bindPopup(`<h2>China</h2><br>1st in plastic waste:<br>8,82 millions of metric toners of plastic per year`), 
-                    new L.marker([-5, 120 ], {icon: arrow}).bindPopup(`<h2>Indonesia</h2><br>2nd in plastic waste:<br>3.22 millions of metric toners of plastic per year`),
-                    new L.marker([16, 108], {icon: arrow}).bindPopup(`<h2>Vietnam</h2><br>4th in plastic waste:<br>1.83 millions of metric toners of plastic per year`),
-                    new L.marker([13, 122], {icon: arrow}).bindPopup(`<h2>Philippines</h2><br>3rd in plastic waste:<br>1.88 millions of metric toners of plastic per year`),
-                    new L.marker([8.027712, 80.582054], {icon: arrow}).bindPopup(`<h2>Sri Lanka</h2><br>5th in plastic waste:<br>1.59 millions of metric toners of plastic per year`),
-                    new L.marker([16.226724, 101.476501], {icon: arrow}).bindPopup(`<h2>Thailand</h2><br>6th in plastic waste:<br>1.03 millions of metric toners of plastic per year`),
-                    new L.marker([27.733657, 29.745149], {icon: arrow}).bindPopup(`<h2>Egypt</h2><br>7th in plastic waste:<br>0.97 millions of metric toners of plastic per year`),
-                    new L.marker([3.645673, 102.507192], {icon: arrow}).bindPopup(`<h2>Malaysia</h2><br>8th in plastic waste:<br>0.94 millions of metric toners of plastic per year`),
-                    new L.marker([8.578017, 8.062578], {icon: arrow}).bindPopup(`<h2>Nigeria</h2><br>9th in plastic waste:<br>0.85 millions of metric toners of plastic per year`),
-                    new L.marker([24.400169, 90.044586], {icon: arrow}).bindPopup(`<h2>Bangladesh</h2><br>10th in plastic waste:<br>0.79 millions of metric toners of plastic per year`)
+                    new L.marker([35, 103], {icon: arrow}).bindPopup(`<h2>China</h2><br>1st in plastic waste:<br>8,82 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }), 
+                    new L.marker([-5, 120 ], {icon: arrow}).bindPopup(`<h2>Indonesia</h2><br>2nd in plastic waste:<br>3.22 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([16, 108], {icon: arrow}).bindPopup(`<h2>Vietnam</h2><br>4th in plastic waste:<br>1.83 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([13, 122], {icon: arrow}).bindPopup(`<h2>Philippines</h2><br>3rd in plastic waste:<br>1.88 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([8.027712, 80.582054], {icon: arrow}).bindPopup(`<h2>Sri Lanka</h2><br>5th in plastic waste:<br>1.59 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([16.226724, 101.476501], {icon: arrow}).bindPopup(`<h2>Thailand</h2><br>6th in plastic waste:<br>1.03 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([27.733657, 29.745149], {icon: arrow}).bindPopup(`<h2>Egypt</h2><br>7th in plastic waste:<br>0.97 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([3.645673, 102.507192], {icon: arrow}).bindPopup(`<h2>Malaysia</h2><br>8th in plastic waste:<br>0.94 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([8.578017, 8.062578], {icon: arrow}).bindPopup(`<h2>Nigeria</h2><br>9th in plastic waste:<br>0.85 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    }),
+                    new L.marker([24.400169, 90.044586], {icon: arrow}).bindPopup(`<h2>Bangladesh</h2><br>10th in plastic waste:<br>0.79 millions of metric toners of plastic per year`).on('click', function(ev){
+                      scrollMeUp();
+                     
+                    })
                 ]);
                 packetMarks.addTo(map)
     
@@ -128,11 +158,11 @@
          var text1="" ;
          var textToSend="";
     
-         function  changeTextWithMarker( text1 )
+         function  changeTextWithMarker( text1 , par1 , par2 )
             {
 
 
-              map.setView([50.083333, -55.466667]);
+              map.setView([par1, par2]);
               //map.setZoom(2.7);
 
 
@@ -156,6 +186,15 @@
                 //Auto scroll the window
                 window.scrollTo(300, 700);
             
+            }
+
+
+
+            function scrollMeUp(){
+
+              window.scrollTo(0,0);
+              map.setView([0,0],2.7);
+
             }
 
 
