@@ -3,6 +3,8 @@ body{
   overflow: overlay;
   scroll-behavior: smooth;
   scrollbar-width: none;
+
+  width: auto%;
 }
 iframe{
   overflow: overlay;
@@ -36,7 +38,9 @@ svg{
     top: 50%;
     margin-top: -20px;
     left: 50%;
-    margin-left: -225px;
+    margin-left: -120px;
+    right: 50%;
+    margin-right: 120px;
 }
  
 html {

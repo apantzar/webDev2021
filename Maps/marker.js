@@ -93,7 +93,7 @@
                       changeTextWithMarker(hawaiianPatriot, 57.201243, -162.895969)
                   }), //Hawaiian Patriot  
                     new L.marker([40.994167, 29.007778]).bindPopup(`<h2>Independenta</h2`).on('click', function(ev){
-                      changeTextWithMarker(independenta , 75.994167, 29.007778)
+                      changeTextWithMarker(independenta , 72.994167, 29.007778)
                   }), //Independenta
                     new L.marker([41.180765, -8.699863]).bindPopup(`<h2>Jakob Maersk</h2>`).on('click', function(ev){
                       changeTextWithMarker(jakobMaersk, 75.180765, -8.699863 )
