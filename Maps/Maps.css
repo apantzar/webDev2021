@@ -36,11 +36,12 @@ svg{
     font-display:auto;
     position: relative;
     top: 50%;
+    
     margin-top: -20px;
     left: 50%;
-    margin-left: -120px;
+    margin-left: -140px;
     right: 50%;
-    margin-right: 120px;
+    margin-right: 140px;
 }
  
 html {
@@ -103,3 +104,65 @@ a {
   background: #959797;
   
 }
+
+
+.main {
+  float: left;
+  width: 90%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+
+.margin{
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -140px;
+    right: 50%;
+    margin-right: 140px;
+}
+
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 50%;
+  }
+
+  .margin{
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -140px;
+    right: 50%;
+    margin-right: 140px;
+}
+
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+
+  }
+
+  .margin{
+    margin-top: -20px;
+    left: 0%;
+    margin-left: 0px;
+    right: 80%;
+    margin-right: 100px;
+}
+
+
+main{
+  text-align: center;
+  overflow-x: inherit;
+
+}
+
+}
+
