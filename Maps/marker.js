@@ -1,8 +1,5 @@
         
-       // import atlantic from 'parser.js';
-            
-             //markers for map, texts
-
+    //Map's markers file
 
              let isOpen = false;
 
@@ -37,26 +34,18 @@
     
     
                 let popText = "";
-              /*  var para = new URLSearchParams(window.location.search);
-                var pass = para.get("giveMe");
-
-
-                console.log("I am the pass "+ pass); */
+             
     
-                //multiple marks 
+                //======================================================================multiple-marks (blue)=================================================================================== 
                 const packetMarks = L.layerGroup([
                     
                     new L.marker([13.083333, -55.466667]).bindPopup(`<h2>Atlantic Empress</h2>`).on('click', function(ev) {// ev is an event object (MouseEvent in this case)
                     
-                     /*
-                      if(isOpen){
-                        closeMe();
-                        
-                      }else if (!isOpen){*/
+                   
                         changeTextWithMarker(atlantic , 50.083333, -55.466667 );
 
                        
-                     // }
+                   
                   
                   
                   console.log();
@@ -158,6 +147,9 @@
          var text1="" ;
          var textToSend="";
     
+         //=======================================================================
+         //par1 = x, par2=y, text->text ;)
+         //=======================================================================
          function  changeTextWithMarker( text1 , par1 , par2 )
             {
 
@@ -173,11 +165,11 @@
                localStorage.setItem("textvalue", x);
                console.log(x);
     
-              //getText(x);
+             
     
                 //htmlPath = file's path
     
-                document.getElementById("htmlPath").src = "../Maps/text.html";
+                document.getElementById("htmlPath").src = "../Maps/text.html"; //get the file
               
                 document.getElementById("htmlPath").style= "position:absolute; top: 100%; bottom: 0%; left: 0%; right: 50%; border:none; ";
                
@@ -190,7 +182,10 @@
 
 
 
+            //For auto scroll for red markers
+
             function scrollMeUp(){
+
 
               window.scrollTo(0,0);
               map.setView([0,0],2.7);
@@ -199,6 +194,8 @@
 
 
 
+
+            //==================================================Testing========================================================================
             //For close (x) button
                 function closeMe(){
 

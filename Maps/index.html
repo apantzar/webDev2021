@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 
     <header>
+        
+
         <meta http-equiv="Content-Security-Policy" 
      content="frame-src https://docs.google.com;">
         <link rel="stylesheet" type="text/css" href="../Menu/Menu.css">
@@ -11,6 +13,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <link rel="stylesheet" type="text/css" href="Maps.css">
+
+
+
+
+
+        <div class="nav-container" >
+            <nav class="navbar">
+                <h1 id="navbar-logo">SeaThePollution</h1>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/" class="nav-links">Home</a></li>
+                    <li><a href="./Maps" class="nav-links">Map</a></li>
+                    <li><a href="Stats" class="nav-links">Stats</a></li>
+                    <li><a href="#" class="nav-links nav-links-Button">Sign-In</a></li>
+                </ul>
+            </nav>
+        </div>
+    <script src="Menu/Menu.js"></script>
+
     </header>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -19,7 +45,8 @@
 
     <style>
         
-        #map {position: absolute; top:80px; bottom: 0%; left: 0%; right: 0%;}
+        /*Map position  */
+        #map {position: absolute; top:80px; bottom: 0%; left: 0%; right: 0%;} 
 
     </style>
 
@@ -50,7 +77,7 @@
                     </ul>
                 </nav>
             </div>
-        <script src="../Menu/Menu.js"></script>
+        <script src="../Menu/Menu.js"></script> <!--Menu js loaded-->
         </header>
 
         <main>
@@ -67,14 +94,9 @@
 
 
             
-            <!--Frame with text info-->
+            <!--Frame with text for each element-->
             <form action="text.html">
               <iframe name = "theFrame" id="htmlPath"  width="100%" height="50%" src="" id = "test"></iframe>
-
-              
-
-
-
             </form>
 
 

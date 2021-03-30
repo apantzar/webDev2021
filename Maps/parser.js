@@ -1,6 +1,8 @@
-let atlantic ="";
+//This .js file has variables for each element in order to change the text (into text.html)
+
 let part1 = "";
 let part2 = "";
+
 
 `<link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>`
 
@@ -46,14 +48,14 @@ part2 = `</text>
 
 
 
- atlantic = part1 + `Atlantic Empress`+ part2 + `Atlantic Empress was a Greek oil tanker that in 1979 collided with the oil tanker Aegean Captain in the Caribbean, and eventually 
+ let atlantic = part1 + `Atlantic Empress`+ part2 + `Atlantic Empress was a Greek oil tanker that in 1979 collided with the oil tanker Aegean Captain in the Caribbean, and eventually 
  sank, having created the fifth largest oil spill on record and the largest ship-based spill having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea. It was built 
  at the Odense Staalskibsværft shipyard in Odense, Denmark, and launched on 16 February 1974. On 19 July 1979 Atlantic Empress collided with the Aegean Captain, another fully laden 
  Greek supertanker, 18 nautical miles (33 km) east of the island of Tobago. At the time of the collision Atlantic Empress was sailing from Saudi Arabia to Beaumont, Texas, with a 
  cargo of light crude oil owned by Mobil Oil. Aegean Captain was en route to Singapore from Aruba. In heavy rain and thick fog the two ships did not sight each other until they were
  550 metres (600 yd) apart. Aegean Captain changed course, but it was too late; at 7:15 p.m, the two ships collided, with the Empress tearing a hole in the Captain's starboard bow. 
  Large fires began on each ship, which were soon beyond the control of the crews, who abandoned their ships. The collision and fire claimed the lives of 26 of the Empress's crew
- members, and one crew member on the Captain.[3] The remaining crew from both ships were taken to Tobago for medical treatment, while the Empress's captain was transported to a 
+ members, and one crew member on the Captain. The remaining crew from both ships were taken to Tobago for medical treatment, while the Empress's captain was transported to a 
  hospital in Texas, having inhaled fire. Firefighters from the Trinidad and Tobago Coast Guard brought the fires aboard the Captain under control the next day, and members of her 
  crew returned to the ship, and were able to bring her into Curaçao, where her cargo was off-loaded. Meanwhile, a five-man specialist emergency crew from the Dutch Salvage 
  organization Smit International and the German Bugsier, managed by a Salvage inspector of Smit International, attempted to control the fire aboard Empress, and contain the spreading 
@@ -63,7 +65,6 @@ part2 = `</text>
  ten years later 37,000 metric tonnes of oil was released.`;
 
 
-`sessionStorage.setItem( thId, h1);`
 
 let abtSummer = part1 + `ABT Summer` + part2 +`On 28th May 1991, while en route from the Gulf terminal at Kharg Island, Iran to Rotterdam the tanker ABT SUMMER, fully laden with a cargo of 260,000 tonnes 
 of Iranian heavy crude oil, experienced an explosion and a fire about 900 miles off the coast of Angola. Five of the 32 crew members on board died as a result of the incident. A large 

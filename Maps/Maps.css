@@ -10,7 +10,7 @@ iframe{
   overflow: overlay;
   scrollbar-color: #000000;
   scroll-behavior:smooth;
-  background:linear-gradient(#0C1827,#0c1827e1, #2C84CB);
+  background:linear-gradient(#13293e,#13293ee5, #13293ed0);
 
   /*overflow: auto;
  -webkit-overflow-scrolling:touch;*/
@@ -22,16 +22,18 @@ iframe{
 p {
     color: whitesmoke;
     text-align:left;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 100px;
     margin-right: 100px;
     margin-left: 80px;
     word-spacing: 7px;
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     
     
 }
+
+/*For title with animation*/
 svg{
     font-display:auto;
     position: relative;
