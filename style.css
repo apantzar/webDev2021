@@ -258,11 +258,11 @@ section img
     padding-top: 20px;
 }
 .right {
-    background-color: salmon;
+    background-color: transparent;
     margin-left: 50%;
     margin-top: -30%;
-    background-image:  url(Images/Untitled-1.jpg);
-    background-attachment: fixed;
+    background-image:  url(Images/Untitled-2.png);
+    background-size: cover;
     height: 300px;
     
 }
