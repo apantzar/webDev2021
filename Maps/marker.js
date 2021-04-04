@@ -172,6 +172,8 @@
                 document.getElementById("htmlPath").src = "../Maps/text.html"; //get the file
               
                 document.getElementById("htmlPath").style= "position:absolute; top: 100%; bottom: 0%; left: 0%; right: 50%; border:none; ";
+
+               
                
            
                 

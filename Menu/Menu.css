@@ -86,6 +86,8 @@
 
     }
     .nav-menu{
+       
+    
         display: grid;
         grid-template-columns: auto;
         background: rgb(155, 223, 255);
