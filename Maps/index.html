@@ -9,6 +9,7 @@
         <meta http-equiv="Content-Security-Policy" 
      content="frame-src https://docs.google.com;">
         <link rel="stylesheet" type="text/css" href="../Menu/Menu.css">
+        
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -65,12 +66,54 @@
                         <li><a href="../" class="nav-links">Home</a></li>
                         <li><a href="../Maps" class="nav-links">Map</a></li>
                         <li><a href="Stats" class="nav-links">Stats</a></li>
-                        <li><a href="#" class="nav-links nav-links-Button">Sign-In</a></li>
+                        <li><a href="#" id="signBtn" class="nav-links nav-links-Button">Sign-In</a></li>
                     </ul>
                 </nav>
             </div>
+
+                 
+       <!--This is for popup (Sign-In)-->
+
+       <div class="popup">
+        <div class="popup-content">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
+            <button class="signBtnStyle" id="Sign-In">Sign-In</button>
+            <button id="closeBtn" class="close" >x</button>
+        </div>
+
+        
+    </div>
+
+    <script>
+        document.getElementById("signBtn").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "flex";
+            console.log("I am in") //TESTING
+
+
+        })
+
+
+        //Close button
+
+        document.querySelector(".close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+            console.log("I am in") //TESTING
+
+
+        })
+
+        
+    </script>
+
+
         <script src="../Menu/Menu.js"></script> <!--Menu js loaded-->
+
         </header>
+
+
+
 
         <main>
 

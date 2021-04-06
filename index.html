@@ -41,10 +41,49 @@
                     <li><a href="/" class="nav-links">Home</a></li>
                     <li><a href="./Maps" class="nav-links">Map</a></li>
                     <li><a href="./Information" class="nav-links">Information</a></li>
-                    <li><a href="#" class="nav-links nav-links-Button">Sign-In</a></li>
+                    <li><a href="#" id="signBtn"class="nav-links nav-links-Button">Sign-In</a></li>
                 </ul>
             </nav>
         </div>
+
+
+
+        <!--This is for popup (Sign-In)-->
+
+        <div class="popup">
+            <div class="popup-content">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
+                <button class="signBtnStyle" id="Sign-In">Sign-In</button>
+                <button id="closeBtn" class="close" >x</button>
+            </div>
+
+            
+        </div>
+
+        <script>
+            document.getElementById("signBtn").addEventListener("click", function(){
+                document.querySelector(".popup").style.display = "flex";
+                console.log("I am in") //TESTING
+
+
+            })
+
+
+            //Close button
+
+            document.querySelector(".close").addEventListener("click", function(){
+                document.querySelector(".popup").style.display = "none";
+                console.log("I am in") //TESTING
+
+
+            })
+
+            
+        </script>
+
+
     <script src="Menu/Menu.js"></script>
     </header>
     <main>
