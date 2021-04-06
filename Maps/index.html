@@ -81,12 +81,24 @@
             <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
             <button class="signBtnStyle" id="Sign-In">Sign-In</button>
             <button id="closeBtn" class="close" >x</button>
+            <button class="registerBtn" id="SignUp" style="display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ">Sign-Up</button>
+            <p style="font-size: 10px; margin-top: 100px; text-align: center; color: black;">You don't have an account? </p>
         </div>
+    </div>
 
-        
+     <!--THIS IS FOR SIGN UP-->
+     <div class="popupSignUp">
+        <div class="Sign-Up-content">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button id="close" class="close" >x</button>
+            <button class="registerBtn" id="SignUp" style="top: 190px; color: #fff; background: #03a9f4; border: 1px solid #fff;;">Sign-Up</button>
+        </div>
     </div>
 
     <script>
+        //Sign in
         document.getElementById("signBtn").addEventListener("click", function(){
             document.querySelector(".popup").style.display = "flex";
             console.log("I am in") //TESTING
@@ -94,6 +106,11 @@
 
         })
 
+         //Sign up
+         document.getElementById("SignUp").addEventListener("click", function(){
+                document.querySelector(".popupSignUp").style.display = "flex";
+                document.querySelector(".popup").style.display = "none";
+            })
 
         //Close button
 
@@ -103,6 +120,12 @@
 
 
         })
+
+        document.getElementById("close").addEventListener("click", function(){
+                console.log("I am in") //TESTING
+                document.querySelector(".popupSignUp").style.display = "none";
+                
+            })
 
         
     </script>

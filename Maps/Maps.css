@@ -9,11 +9,9 @@ body{
 iframe{
   z-index: -1000;
   position:absolute;
- 
   scrollbar-color: #000000;
   scroll-behavior:smooth;
   background:linear-gradient(#13293e,#13293ee5, #13293ed0);
-
 
   /*overflow: auto;
  -webkit-overflow-scrolling:touch;*/
@@ -61,7 +59,6 @@ html {
 
 
 
-
 /*Login popup*/
 
 .popup{
@@ -78,7 +75,7 @@ html {
 
 
 .popup-content{
-  height:250px;
+  height:300px;
   width:500px;
   background: #fff;
   padding: 20px;
@@ -90,9 +87,29 @@ html {
 
 }
 
+.popupSignUp{
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.Sign-Up-content{
+  height:250px;
+  width:500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
 
 input{ 
-  
+
   background-color: #f6f6f6;
   text-align: center;
   margin: 20px auto;
@@ -100,7 +117,7 @@ input{
   width: 50%;
   padding: 8px;
   border: none;
-  
+
 
 
 }
@@ -113,14 +130,14 @@ input{
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  
+
 
 }
 
 .signBtnStyle{
   color: white;
   position:absolute;
-  top:180px;
+  top:150px;
   right: 25%;
   width: 50%;
   padding: 8px;
@@ -130,12 +147,36 @@ input{
   font-size: medium;
   cursor: pointer;
 
-  
-  
- 
 
 
 
+
+
+
+}
+
+.registerBtn{
+  color: #03a9f4;
+  position:absolute;
+  top:240px;
+  right: 25%;
+  width: 50%;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #03a9f4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: medium;
+  cursor: pointer;
+}
+
+input[type=email]:focus {
+  background-color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 2px solid #5fbae9;
+}
+
+input[type=text]:placeholder {
+  color: #cccccc;
 }
 
 
@@ -144,7 +185,7 @@ input[type=text]:focus {
   background-color: #fff;
   border-top: 1px solid #fff;
   border-bottom: 2px solid #5fbae9;
-  
+
 }
 
 input[type=text]:placeholder {
@@ -240,6 +281,11 @@ a {
   overflow: hidden;
 }
 
+.map{
+
+  position: absolute; top:80px; bottom: 0%; left: 50%; right: 20%;
+
+}
 
 .margin{
     margin-top: -20px;
@@ -268,13 +314,6 @@ a {
     margin-right: 140px;
 }
 
-
-
-
-
-
-
-
 }
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
@@ -282,12 +321,7 @@ a {
     width: 100%;
     
   }
-
-  .map{
-
-    position: absolute; top:80px; bottom: 0%; left: 50%; right: 20%;
-    
-  }
+  
 
   .margin{
     margin-top: -20px;
