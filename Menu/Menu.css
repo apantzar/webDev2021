@@ -7,7 +7,7 @@
 
 .nav-container {
     width: 100%;
-    background-color: #0b4467;
+    background-color: #c0bea8;
 }
 
 
@@ -90,7 +90,7 @@
     
         display: grid;
         grid-template-columns: auto;
-        background: rgb(155, 223, 255);
+        background:#c0bea8;
         margin: 0;
         width: 100%;/*lalala*/
         position: absolute;
@@ -103,7 +103,7 @@
         margin-left: 20px;
     }
     .nav-menu.active{
-        background: rgb(155, 223, 255);
+        background:#c0bea8;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -121,14 +121,14 @@
         border: none;
         padding: 0;
         border-radius: 0;
-        background: rgb(81, 179, 224);
+        background: #a09d8a;
         color: white;
     }
     .nav-links-Button:hover{
         border: none;
         padding: 0;
         border-radius: 0;
-        background-color:  rgb(155, 223, 255);
+        background-color:  #c0bea8;
         transition: all 0.4s ease-out;
     }
 
