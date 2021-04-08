@@ -28,7 +28,7 @@ p {
     margin-right: 100px;
     margin-left: 80px;
     word-spacing: 7px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:  'Comfortaa',sans-serif;
     font-size: 16px;
     
     
@@ -99,7 +99,7 @@ html {
 }
 
 .Sign-Up-content{
-  height:250px;
+  height:330px;
   width:500px;
   background: #fff;
   padding: 20px;

@@ -82,7 +82,7 @@
             <button class="signBtnStyle" id="Sign-In">Sign-In</button>
             <button id="closeBtn" class="close" >x</button>
             <button class="registerBtn" id="SignUp" style="display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ">Sign-Up</button>
-            <p style="font-size: 10px; margin-top: 100px; text-align: center; color: black;">You don't have an account? </p>
+            <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 100px; text-align: center; color: black;">You don't have an account? </p>
         </div>
     </div>
 
@@ -93,6 +93,8 @@
             <input type="text" placeholder="Username">
             <input type="password" placeholder="Password">
             <button id="close" class="close" >x</button>
+            <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;">You already have an account?</p>
+            <button class="signBtnStyle" id="signBtn2" style="display: table-cell; vertical-align: middle; height: 10%; top: 270px; line-height: 2.5%; ">Sign-In</button>
             <button class="registerBtn" id="SignUp" style="top: 190px; color: #fff; background: #c0bea8; border: 1px solid #fff;;">Sign-Up</button>
         </div>
     </div>
@@ -101,6 +103,17 @@
         //Sign in
         document.getElementById("signBtn").addEventListener("click", function(){
             document.querySelector(".popup").style.display = "flex";
+            document.querySelector(".popupSignUp").style.display = "none";
+            console.log("I am in") //TESTING
+
+
+        })
+
+
+        //sign-In inside 
+        document.getElementById("signBtn2").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "flex";
+            document.querySelector(".popupSignUp").style.display = "none";
             console.log("I am in") //TESTING
 
 
