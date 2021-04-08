@@ -7,7 +7,7 @@
 
 .nav-container {
     width: 100%;
-    background-color: #c0bea8;
+    background-color: #0074a9;
 }
 
 
@@ -86,11 +86,12 @@
 
     }
     .nav-menu{
+        z-index: 10;
        
     
         display: grid;
         grid-template-columns: auto;
-        background:#c0bea8;
+        background:#0074a9;
         margin: 0;
         width: 100%;/*lalala*/
         position: absolute;
@@ -103,7 +104,7 @@
         margin-left: 20px;
     }
     .nav-menu.active{
-        background:#c0bea8;
+        background:#0074a9;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -121,14 +122,14 @@
         border: none;
         padding: 0;
         border-radius: 0;
-        background: #a09d8a;
+        background: #02618d;
         color: white;
     }
     .nav-links-Button:hover{
         border: none;
         padding: 0;
         border-radius: 0;
-        background-color:  #c0bea8;
+        background-color:  #0074a9;
         transition: all 0.4s ease-out;
     }
 
