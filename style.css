@@ -28,7 +28,7 @@
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, #05413d,transparent);
+    background: linear-gradient(to top, #001c29,transparent);
     z-index: 10;
     
 }
@@ -87,7 +87,7 @@ section img
     width: 100%;
     height: 100%;
     padding-top: 50px;
-    background:linear-gradient(-45deg,#04978c,#011f1d,#013330, #04978c);
+    background:linear-gradient(-45deg,#0074a9,#02161f,#001c29, #0074a9);
     background-size: 400% 400%;
     color: rgb(245, 245, 245);
     line-height: 1.45;
@@ -166,8 +166,8 @@ section img
     height: 100%;
     background: radial-gradient(
         ellipse at center,
-        #04978c 0%,
-        #04978c 70%,
+        #0074a9 0%,
+        #0074a9 70%,
         rgba(0, 128, 172, 0) 70.3%
     );
     position: relative;
