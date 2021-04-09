@@ -48,7 +48,7 @@ part2 = `</text>
 
 
 
- let atlantic = part1 + `Atlantic Empress`+ part2 + `Atlantic Empress was a Greek oil tanker that in 1979 collided with the oil tanker Aegean Captain in the Caribbean, and eventually 
+ let atlantic = part1 + `Atlantic Empress`+ part2 + `<p>Atlantic Empress was a Greek oil tanker that in 1979 collided with the oil tanker Aegean Captain in the Caribbean, and eventually 
  sank, having created the fifth largest oil spill on record and the largest ship-based spill having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea. It was built 
  at the Odense Staalskibsværft shipyard in Odense, Denmark, and launched on 16 February 1974. On 19 July 1979 Atlantic Empress collided with the Aegean Captain, another fully laden 
  Greek supertanker, 18 nautical miles (33 km) east of the island of Tobago. At the time of the collision Atlantic Empress was sailing from Saudi Arabia to Beaumont, Texas, with a 
@@ -62,7 +62,7 @@ part2 = `</text>
  oil slick. Two tugs (one of them being the Smit Zwarte Zee) towed the burning ship further out to sea. On 24 July, a week after the collision, the Empress was still burning, and also 
  listing, when an explosion occurred that increased the rate of flow. The next day another larger explosion increased the rate to 26 to 57 cubic metres per hour (7,000 to 15,000 gal/h),
  twice the previous rate. Finally, on 3 August, the Empress sank, having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea. By comparison, in the Exxon Valdez spill
- ten years later 37,000 metric tonnes of oil was released.`;
+ ten years later 37,000 metric tonnes of oil was released.</p>`;
 
 
 
