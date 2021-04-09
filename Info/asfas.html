@@ -1,134 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information</title>
-    <link rel="stylesheet" type="text/css" href="../Menu/Menu.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" type="text/css" href="Information.css">
-    <link rel="stylesheet" href="../Footer/Footer.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0; padding: 0;}
-        .banner{position: relative; height: 50%; margin: 0 auto;}
-    </style>
-</head>
-<body>
-    <header>
-        <div class="nav-container">
-            <nav class="navbar">
-                <h1 id="navbar-logo">SeaThePollution</h1>
-                <div class="menu-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="/" class="nav-links">Home</a></li>
-                    <li><a href="./Maps" class="nav-links">Map</a></li>
-                    <li><a href="./Information" class="nav-links">Information</a></li>
-                    <li><a href="#" class="nav-links nav-links-Button">Sign-In</a></li>
-                </ul>
-            </nav>
-        </div>
-    <script src="../Menu/Menu.js"></script>
-    </header>
-    <section>
-        <h1>Reveal Elements On Scroll</h1>
-      </section>
-      <section>
-        <div class="container reveal">
-          <h2>Your Title</h2>
-          <div class="cards">
-            <div class="qt-box qt-background">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 ml-auto mr-auto text-left col-sm-12">
-                            <p class="lead ">
-                                " The Greatest Threat To Our Planet Is The Belief That Someone Else Will Save It "
-                            </p>
-                            <span class="lead">Michael Strahan</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container reveal">
-          <h2>Your Title</h2>
-          <div class="cards">
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container reveal">
-          <h2>Your Title</h2>
-          <div class="cards">
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="text-card">
-              <h3>Title</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <script type="text/javascript">
-      window.addEventListener('scroll', reveal);
-  
-      function reveal(){
-        var reveals = document.querySelectorAll('.reveal');
-  
-        for(var i = 0; i < reveals.length; i++){
-  
-          var windowheight = window.innerHeight;
-          var revealtop = reveals[i].getBoundingClientRect().top;
-          var revealpoint = 150;
-  
-          if(revealtop < windowheight - revealpoint){
-            reveals[i].classList.add('active');
-          }
-          else{
-            reveals[i].classList.remove('active');
-          }
-        }
-      }
-      </script>
-  
-</body>
-</html>
+<section>
+  <div class="container reveal">
+    <h2>Industrial Pollution</h2>
+    <div class="cards">
+      <div class="text-card">
+        <p>Industry is a huge source of water pollution, it produces pollutants that are extremely harmful to people and the environment.<br>
+
+          Many industrial facilities use freshwater to carry away waste from the plant and into rivers, lakes and oceans.<br>
+          
+          Pollutants from industrial sources include:<br><br>
+          
+           
+          
+          <b>Asbestos</b> – This pollutant is a serious health hazard and carcinogenic. Asbestos fibres can be inhaled and cause illnesses such as asbestosis, mesothelioma, lung cancer, intestinal cancer and liver cancer.<br>
+          <b>Lead</b> – This is a metallic element and can cause health and environmental problems. It is a non-biodegradable substance so is hard to clean up once the environment is contaminated. Lead is harmful to the health of many animals, including humans, as it can inhibit the action of bodily enzymes.<br>
+          <b>Mercury</b> – This is a metallic element and can cause health and environmental problems. It is a non-biodegradable substance so is hard to clean up once the environment is contaminated. Mercury is also harmful to animal health as it can cause illness through mercury poisoning.<br>
+          <b>Nitrates</b> – The increased use of fertilisers means that nitrates are more often being washed from the soil and into rivers and lakes. This can cause eutrophication, which can be very problematic to marine environments.<br>
+          <b>Phosphates</b> – The increased use of fertilisers means that phosphates are more often being washed from the soil and into rivers and lakes. This can cause eutrophication, which can be very problematic to marine environments.<br>
+          <b>Sulphur</b> – This is a non-metallic substance that is harmful for marine life.
+          Oilsy – Oil does not dissolve in water, instead it forms a thick layer on the water surface. This can stop marine plants receiving enough light for photosynthesis. It is also harmful for fish and marine birds.<br>
+          <b>Petrochemicals</b> – This is formed from gas or petrol and can be toxic to marine life.</p>
+      </div>
+      <div class="photo-card">
+        <img src="../Images/32.jpg">
+      </div>
+    </div>
+  </div>
+</section>

@@ -9,6 +9,7 @@
 p{
   font-size: 2.4vh;
   letter-spacing: 0.5px;
+  line-height: 25px;
 }
 
 body{
@@ -21,18 +22,22 @@ section{
   align-items: center;
 }
 
-section:nth-child(2){
-  color: #1D212B;
-  background:#0b4467;
-}
 
-section:nth-child(3){
-  color: #0b4467;
-}
 
 section:nth-child(4){
-  color: #1D212B;
+  color: white;
   background: #0b4467;
+}
+section:nth-child(5)
+{
+  background:white;
+}
+section:nth-child(6)
+{
+  background: #0b4467;
+}
+section:nth-child(6) p{
+  color: white;
 }
 
 section .container{
@@ -70,9 +75,9 @@ section .cards .text-card:nth-child(1)
 section .cards .photo-card img{
   margin: 20px;
   padding: 20px;
-  max-width: 100%;
-  width: 1300px;
-  height: 600px;
+  max-width: 900px;
+  width: 800px;
+  height: 650px;
 
 }
 
@@ -80,16 +85,29 @@ section .cards .photo1-card img{
   margin: 20px;
   padding: 20px;
   max-width: 900px;
-  width: 1300px;
+  width: 800px;
   height: 650px;
 
 }
+
+section .cards .photo2-card img
+{
+  margin: 20px;
+  padding: 20px;
+  max-width: 900px;
+  width: 800px;
+  height: 560px;
+}
+
 .txt{
   margin-left: 3%;
 }
 
 .textc{
   color: black;
+}
+.txt2 p {
+  margin-left: 3%;
 }
 
 
@@ -137,6 +155,17 @@ section .cards .photo1-card img{
     text-align: center;
     
 }
+section .cards .photo3-card img
+{
+  margin: 20px;
+  padding: 20px;
+  max-width: 900px;
+  width: 800px;
+  height: 560px;
+}
+
+
+
 /*Login popup*/
 
 .popup{
@@ -268,12 +297,5 @@ input[type=password]:placeholder {
 }
 
 
-#formFooter {
-  background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
-}
+
 /*afto*/
