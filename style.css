@@ -273,6 +273,22 @@ section img
     transform: translate(-50%, -50%);
 }
 
+.container-image-ocean{
+    margin: 50px auto;
+    width: 100%;
+    padding: 8px;
+}
+.container-image-ocean img{
+    float: left;
+    width: 300px;
+    height: 260px;
+    position: relative;
+    padding: 0 10px 0 0;
+}
+.textocean
+{
+    text-align: justify;
+}
 
 
 /*Login popup*/

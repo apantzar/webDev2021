@@ -131,10 +131,11 @@ section .cards .photo1-card img{
 {
     font-size: 1.7rem;
     color: rgb(245, 230, 202);
-    position: absolute;
+    position: relative;
     top: 45%;
     width: 100%;
     text-align: center;
+    
 }
 /*Login popup*/
 
