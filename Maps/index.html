@@ -9,6 +9,8 @@
         <meta http-equiv="Content-Security-Policy" 
      content="frame-src https://docs.google.com;">
         <link rel="stylesheet" type="text/css" href="../Menu/Menu.css">
+        <link rel="stylesheet" type="text/css" href="../Footer/Footer.css">
+
         
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
@@ -19,7 +21,7 @@
     </header>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!--- <div> <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script></div> -->
 
 
     <style>
@@ -40,6 +42,9 @@
                 
             }
             }
+
+
+
 
     </style>
 
@@ -70,6 +75,9 @@
                     </ul>
                 </nav>
             </div>
+
+
+           
 
                  
        <!--This is for popup (Sign-In)-->
@@ -153,6 +161,7 @@
 
         <main>
 
+            <div> <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script></div> 
 
 
             <!--Testing -->
@@ -166,18 +175,49 @@
 
             
             <!--Frame with text for each element-->
-            <form action="text.html">
-              <iframe name = "theFrame" id="htmlPath"  width="100%" height="50%" src="" id = "test"></iframe>
+            <form action="text.html" >
+            
+            <div>  <iframe name = "theFrame" id="htmlPath"  width="100%" height="50%" src="" id = "test"></iframe> </div>
+
+            
+
+        
+                 <footer  class="footer2" id="footer" style="position:absolute; top:100%;">
+                <div class="footer-content">
+                    <h3>SeaThePollution</h3>
+                    <p>A Site About Pollution In Oceans.</p>
+                    <div class="images-href">
+                        <a href="../" class="home-foot"> <img src="../Images/ho.png" > </a>
+                        <a href="../Maps/" class="map-foot"> <img src="../Images/ma.png" > </a>
+                        <a href="../" class="info-foot"> <img src="../Images/if.png" > </a>
+                    </div>
+                </div>
+                <div class="footer-bottom"style="height: 5pc; background: #000; width: 100wv;padding: 20px 0;">
+                    <p style="text-align: center;">Copyright &copy;2021 SeaThePollution. Designed By <span> We-Love-Writing-Linux-Drivers-All-The-Time </p>
+                </div>
+        
+            </footer>
+            
+
+             
              
             </form>
 
-
-
-
+            
+         
             
             
 
         </main>
+
+
+       
+
+
+
+
+        
+       
 
 
 
