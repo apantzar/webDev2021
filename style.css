@@ -158,10 +158,6 @@ section img
     position: relative;
 
 }
-.sylvia
-{
-    background: url(Images/1stpic.jpg);
-}
 .quote
 {
     width: 100%;
@@ -360,6 +356,117 @@ section img
     transition: transform 0.5s;
     transform-origin: bottom right;
     transform: scale(0);
+}
+@media screen and (max-width: 1600px) {
+    #text1
+    {
+        margin-top: -27%;
+    }
+    #text2
+    {
+        margin-top: -23.5%;
+    }
+
+    #text3
+    {
+        margin-top: -27%;
+    }
+
+}
+
+@media screen and (max-width: 1350px) {
+    #text1
+    {
+        margin-top: -37%;
+        font-size: 8em;
+    }
+    #text2
+    {
+        margin-top: -32.5%;
+        font-size: 2em;
+    }
+
+    #text3
+    {
+        margin-top: -37%;
+        font-size: 8em;
+    }
+
+}
+
+
+@media screen and (max-width: 950px) {
+    #text1
+    {
+        margin-top: -42%;
+        font-size: 6em;
+    }
+    #text2
+    {
+        margin-top: -37.5%;
+        font-size: 2em;
+    }
+
+    #text3
+    {
+        margin-top: -42%;
+        font-size: 6em;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #text1
+    {
+        margin-top: -60%;
+        font-size: 4em;
+    }
+    #text2
+    {
+        margin-top: -57.5%;
+        font-size: 2em;
+    }
+
+    #text3
+    {
+        margin-top: -60%;
+        font-size: 4em;
+    }
+}
+@media screen and (max-width: 530px) {
+    #text1
+    {
+        margin-top: -65%;
+        font-size: 4em;
+    }
+    #text2
+    {
+        margin-top: -61.5%;
+        font-size: 2em;
+    }
+
+    #text3
+    {
+        margin-top: -65%;
+        font-size: 4em;
+    }
+}
+@media screen and (max-width: 1020px) {
+    .right{
+        margin-top: 2.5%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        width: 500px;
+    }
+    .left{
+        margin-left: auto;
+        margin-right: auto;
+        left: 30px;
+        height: 350px;
+        width: 350px;
+        z-index: 133123;
+    }
 }
 
 
