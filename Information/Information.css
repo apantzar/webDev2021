@@ -7,7 +7,7 @@
     font-family: 'Comfortaa',sans-serif;
 }
 p{
-  font-size: 2.4vh;
+  font-size: 1.5vh;
   letter-spacing: 0.5px;
   line-height: 25px;
 }
@@ -17,7 +17,7 @@ body{
 }
 
 section{
-  min-height: 100vh;
+  min-height: 50%;
   display: flex;
   align-items: center;
 }
@@ -60,7 +60,7 @@ section .cards{
 }
 
 section .cards .text-card{
-  width: 100;
+  width: 50%;
   margin: 20px;
   padding: 20px;
 }
@@ -73,20 +73,20 @@ section .cards .text-card:nth-child(1)
 
 
 section .cards .photo-card img{
-  margin: 20px;
-  padding: 20px;
-  max-width: 900px;
-  width: 800px;
-  height: 650px;
+  margin: 0;
+  padding: 0px;
+  max-width: 500px;
+  width: 320px;
+  height: 480px;
   z-index: -100000;
 }
 
 section .cards .photo1-card img{
   margin: 20px;
   padding: 20px;
-  max-width: 900px;
-  width: 800px;
-  height: 650px;
+  max-width: 500px;
+  width: 480px;
+  height: 320px;
   z-index: -100000;
 
 }
@@ -110,7 +110,20 @@ section .cards .photo2-card img
 .txt2 p {
   margin-left: 3%;
 }
-
+.container1 img{
+  float: left;
+  width: 320px;
+  height: 480px;
+  position: relative;
+  padding: 0 10px 0 0;
+}
+.text-card p{
+  line-height: 37px;
+}
+.text-to-center{
+  text-align: center;
+  padding: 40px;
+}
 
 
 @media (max-width: 900px){
@@ -164,6 +177,7 @@ section .cards .photo3-card img
   width: 800px;
   height: 560px;
 }
+
 
 
 
