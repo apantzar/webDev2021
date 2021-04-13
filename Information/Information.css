@@ -55,60 +55,16 @@ section h2{
   text-transform: uppercase;
 }
 
-section .cards{
-  display: flex;
+.ocean-pol{
+  margin: 100px;
 }
 
-section .cards .text-card{
-  width: 50%;
-  margin: 20px;
-  padding: 20px;
-}
-
-section .cards .text-card:nth-child(1)
-{
-  color: white;
-}
-
-
-
-section .cards .photo-card img{
-  margin: 0;
-  padding: 0px;
-  max-width: 500px;
-  width: 320px;
-  height: 480px;
-  z-index: -100000;
-}
-
-section .cards .photo1-card img{
-  margin: 20px;
-  padding: 20px;
-  max-width: 500px;
+.container0 img{
+  float: right;
   width: 480px;
-  height: 320px;
-  z-index: -100000;
-
-}
-
-section .cards .photo2-card img
-{
-  margin: 20px;
-  padding: 20px;
-  max-width: 900px;
-  width: 800px;
-  height: 560px;
-}
-
-.txt{
-  margin-left: 3%;
-}
-
-.textc{
-  color: black;
-}
-.txt2 p {
-  margin-left: 3%;
+  height: 390px;
+  position: relative;
+  padding: 0 10px 0 0;
 }
 .container1 img{
   float: left;
@@ -139,7 +95,7 @@ section .cards .photo2-card img
   padding: 0 10px 0 0;
 }
 .container4 img{
-  float: left;
+  float: right;
   width: 480px;
   height: 320px;
   position: relative;
