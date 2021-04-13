@@ -5,9 +5,12 @@
 
            
          
+             var southWest = L.latLng(40.712, 0),
+              northEast = L.latLng(40.774, 0),
+              bounds = L.latLngBounds(southWest, northEast);
             
 
-              var map = L.map('map',{'worldCopyJump': true}).setView([0,0],2.7); //z=2.7 (zoom)
+              var map = L.map('map',{'worldCopyJump': true,  maxBounds: bounds,}).setView([0,0],2.7); //z=2.7 (zoom)
     
                 const arrow = L.icon({
     
