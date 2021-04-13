@@ -124,6 +124,27 @@ section .cards .photo2-card img
   text-align: center;
   padding: 40px;
 }
+.container2 img{
+  float: right;
+  width: 480px;
+  height: 320px;
+  position: relative;
+  padding: 0 10px 0 0;
+}
+.container3 img{
+  float: left;
+  width: 480px;
+  height: 320px;
+  position: relative;
+  padding: 0 10px 0 0;
+}
+.container4 img{
+  float: left;
+  width: 480px;
+  height: 320px;
+  position: relative;
+  padding: 0 10px 0 0;
+}
 
 
 @media (max-width: 900px){
