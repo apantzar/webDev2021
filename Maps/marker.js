@@ -4,19 +4,10 @@
              let isOpen = false;
 
            
-             
-             window.addEventListener('scroll',function(){
-                var value = window.scrollY;
-    
-                drysand.style.top = value * 0.3  + 'px';
-                sand.style.top = value * 0.10 +'px'
-                sea.style.top = -value * 0.4 + 'px'
-                Text1.style.right = value * 0.5 +'px'
-                Text3.style.left = value * 0.5 +'px'
-                });
+         
             
 
-                var map = L.map('map').setView([0,0],2.7); //z=2.7 (zoom)
+              var map = L.map('map',{'worldCopyJump': true}).setView([0,0],2.7); //z=2.7 (zoom)
     
                 const arrow = L.icon({
     
@@ -37,6 +28,8 @@
                   iconSize:     [40, 40], // size of the icon
                  
               })
+
+
     
                 L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=2spIdQjJtUxW69tie1Xh',{
                     minZoom: 2, //fixed zoom (min zoom)
