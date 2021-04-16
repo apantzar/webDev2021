@@ -24,19 +24,7 @@ body{
   background-color: white;
 }
 
-.overlay {
-  padding: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 100%;
-  left: -40px;
-  right: 0;
-  height: 2rem;
-  width: 15vh;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: white;
-}
+
 
 .overlay2 {
   padding: 20px;
@@ -91,24 +79,33 @@ body{
   background-color: white;
 }
 
-.container21:hover .overlay {
-  opacity: 1;
+.nav-item2{
+  position: absolute;
+  top:10%;
+  left:20px;
 }
 
+.nav-item3{
+  position: absolute;
+  top:35%;
+  left:22px;
+}
+
+.nav-item4{
+  position: absolute;
+  top:57%;
+  left:18px;
+}
+
+.nav-item5{
+  position: absolute;
+  top: 79%;
+  left:18px;
+}
 .container22:hover .overlay2{
   opacity: 1;
 }
 
-.nav-item2{
-  position: absolute;
-  top:20%;
-  left:20px;
-}
-.nav-item{
-  position: absolute;
-  top:0%;
-  left:25px;
-}
 .container23:hover .overlay3{
   opacity: 1;
 }
@@ -121,22 +118,6 @@ body{
 .image3{
   width: 25px;
   height: 25px;
-}
-.nav-item3{
-  position: absolute;
-  top:45%;
-  left:22px;
-}
-
-.nav-item4{
-  position: absolute;
-  top:67%;
-  left:18px;
-}
-.nav-item5{
-  position: absolute;
-  top: 89%;
-  left:18px;
 }
 ul
 {
