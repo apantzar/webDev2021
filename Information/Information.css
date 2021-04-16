@@ -7,7 +7,7 @@
     font-family: 'Comfortaa',sans-serif;
 }
 p{
-  font-size: 1.5vh;
+  font-size: 1.7vh;
   letter-spacing: 0.5px;
   line-height: 25px;
 }
@@ -15,6 +15,153 @@ p{
 body{
   background:white;
 }
+.smallnavbar
+{
+  width: 10rem;
+  height: 45vh;
+  position: absolute;
+  left: 100px;
+  background-color: white;
+}
+
+.overlay {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 100%;
+  left: -40px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.overlay2 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.overlay3 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.overlay4 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.overlay5 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.container21:hover .overlay {
+  opacity: 1;
+}
+
+.container22:hover .overlay2{
+  opacity: 1;
+}
+
+.nav-item2{
+  position: absolute;
+  top:20%;
+  left:20px;
+}
+.nav-item{
+  position: absolute;
+  top:0%;
+  left:25px;
+}
+.container23:hover .overlay3{
+  opacity: 1;
+}
+.container24:hover .overlay4{
+  opacity: 1;
+}
+.container25:hover .overlay5{
+  opacity: 1;
+}
+.image3{
+  width: 25px;
+  height: 25px;
+}
+.nav-item3{
+  position: absolute;
+  top:45%;
+  left:22px;
+}
+
+.nav-item4{
+  position: absolute;
+  top:67%;
+  left:18px;
+}
+.nav-item5{
+  position: absolute;
+  top: 89%;
+  left:18px;
+}
+ul
+{
+  list-style-type: none;
+}
+
+
+
+
+
+
+.textt {
+  font-family: 'Lobster', cursive;
+  color: rgb(95, 80, 51);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3vh;
+}
+
+
 
 section{
   min-height: 50%;
@@ -69,7 +216,7 @@ section h2{
 .container1 img{
   float: left;
   width: 320px;
-  height: 480px;
+  height: 500px;
   position: relative;
   padding: 0 10px 0 0;
 }
@@ -85,14 +232,14 @@ section h2{
   width: 480px;
   height: 320px;
   position: relative;
-  padding: 0 10px 0 0;
+  padding:10px;
 }
 .container3 img{
   float: left;
   width: 480px;
   height: 320px;
   position: relative;
-  padding: 0 10px 0 0;
+  padding: 10px 10px 0 0;
 }
 .container4 img{
   float: right;
