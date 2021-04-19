@@ -16,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
     <style>
         article{
             display: grid;
@@ -143,7 +146,7 @@
                             <div clas="navtitle">
                                 <h2 class="navigatortitle">Page<br>Navigator</h2>
                             </div>
-                            <a href="#" class="navlink2">
+                            <a href="#Industrial" class="navlink2">
                                 <div class="container22">
                                     <img src="../Images/icons8-factory-30.png" class="image2">
                                     <div class="overlay2">
@@ -153,7 +156,7 @@
                             </a>
                         </li>
                         <li class="nav-item3">
-                            <a href="#" class="navlink3">
+                            <a href="#Oil" class="navlink3">
                                 <div class="container23">
                                     <img src="../Images/icons8-oil-industry-50.png" class="image3">
                                     <div class="overlay3">
@@ -163,7 +166,7 @@
                             </a>
                         </li>
                         <li class="nav-item4">
-                            <a href="#" class="navlink4">
+                            <a href="#Plastic" class="navlink4">
                                 <div class="container24">
                                     <img src="../Images/icons8-bottle-of-water-30.png" class="image4">
                                     <div class="overlay4">
@@ -173,7 +176,7 @@
                             </a>
                         </li>
                         <li class="nav-item5">
-                            <a href="#" class="navlink5">
+                            <a href="#Noise" class="navlink5">
                                 <div class="container25">
                                     <img src="../Images/icons8-radio-waves-30.png" class="image5">
                                     <div class="overlay5">
@@ -190,9 +193,9 @@
                 <p > The majority of pollutants that make their way into the ocean come from human activities along the coastlines and far inland. One of the biggest sources of pollution is nonpoint source pollution, which occurs as a result of runoff. Nonpoint source pollution can come from many sources, like septic tanks, vehicles, farms, livestock ranches, and timber harvest areas. In conclusion, marine pollution encompasses many types of pollution that disrupt the marine ecosystem, including industrial, oil, noise, and plastic pollution.<br><br> </p>
             </div>
     </article>
-    <section>
+    <section id="Industrial">
         <div class="container reveal">
-          <h2>Industrial Pollution</h2>
+          <h2 >Industrial Pollution</h2>
             <p class="text-to-center">
                 Industry is a huge source of water pollution, it produces pollutants that are extremely harmful to people and the environment.<br>
 
@@ -219,9 +222,9 @@
         </div>
       </section>
     
-      <section>
+      <section id="Oil">
         <div class="container reveal">
-          <h2>Oil Pollution</h2>
+          <h2 >Oil Pollution</h2>
           <p class="text-to-center">Oil pollution can be caused by any spillage of crude oil or its refined products.<br> However, the largest and most damaging pollution events usually involve spills of petroleum or heavy bunker fuel from disabled tankers or drill platforms at sea,<br> from barges or ships on major inland waterways, or from blowouts of wells or broken pipelines on land.<br>
             <div class="container2">
               <img src="../Images/riley-uVLBeE7QuN8-unsplash.jpg">
@@ -235,9 +238,9 @@
         </div>
       </section>
 
-      <section>
+      <section id="Plastic">
         <div class="container reveal">
-            <h2>Plastic Pollution</h2>
+            <h2 >Plastic Pollution</h2>
             <p class="text-to-center"> 
                 Plastic is a synthetic organic polymer made from petroleum with properties ideally suited for a wide variety of applications, including packaging, building and construction, household and sports equipment, vehicles, electronics and agriculture. Ocean-based plastic originates mainly from the fishing industry, nautical activities and aquaculture.<br> Plastic is cheap, lightweight, strong and malleable. Over 300 million tons of plastic are produced every year, half of which is used to design single-use items such as shopping bags, cups and straws.<br> Plastic pollution is the most widespread problem affecting the marine environment. It also threatens ocean health, food safety and quality, human health, coastal tourism, and contributes to climate change. 
             </p>
@@ -267,9 +270,9 @@
         </div>
       </section>
 
-      <section>
+      <section id="Noise">
         <div class="container reveal">
-            <h2>Noise Pollution</h2>
+            <h2 >Noise Pollution</h2>
             <p class="text-to-center">More often than not, noise is a forgotten or unmentioned source of pollution. We can’t see it, we can’t smell it, and unfortunately, we have grown accustom to the noise emissions of our life style. 
                 The oceans, on the other hand, have not. Ocean noise pollution is a growing issue for our planet. Prior to the mechanization of oceanographic travel, all noises in the ocean were generated by nature. Noises include wind and waves, lightening, breaking ice, sea vents, earthquakes, and the vast array of biological sounds. These sounds and noises were perceived by animals, sensed within biological constraints of tissues, muscles, and bones, and adapted to various and particular acoustical niches. Noises that humans are generating in the ocean are not so constrained. Some anthropogenic noises may not be problematic. 
                 The ocean can naturally be very noisy in places, and it is likely that many animals living in noisy environments have adapted ways to filter or contend with noise. 
@@ -311,6 +314,11 @@
         </div>
 
     </footer>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
 
       
   
@@ -335,6 +343,46 @@
         }
       }
       </script>
+      		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+              <script>
+                  $(document).ready(function() {
+                      var progressPath = document.querySelector('.progress-wrap path');
+                      var pathLength = progressPath.getTotalLength();
+      
+                      progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+                      progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+                      progressPath.style.strokeDashoffset = pathLength;
+                      progressPath.getBoundingClientRect();
+                      progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+      
+                      var updateProgress = function() {
+                          var scroll = $(window).scrollTop();
+                          var height = $(document).height() - $(window).height();
+                          var progress = pathLength - (scroll * pathLength / height);
+                          progressPath.style.strokeDashoffset = progress;
+                      }
+      
+                      updateProgress();
+                      $(window).scroll(updateProgress);
+      
+                      var offset = 50;
+                      var duration = 550;
+      
+                      jQuery(window).on('scroll', function() {
+                          if(jQuery(this).scrollTop() > offset) {
+                              jQuery('.progress-wrap').addClass('active-progress');
+                          } else {
+                              jQuery('.progress-wrap').removeClass('active-progress');
+                          }
+                      });
+      
+                      jQuery('.progress-wrap').on('click', function(event) {
+                          event.preventDefault();
+                          jQuery('html, body').animate({scrollTop: 0}, duration);
+                          return false;
+                      })
+                  });
+              </script>
   
 </body>
 </html>
