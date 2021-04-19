@@ -11,8 +11,14 @@
               bounds = L.latLngBounds(southWest, northEast);*/
             
 
-              var map = L.map('map',{'worldCopyJump': true}).setView([0,0],2.7); //z=2.7 (zoom)
+              var map = L.map('map',{'worldCopyJump': true /*For markers to 'jump' */}).setView([0,0],2.7); //z=2.7 (zoom)
     
+
+
+
+              /////////////ICONS-FOR-MARKERS////////////////
+
+              //=====Arrow=====
                 const arrow = L.icon({
     
                     iconUrl: '../Maps/icons/arrow.png',
@@ -24,7 +30,7 @@
 
 
 
-                //=====SHIP======
+              //=====SHIP======
                 
                 const ship = L.icon({
     
@@ -34,6 +40,7 @@
               })
 
 
+              ////////////API//////////////
     
                 L.tileLayer('https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=2spIdQjJtUxW69tie1Xh',{
                     minZoom: 2, //fixed zoom (min zoom)
@@ -43,10 +50,9 @@
     
     
     
-                let popText = "";
              
     
-                //======================================================================multiple-marks (blue)=================================================================================== 
+                //======================================================================multiple-marks=================================================================================== 
                 const packetMarks = L.layerGroup([
                     
                     new L.marker([13.083333, -55.466667],{icon: ship}).bindPopup(`<h2>Atlantic Empress</h2>`).on('click', function(ev) {// ev is an event object (MouseEvent in this case)
@@ -202,21 +208,4 @@
               map.setView([0,0],2.7);
 
             }
-
-
-
-
-            //==================================================Testing========================================================================
-            //For close (x) button
-                function closeMe(){
-
-                    //document.getElementsByName("theFrame").src = "../Maps/index.html";
-                    console.log("x is here");
-                    document.getElementById("htmlPath").style= "position:100%; top: 20%; bottom: 0%; left: 0%; right: 50%; border:none; ";
-                   // document.getElementsByName("theFrame").
-
-                   isOpen = false;
-                   
-                }
-    
            

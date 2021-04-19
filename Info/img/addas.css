@@ -1,39 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa',sans-serif;
+}
+p{
+  font-size: 2.4vh;
+  letter-spacing: 0.5px;
+  line-height: 25px;
 }
 
 body{
-  background: #1D212B;
+  background:white;
 }
 
 section{
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-section:nth-child(1){
-    background: url(../Images/1stpic.jpg) no-repeat;
-}
 
-section:nth-child(2){
-  color: #1D212B;
-  background: #fff;
-}
-
-section:nth-child(3){
-  color: #fff;
-}
 
 section:nth-child(4){
-  color: #1D212B;
-  background: #fff;
+  color: white;
+  background: #0b4467;
+}
+section:nth-child(5)
+{
+  background:white;
+}
+section:nth-child(6)
+{
+  background: #0b4467;
+}
+section:nth-child(6) p{
+  color: white;
 }
 
 section .container{
@@ -45,6 +49,7 @@ section h1{
 }
 
 section h2{
+  color:black;
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
@@ -55,17 +60,58 @@ section .cards{
 }
 
 section .cards .text-card{
-  background: #2696E9;
+  width: 100;
   margin: 20px;
   padding: 20px;
 }
 
-section .cards .text-card h3{
-  font-size: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 10px;
+section .cards .text-card:nth-child(1)
+{
+  color: white;
 }
+
+
+
+section .cards .photo-card img{
+  margin: 20px;
+  padding: 20px;
+  max-width: 900px;
+  width: 800px;
+  height: 650px;
+  z-index: -100000;
+}
+
+section .cards .photo1-card img{
+  margin: 20px;
+  padding: 20px;
+  max-width: 900px;
+  width: 800px;
+  height: 650px;
+  z-index: -100000;
+
+}
+
+section .cards .photo2-card img
+{
+  margin: 20px;
+  padding: 20px;
+  max-width: 900px;
+  width: 800px;
+  height: 560px;
+}
+
+.txt{
+  margin-left: 3%;
+}
+
+.textc{
+  color: black;
+}
+.txt2 p {
+  margin-left: 3%;
+}
+
+
 
 @media (max-width: 900px){
   section h1{
@@ -88,25 +134,40 @@ section .cards .text-card h3{
   transform: translateY(0px);
   opacity: 1;
 }
-    .qt-background{
-    background: url(../Images/1stpic.jpg) no-repeat;
+.qt-background{
+    background: url(../Images/xianyu-hao-betJpW6fuoY-unsplash.jpg) no-repeat;
     background-size: cover;
     padding: 100px 0;
     background-attachment: fixed;
     background-position: center center;
     position: relative;
 }
-.qt-background p {
-    font-size: 35px;
-    font-weight: 300;
-    line-height: 44px;
-    color: #fff;
-    font-family: 'Arbutus Slab', serif;
-    margin-bottom: 20px;
+.Prolog{
+    padding: 50px;
+    margin: 30px;
+}
+.title
+{
+    font-size: 1.7rem;
+    color: rgb(245, 230, 202);
+    position: relative;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    
+}
+section .cards .photo3-card img
+{
+  margin: 20px;
+  padding: 20px;
+  max-width: 900px;
+  width: 800px;
+  height: 560px;
 }
 
-.qt-background span {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-}  
+
+
+
+
+
+/*afto*/

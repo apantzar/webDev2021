@@ -7,7 +7,7 @@
     font-family: 'Comfortaa',sans-serif;
 }
 p{
-  font-size: 1.5vh;
+  font-size: 1.7vh;
   letter-spacing: 0.5px;
   line-height: 25px;
 }
@@ -15,6 +15,150 @@ p{
 body{
   background:white;
 }
+.smallnavbar
+{
+  width: 10rem;
+  height: 45vh;
+  position: absolute;
+  left: 100px;
+  background-color: white;
+}
+
+
+
+.overlay2 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.overlay3 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.overlay4 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+.overlay5 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -35px;
+  right: 0;
+  height: 2rem;
+  width: 15vh;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.nav-item2{
+  position: absolute;
+  top:20%;
+  left:20px;
+}
+
+.nav-item3{
+  position: absolute;
+  top:43%;
+  left:22px;
+}
+
+.nav-item4{
+  position: absolute;
+  top:65%;
+  left:18px;
+}
+
+.nav-item5{
+  position: absolute;
+  top: 88%;
+  left:18px;
+}
+.container22:hover .overlay2{
+  opacity: 1;
+}
+
+.container23:hover .overlay3{
+  opacity: 1;
+}
+.container24:hover .overlay4{
+  opacity: 1;
+}
+.container25:hover .overlay5{
+  opacity: 1;
+}
+.image3{
+  width: 25px;
+  height: 25px;
+}
+ul
+{
+  list-style-type: none;
+}
+
+.textt {
+  font-family: 'Lobster', cursive;
+  color: rgb(95, 80, 51);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3vh;
+}
+
+.navigatortitle{
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+  left: -45px;
+  text-align: center;
+}
+.navigatortitle
+{
+  background-color: black;
+  background-image: linear-gradient(-75deg,transparent 0,transparent 5%,rgba(255, 255, 255,0.5)5%,rgba(255, 255, 255,0.5)10%,transparent 10%,transparent 100%);
+  background-size: 200% 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: 1.2s;
+  background-clip: text;
+}
+.navigatortitle:hover{
+  background-position: -120% 0;
+}
+
+
 
 section{
   min-height: 50%;
@@ -69,7 +213,7 @@ section h2{
 .container1 img{
   float: left;
   width: 320px;
-  height: 480px;
+  height: 500px;
   position: relative;
   padding: 0 10px 0 0;
 }
@@ -85,14 +229,14 @@ section h2{
   width: 480px;
   height: 320px;
   position: relative;
-  padding: 0 10px 0 0;
+  padding:10px;
 }
 .container3 img{
   float: left;
   width: 480px;
   height: 320px;
   position: relative;
-  padding: 0 10px 0 0;
+  padding: 10px 10px 0 0;
 }
 .container4 img{
   float: right;
@@ -205,9 +349,100 @@ a{
   text-decoration: inherit
 }
 
+@keyframes border-transform {
+  0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+}
+
+.progress-wrap {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.2);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.progress-wrap::after {
+  position: absolute;
+  font-family: 'unicons';
+  content: "\2191";
+  text-align: center;
+  line-height: 50px;
+  font-size: 26px;
+  color: #ecedf3;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap:hover::after {
+  opacity: 0;
+}
+
+.progress-wrap::before {
+  position: absolute;
+  font-family: 'unicons';
+  content: "\2191";
+  text-align: center;
+  line-height: 50px;
+  font-size: 26px;
+  opacity: 0;
+  background: #16c2e0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap:hover::before {
+  opacity: 1;
+}
+
+.progress-wrap svg path {
+  fill: grey;
+}
 
 
 
-
-
-/*afto*/
+.progress-wrap svg.progress-circle path {
+  stroke: #16c2e0;
+  stroke-width: 5;
+  box-sizing: border-box;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
