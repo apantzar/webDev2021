@@ -25,7 +25,7 @@
 .container{
   position: relative;
   width: auto;
-  height: 91.6vh;
+  height: 91.7 vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +125,7 @@ textarea{
 video{
 	max-width: 100%;
 	max-height: 100%;
-	background-size: cover;
+	
 }
 
 @media screen and (max-width: 880px){
