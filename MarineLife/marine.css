@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+ * {
+	 border: 0;
+	 padding: 0;
+	 margin: 0;
+     
+}
+ html, body {
+	 height: 100%;
+     font-family: 'Comfortaa', cursive;
+     scroll-behavior: smooth;
+}
+ body {
+    font-family: 'Comfortaa', cursive;
+	
+	 /*font-size: 1em;*/
+	 color: #333;
+}
+ h1 {
+	 text-align: center;
+	 font-weight: 300;
+	 font-size: 2em;
+	 margin-bottom: 1em;
+     font-family:'Comfortaa';
+}
+
+p{
+    font-family: 'Comfortaa';
+}
+ 
+
+ 
+ 
+ .wrapper {
+     
+	 position: relative;
+	 
+}
+ .wrapper section {
+      
+	 position: relative;
+	 background: #eee;
+}
+ .wrapper section article {
+    font-family: 'Comfortaa', cursive;
+	 width: 50%;
+	 margin: 0 auto;
+	 padding: 2em 0;
+}
+ .wrapper section article p {
+	 margin-bottom: 1em;
+}
+ .wrapper section article p:last-of-type {
+	 margin-bottom: 0;
+}
+ .wrapper section:after {
+	 content: "";
+	 display: block;
+	 position: relative;
+	 background-attachment: fixed;
+	 background-size: cover;
+	 background-position: center center;
+	 background-repeat: no-repeat;
+	 height: 30em;
+	 width: 100%;
+}
+ .wrapper section:nth-child(1):after {
+	 background-image: url(".//images/francesco-ungaro-JT5o5nmzCRY-unsplash.jpg");
+}
+ .wrapper section:nth-child(2):after {
+	 background-image: url(".//images/tomoe-steineck-T1Wru10gKhg-unsplash.jpg");
+}
+ .wrapper section:nth-child(3):after {
+	 background-image: url(".//images/chuttersnap-2yKVezoXLyg-unsplash.jpg");
+}
+ .wrapper section:nth-child(4):after {
+	 background-image: url(".//images/kris-mikael-krister-tkldDsOBGRg-unsplash.jpg");
+}
+ .wrapper section:nth-child(5):after {
+	 background-image: url(".//images/matthew-pablico-3dkJ4pp0b60-unsplash.jpg");
+}
+ .wrapper section:nth-child(6):after {
+	 background-image: url(".//images/david-clode-zBORpP97apw-unsplash.jpg");
+}
+ @media only screen and (max-width: 600px) {
+	 .wrapper section article {
+		 width: 80%;
+	}
+	 .wrapper section:after {
+		 height: 15em;
+	}
+}
+ 
