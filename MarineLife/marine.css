@@ -41,7 +41,7 @@ p{
  .wrapper section {
       
 	 position: relative;
-	 background: #eee;
+	 background: rgb(255, 255, 255);
 }
  .wrapper section article {
     font-family: 'Comfortaa', cursive;
