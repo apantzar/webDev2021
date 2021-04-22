@@ -18,13 +18,18 @@
 	 /*font-size: 1em;*/
 	 color: #333;
 }
- .header {
+ #heading {
+	 
+	 border-bottom: 2px solid #0074a9;
+	 
 	 text-align: center;
 	 font-weight: 300;
 	 font-size: 2em;
 	 margin-bottom: 1em;
      font-family:'Comfortaa';
 }
+
+
 
 p{
     font-family: 'Comfortaa';
