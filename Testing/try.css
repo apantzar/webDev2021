@@ -40,7 +40,7 @@
   }
   
   .contact-box {
-	left: 20%;
+	left: 20px;
 	width: 670px;
 	background: rgb(192, 186, 186);
 	border-radius: 10px;
@@ -179,6 +179,7 @@ video{
 	cursor: pointer;
 	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-out;
+	overflow: hidden;
 }
 .Buttons-Social .Social-Button:hover{
 	width: 300px;
@@ -198,18 +199,22 @@ video{
 	font-weight: 500;
 	line-height: 30px;
 	margin-left: 5px;
+	opacity: 0;
+	transition: all 0.6s ease-in ease-out;
 }
 .Buttons-Social .Social-Button:hover span{
 	position: relative;
 	top: -39px;
 	left: 20px;
+	opacity: 1;
+	transition: all 0.6s ease-in
+	
 }
 #tel{
 	font-size: 20px;
 	top: -40px;
 	left: 5px;
 }
-
 @media screen and (max-width: 880px){
 	.contact-box{
 		grid-template-columns: 1fr;
