@@ -1,7 +1,7 @@
 *{
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
+
 	font-family: 'Quicksand', sans-serif;
 }
 
@@ -215,6 +215,15 @@ video{
 	top: -40px;
 	left: 5px;
 }
+
+@media screen and (max-width: 745px) {
+	video{
+		max-width: 150%;
+		max-height: 150%;
+		
+	}
+}
+
 @media screen and (max-width: 880px){
 	.contact-box{
 		grid-template-columns: 1fr;
