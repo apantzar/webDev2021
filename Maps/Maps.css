@@ -113,6 +113,8 @@ a {
  /* scrollbar-width: none;  /* Firefox */
 /*}
   */
+
+  /*---For scrollbar style---
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -123,7 +125,7 @@ a {
 ::-webkit-scrollbar-track {
   background: #959797;
   
-}
+}*/
 
 
 .main {
