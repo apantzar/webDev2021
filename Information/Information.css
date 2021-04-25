@@ -36,7 +36,7 @@ body{
 }
 
 
-
+/* When hovering icons of navbar */
 .overlay2 {
   padding: 20px;
   position: absolute;
@@ -147,7 +147,9 @@ ul
   text-align: center;
   font-size: 3vh;
 }
+/* ----------------------------------------------- */
 
+/* Shining Navigator Title */
 .navigatortitle{
   display: flex;
   position: absolute;
@@ -168,6 +170,7 @@ ul
 .navigatortitle:hover{
   background-position: -120% 0;
 }
+/* ------------------------------------------------------------ */
 
 
 
@@ -178,8 +181,7 @@ section{
   padding: 100px;
 }
 
-
-
+/* Different colors in every section */
 section:nth-child(4){
   color: white;
   background: #0b4467;
@@ -195,8 +197,7 @@ section:nth-child(6)
 section:nth-child(6) p{
   color: white;
 }
-
-
+/* ------------------------------ */
 
 section h1{
   font-size: 60px;
@@ -256,17 +257,7 @@ section h2{
   padding: 0 10px 0 0;
 }
 
-
-@media (max-width: 900px){
-  section h1{
-    font-size: 40px;
-  }
-
-  section .cards{
-    flex-direction: column;
-  }
-}
-
+/* On scroll reveal */
 .reveal{
   position: relative;
   transform: translateY(150px);
@@ -278,6 +269,8 @@ section h2{
   transform: translateY(0px);
   opacity: 1;
 }
+/* ----------------------------- */
+
 .backgroundmainimg{
     background: url(../Images/xianyu-hao-betJpW6fuoY-unsplash.jpg) no-repeat;
     background-size: cover;
@@ -312,10 +305,7 @@ section .cards .photo3-card img
   display: grid;
   place-items: center;
 }
-.icon img{
-  height: 70px;
-  width: 70px;
-}
+
 .wrapper .button{
   display: inline-block;
   height: 70px;
@@ -369,6 +359,7 @@ a{
   84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
 }
 
+/* Button to Top of the Page */
 .progress-wrap {
   position: fixed;
   right: 40px;
@@ -456,7 +447,10 @@ a{
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
+/* ----------------------------------------------- */
 
+
+/* Phone resize */
 @media screen and (max-width: 1390px) {
 	.smallnavbar{
 		transform: rotate(90deg);
@@ -586,5 +580,14 @@ a{
     height: 200px;
   }
 
+}
+@media (max-width: 900px){
+  section h1{
+    font-size: 40px;
+  }
+
+  section .cards{
+    flex-direction: column;
+  }
 }
 
