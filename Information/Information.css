@@ -446,3 +446,134 @@ a{
   transition: all 200ms linear;
 }
 
+@media screen and (max-width: 1390px) {
+	.smallnavbar{
+		transform: rotate(90deg);
+    top: 250px;
+    left: 300px;
+  }
+  .nav-item2{
+    transform: rotate(270deg);
+  }
+  .nav-item2 .navigatortitle{
+    left: 400px;
+    bottom: -10px;
+  }
+  .nav-item3{
+    transform: rotate(270deg);
+  }
+  .nav-item4{
+    transform: rotate(270deg);
+  }
+  .nav-item5{
+    transform: rotate(270deg);
+  }
+
+  .Prolog{
+    padding-top: 210px;
+  }
+}
+@media screen and (max-width: 1030px) {
+	.smallnavbar{
+		transform: rotate(90deg);
+    top: 250px;
+    left: 200px;
+  }
+  .nav-item2{
+    transform: rotate(270deg);
+  }
+  .nav-item2 .navigatortitle{
+    left: 300px;
+    bottom: -10px;
+  }
+  .nav-item3{
+    transform: rotate(270deg);
+  }
+  .nav-item4{
+    transform: rotate(270deg);
+  }
+  .nav-item5{
+    transform: rotate(270deg);
+  }
+
+  .Prolog{
+    padding-top: 210px;
+  }
+}
+@media screen and (max-width: 810px) {
+	.smallnavbar{
+		transform: rotate(90deg);
+    top: 250px;
+    left: 200px;
+  }
+  .nav-item2{
+    transform: rotate(270deg);
+  }
+  .nav-item2 .navigatortitle{
+    left: 130px;
+    bottom: -10px;
+  }
+  .nav-item3{
+    transform: rotate(270deg);
+  }
+  .nav-item4{
+    transform: rotate(270deg);
+  }
+  .nav-item5{
+    transform: rotate(270deg);
+  }
+
+  .Prolog{
+    padding-top: 210px;
+  }
+}
+@media screen and (max-width: 810px) {
+	.smallnavbar{
+		transform: rotate(90deg);
+    top: 250px;
+    left: 200px;
+  }
+  .nav-item2{
+    transform: rotate(270deg);
+  }
+  .nav-item2 .navigatortitle{
+    opacity: 0;
+    overflow-x: hidden;
+    
+    left: -100px;
+  }
+  .nav-item3{
+    transform: rotate(270deg);
+  }
+  .nav-item4{
+    transform: rotate(270deg);
+  }
+  .nav-item5{
+    transform: rotate(270deg);
+  }
+
+  .Prolog{
+    padding-top: 210px;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .container2 img{
+    width: 300px;
+    height: 200px;
+  }
+  .container3 img{
+    width: 300px;
+    height: 200px;
+  }
+  .container4 img{
+    width: 300px;
+    height: 200px;
+  }
+  .container5 img {
+    width: 300px;
+    height: 200px;
+  }
+
+}
+
