@@ -7,6 +7,21 @@
     font-family: 'Comfortaa',sans-serif;
 }
 
+/*Alignment*/
+article{
+    display: grid;
+    grid-template-columns: 1fr minmax(0,10.5in) 1fr;
+
+}
+article *
+{
+    grid-column: 2/3;
+}
+p{
+    text-align: center;
+}
+/* ---------------------- */
+
 .mainpage
 {
     position: relative;

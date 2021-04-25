@@ -12,23 +12,11 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="Footer/Footer.css">
-    <style>
-        article{
-            display: grid;
-            grid-template-columns: 1fr minmax(0,10.5in) 1fr;
-
-        }
-        article *
-        {
-            grid-column: 2/3;
-        }
-        p{
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <header>
+
+        <!-- Page Navigator -->
         <div class="nav-container">
             <nav class="navbar">
                 <a href="/"><h1 id="navbar-logo">SeaThePollution</h1></a>
@@ -48,6 +36,7 @@
                 </ul>
             </nav>
         </div>
+        <!-- ------------------------------------------------------------------------------------ -->
 
 
 
@@ -124,6 +113,8 @@
     <script src="Menu/Menu.js"></script>
     </header>
     <main>
+
+        <!-- Image Movement at the Top of page -->
         <section class="mainpage">
             <img src="../Images/DrySand.png" id="DrySand">
             <img src="../Images/WetSand.png" id="Sand">
@@ -152,6 +143,8 @@
                 Text3.style.top = value * 0.4 +'px'
             })
         </script>
+        <!-- ------------------------------------------------- -->
+
         <section class="try">
             <article class="f ">
                 <header class="FirstHeader">
@@ -169,19 +162,26 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- Button Leading to Maps -->
                 <div style="text-align: center; padding-bottom: 70px;">
                     <a href="/Maps/" class="learnmore-button">Maps</a>
                 </div>
+                <!-- ---------------------------------------------- -->
+
+                <!-- Quote in Sticker -->
                 <section class="split left">
                     <section  class="centered">
                         <section  class="quote-div">
                             <blockquote class="quote">
                                 <p class="centertitle"> <br><br><em>"We need to respect the oceans and take care of them as if our lives depended on it. Because they do."</em></p>
-                                <footer>-Sylvia Earle </footer>
+                                <footer>~Sylvia Earle </footer>
                             </blockquote>
                         </section >
                     </section >
                 </section >
+                <!-- -------------------------------------------------------------------- -->
+
                 <section  class="split right">
                     <section  class="centered">
                         <img src="Images/1stpic.jpg" id="lala">
@@ -203,13 +203,18 @@ Many of these pollutants sink to the ocean's depths or float far distances from 
                     </div>
                 </div>
             </article>
+            
+            <!-- Button Leading to Information -->
             <div style="text-align: center; ">
                 <a href="/Information/" class="learnmore-button">Learn More ...</a>
             </div>
+            <!-- ------------------------------------------------------------- -->
+            
         </section>
         
     </main>
 
+    <!-- Footer -->
     <footer class="footer2">
         <div class="footer-content">
             <h3>SeaThePollution</h3>
@@ -225,6 +230,7 @@ Many of these pollutants sink to the ocean's depths or float far distances from 
         </div>
 
     </footer>
+    <!-- ----------------------------------------------------------------------- -->
 
 
 
