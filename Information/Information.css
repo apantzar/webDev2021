@@ -6,6 +6,17 @@
     padding: 0;
     font-family: 'Comfortaa',sans-serif;
 }
+
+article{
+  display: grid;
+  grid-template-columns: 1fr minmax(0,10.5in) 1fr;
+
+}
+article *
+{
+  grid-column: 2/3;
+}
+
 p{
   font-size: 1.7vh;
   letter-spacing: 0.5px;
@@ -267,7 +278,7 @@ section h2{
   transform: translateY(0px);
   opacity: 1;
 }
-.qt-background{
+.backgroundmainimg{
     background: url(../Images/xianyu-hao-betJpW6fuoY-unsplash.jpg) no-repeat;
     background-size: cover;
     padding: 100px 0;
