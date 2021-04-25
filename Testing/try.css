@@ -10,6 +10,7 @@
   position: absolute;
   top: 0%;
   left: 0%;
+  overflow: hidden;
 }
 
 .color-overlay {
@@ -215,14 +216,76 @@ video{
 	top: -40px;
 	left: 5px;
 }
-
-@media screen and (max-width: 1730px) {
-	video{
-		max-width: 100%;
-		max-height: 140%;
-		
+@media screen and (max-width: 1240px) {
+	.contact-box{
+		margin-left: 200px;
+		left: -100px;
 	}
 }
+@media screen and (max-width: 1750px) {
+	video{
+		max-width: 120%;
+		max-height: 140%;
+	}
+}
+@media screen and (max-width: 1470px) {
+	video{
+		max-width: 140%;
+		max-height: 170%;
+	}
+}
+@media screen and (max-width: 1233px) {
+	video{
+		max-width: 170%;
+		max-height: 200%;
+	}
+}
+@media screen and (max-width: 1033px) {
+	video{
+		max-width: 200%;
+		max-height: 200%;
+		overflow-x:hidden
+	}
+}
+@media screen and (max-width: 875px) {
+	video{
+		max-width: 230%;
+		max-height: 230%;
+	}
+}
+@media screen and (max-width: 759px) {
+	video{
+		max-width: 250%;
+		max-height: 250%;
+	}
+}
+@media screen and (max-width: 697px) {
+	video{
+		max-width: 270%;
+		max-height: 270%;
+	}
+}
+@media screen and (max-width: 651px) {
+	video{
+		max-width: 300%;
+		max-height: 300%;
+	}
+}
+
+@media screen and (max-width: 584px) {
+	video{
+		max-width: 350%;
+		max-height: 350%;
+	}
+}
+@media screen and (max-width: 503px) {
+	video{
+		max-width: 370%;
+		max-height: 370%;
+	}
+}
+
+
 
 @media screen and (max-width: 880px){
 	.contact-box{
