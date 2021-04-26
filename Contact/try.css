@@ -216,6 +216,8 @@ video{
 	top: -40px;
 	left: 5px;
 }
+
+/* Phone resize */
 @media screen and (max-width: 1240px) {
 	.contact-box{
 		margin-left: 200px;
