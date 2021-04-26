@@ -1,4 +1,5 @@
 //This .js file has variables for each element in order to change the text (into text.html)
+//part1 and part2 are for the effect (waves)
 
 let part1 = "";
 let part2 = "";
@@ -63,8 +64,6 @@ part2 = `</text>
  listing, when an explosion occurred that increased the rate of flow. The next day another larger explosion increased the rate to 26 to 57 cubic metres per hour (7,000 to 15,000 gal/h),
  twice the previous rate. Finally, on 3 August, the Empress sank, having spilled 287,000 metric tonnes of crude oil into the Caribbean Sea. By comparison, in the Exxon Valdez spill
  ten years later 37,000 metric tonnes of oil was released.</p>`;
-
-
 
 let abtSummer = part1 + `ABT Summer` + part2 +`On 28th May 1991, while en route from the Gulf terminal at Kharg Island, Iran to Rotterdam the tanker ABT SUMMER, fully laden with a cargo of 260,000 tonnes 
 of Iranian heavy crude oil, experienced an explosion and a fire about 900 miles off the coast of Angola. Five of the 32 crew members on board died as a result of the incident. A large 

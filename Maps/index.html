@@ -21,29 +21,16 @@
     </header>
 
 
-  
-
-    
-  <!--- <div> <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script></div> -->
-
-
+    <!--MAP POSITION STYLE-->
     <style>
         
         /*Map position  */
         #map {position: absolute; top:80px; bottom: 0%; left: 0%; right: 0%; z-index: -1;} 
 
-
-
-                    @media only screen and (max-width:500px) {
+        @media only screen and (max-width:500px) {
             /* For mobile phones: */
            
-
-            #map{
-                
-                position:absolute; top:80px; bottom: 0%; left: 0%; right: 0% ;z-index :-1;
-                
-                
-            }
+            #map{position:absolute; top:80px; bottom: 0%; left: 0%; right: 0% ;z-index :-1; }
             }
 
 
@@ -117,9 +104,7 @@
         document.getElementById("signBtn").addEventListener("click", function(){
             document.querySelector(".popup").style.display = "flex";
             document.querySelector(".popupSignUp").style.display = "none";
-            console.log("I am in") //TESTING
-
-
+           // console.log("I am in") //TESTING
         })
 
 
@@ -127,9 +112,7 @@
         document.getElementById("signBtn2").addEventListener("click", function(){
             document.querySelector(".popup").style.display = "flex";
             document.querySelector(".popupSignUp").style.display = "none";
-            console.log("I am in") //TESTING
-
-
+           // console.log("I am in") //TESTING
         })
 
          //Sign up
@@ -142,15 +125,12 @@
 
         document.querySelector(".close").addEventListener("click", function(){
             document.querySelector(".popup").style.display = "none";
-            console.log("I am in") //TESTING
-
-
+        //    console.log("I am in") //TESTING
         })
 
         document.getElementById("close").addEventListener("click", function(){
                 console.log("I am in") //TESTING
-                document.querySelector(".popupSignUp").style.display = "none";
-                
+                document.querySelector(".popupSignUp").style.display = "none";            
             })
 
         
@@ -169,25 +149,22 @@
             <div> <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script></div> 
 
 
-            <!--Testing -->
-
             <div class=".zoom" id="map"></div>
 
+            <!--Loading js files-->
             <script src="marker.js"></script>
             <script src="parser.js"></script>
 
 
-
-            
             <!--Frame with text for each element-->
             <form action="text.html" >
             
-            <div>  <iframe name = "theFrame" id="htmlPath"  width="100%" height="50%" src="" id = "test"></iframe> </div>
+            <div>  <iframe name = "theFrame" id="htmlPath"  width="100%" height="50%" src=""></iframe> </div>
 
-            
             </form>
 
-                 <footer  class="footer2" id="footer" style="position:absolute; top:100%;">
+            <!--Footer-->
+            <footer  class="footer2" id="footer" style="position:absolute; top:100%;">
                 <div class="footer-content">
                     <h3>SeaThePollution</h3>
                     <p style="word-spacing: 1px;">A Site About Pollution In Oceans.</p>
@@ -200,26 +177,10 @@
                 <div class="footer-bottom"style="height: 5pc; background: #000; width: 100wv;padding: 20px 0;">
                     <p style="text-align: center;">Copyright &copy;2021 SeaThePollution. Designed By <span> We-Love-Writing-Linux-Drivers-All-The-Time </p>
                 </div>
+        </footer>
         
-            </footer>
-            
-         
-            
-            
-
+        
         </main>
-
-
-       
-
-
-
-
-        
-       
-
-
-
         
     </body>
 

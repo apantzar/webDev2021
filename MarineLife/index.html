@@ -17,24 +17,12 @@
         <link rel="stylesheet" type="text/css" href="../MarineLife/marine.css">
         <link rel="stylesheet" type="text/css" href="../Menu/Menu.css">
         <link rel="stylesheet" type="text/css" href="../MarineLife/titleMarine.css">
-       
-        
-        
-      
-       
-
-
-
-        <script src="marine.js"></script>
-
-       
-        
-     </header>
-
     
+        <script src="marine.js"></script>
+  
+    </header>
 
-
-     <title>Marine Life • SeaThePollution</title>
+    <title>Marine Life • SeaThePollution</title>
 </head>
 
 <body>
@@ -43,106 +31,96 @@
 
         <header>
             
-            <div class="nav-container">
-                <nav class="navbar">
-                    <a href="/"><h1 id="navbar-logo">SeaThePollution</h1></a>
-                    <div class="menu-toggle" id="mobile-menu" style="z-index: 1000;">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                    <ul class="nav-menu">
-                        <li><a href="../" class="nav-links">Home</a></li>
-                        <li><a href="../Maps" class="nav-links">Map</a></li>
-                        <li><a href="../Information" class="nav-links">Information</a></li>
-                        <li><a href="../MarineLife/" class="nav-links">Marine Life</a></li>
-                        <li><a href="../Contact/" class="nav-links">Contact Us</a></li>
-                        <li><a href="#" id="signBtn" class="nav-links nav-links-Button">Sign-In</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div class="nav-container">
+                    <nav class="navbar">
+                        <a href="/"><h1 id="navbar-logo">SeaThePollution</h1></a>
+                        <div class="menu-toggle" id="mobile-menu" style="z-index: 1000;">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <ul class="nav-menu">
+                            <li><a href="../" class="nav-links">Home</a></li>
+                            <li><a href="../Maps" class="nav-links">Map</a></li>
+                            <li><a href="../Information" class="nav-links">Information</a></li>
+                            <li><a href="../MarineLife/" class="nav-links">Marine Life</a></li>
+                            <li><a href="../Contact/" class="nav-links">Contact Us</a></li>
+                            <li><a href="#" id="signBtn" class="nav-links nav-links-Button">Sign-In</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            
+                <!--This is for popup (Sign-In)-->
+
+                <div class="popup">
+                  <div class="popup-content">
+                      <input type="text" placeholder="Username">
+                      <input type="password" placeholder="Password">
+                      <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
+                      <button class="signBtnStyle" id="Sign-In">Sign-In</button>
+                      <button id="closeBtn" class="close" >x</button>
+                      <button class="registerBtn" id="SignUp" style="display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ">Sign-Up</button>
+                      <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 100px; text-align: center; color: black;">You don't have an account? </p>
+                  </div>
+              </div>
+
+              <!--THIS IS FOR SIGN UP-->
+              <div class="popupSignUp">
+                  <div class="Sign-Up-content">
+                      <input type="email" placeholder="Email">
+                      <input type="text" placeholder="Username">
+                      <input type="password" placeholder="Password">
+                      <button id="close" class="close" >x</button>
+                      <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;">You already have an account?</p>
+                      <button class="signBtnStyle" id="signBtn2" style="display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; ">Sign-In</button>
+                      <button class="registerBtn" id="SignUp" style="top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;">Sign-Up</button>
+                  </div>
+              </div>
+
+              <script>
+                  //Sign in
+                  document.getElementById("signBtn").addEventListener("click", function(){
+                      document.querySelector(".popup").style.display = "flex";
+                      document.querySelector(".popupSignUp").style.display = "none";
+                      //console.log("I am in") //TESTING
+                  })
 
 
-           
+                  //sign-In inside 
+                  document.getElementById("signBtn2").addEventListener("click", function(){
+                      document.querySelector(".popup").style.display = "flex";
+                      document.querySelector(".popupSignUp").style.display = "none";
+                  //   console.log("I am in") //TESTING
+                  })
 
-                 
-       <!--This is for popup (Sign-In)-->
+                  //Sign up
+                  document.getElementById("SignUp").addEventListener("click", function(){
+                          document.querySelector(".popupSignUp").style.display = "flex";
+                          document.querySelector(".popup").style.display = "none";
+                      })
 
-       <div class="popup">
-        <div class="popup-content">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
-            <button class="signBtnStyle" id="Sign-In">Sign-In</button>
-            <button id="closeBtn" class="close" >x</button>
-            <button class="registerBtn" id="SignUp" style="display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ">Sign-Up</button>
-            <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 100px; text-align: center; color: black;">You don't have an account? </p>
-        </div>
-    </div>
+                  //Close button
+                  document.querySelector(".close").addEventListener("click", function(){
+                      document.querySelector(".popup").style.display = "none";
+                    // console.log("I am in") //TESTING
+                  })
 
-     <!--THIS IS FOR SIGN UP-->
-     <div class="popupSignUp">
-        <div class="Sign-Up-content">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button id="close" class="close" >x</button>
-            <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;">You already have an account?</p>
-            <button class="signBtnStyle" id="signBtn2" style="display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; ">Sign-In</button>
-            <button class="registerBtn" id="SignUp" style="top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;">Sign-Up</button>
-        </div>
-    </div>
+                  document.getElementById("close").addEventListener("click", function(){
+                          console.log("I am in") //TESTING
+                          document.querySelector(".popupSignUp").style.display = "none";   
+                      })
 
-    <script>
-        //Sign in
-        document.getElementById("signBtn").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "flex";
-            document.querySelector(".popupSignUp").style.display = "none";
-            console.log("I am in") //TESTING
+                  
+              </script>
 
 
-        })
-
-
-        //sign-In inside 
-        document.getElementById("signBtn2").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "flex";
-            document.querySelector(".popupSignUp").style.display = "none";
-            console.log("I am in") //TESTING
-
-
-        })
-
-         //Sign up
-         document.getElementById("SignUp").addEventListener("click", function(){
-                document.querySelector(".popupSignUp").style.display = "flex";
-                document.querySelector(".popup").style.display = "none";
-            })
-
-        //Close button
-
-        document.querySelector(".close").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "none";
-            console.log("I am in") //TESTING
-
-
-        })
-
-        document.getElementById("close").addEventListener("click", function(){
-                console.log("I am in") //TESTING
-                document.querySelector(".popupSignUp").style.display = "none";
-                
-            })
-
-        
-    </script>
-
-
-        <script src="../Menu/Menu.js"></script> <!--Menu js loaded-->
+              <script src="../Menu/Menu.js"></script> <!--Menu js loaded-->
 
         </header>
 
+        <!--Effect for title (video & svg with title)-->
         <div>
         <video controls autoplay playsinline muted loop preload poster="../MarineLife/images/loadingProblemImage.png">
             <source src=".//videos/production ID 3765078.mp4" />
@@ -159,36 +137,25 @@
           </svg>
         </div>
 
-        
-           
-          
-          
+         
         
        <!--Information about each section-->
      
       <div class="wrapper">
         <section id="marineLife">
           <article>
-
-          
-            
-
-
-  
             <p>
-        The ocean is one of the most unexplored parts of our planet, with a magnitude of undiscovered species and mysteries. It turns out from the studies conducted over the last few decades, 
-        this magnificent environment is under serious threat from human intervention, with plastics set to outnumber fish by 2050.
-        Marine life, as we know it, is suffering irreparable damage from the chemical pollution of the waters and the millions of tons of mismanaged waste dumped in the oceans each year. 
-        The result is a planetary crisis with over 100 million marine animal’s lives get lost every year, and the decay of the ocean's ecosystem.Almost 1,000 species of marine animals get 
-        impacted by ocean pollution, and we now have over 500 locations recorded as dead zones where marine life cannot exist. How did this happen, what is causing the most damage, find out 
-        everything below in the marine pollution statistics roundup.Over 2,000 species are currently on the ESA, and they are separated into "Threatened" and "Endangered" species. Endangered species are in danger of going extinct, while Threatened species 
-        are approaching Endangered status.
+                The ocean is one of the most unexplored parts of our planet, with a magnitude of undiscovered species and mysteries. It turns out from the studies conducted over the last few decades, 
+                this magnificent environment is under serious threat from human intervention, with plastics set to outnumber fish by 2050.
+                Marine life, as we know it, is suffering irreparable damage from the chemical pollution of the waters and the millions of tons of mismanaged waste dumped in the oceans each year. 
+                The result is a planetary crisis with over 100 million marine animal’s lives get lost every year, and the decay of the ocean's ecosystem.Almost 1,000 species of marine animals get 
+                impacted by ocean pollution, and we now have over 500 locations recorded as dead zones where marine life cannot exist. How did this happen, what is causing the most damage, find out 
+                everything below in the marine pollution statistics roundup.Over 2,000 species are currently on the ESA, and they are separated into "Threatened" and "Endangered" species. Endangered species are in danger of going extinct, while Threatened species 
+                are approaching Endangered status.
         
-        <br><br>
-            
-        Trailer:<a href=" https://www.youtube.com/watch?v=6zrn4-FfbXw" target="_blank"> A Plastic Ocean</a>
-
-        
+                <br><br>
+                    
+                Trailer:<a href=" https://www.youtube.com/watch?v=6zrn4-FfbXw" target="_blank"> A Plastic Ocean</a>
             </p>
           </article>
         </section>
@@ -205,15 +172,9 @@
                 every five or six years.<br>Bleaching happens when corals become overheated and expel the symbiotic algae that feed them. Without the algae to photosynthesize their food for them, corals 
                 stop growing and become more susceptible to disease. If water temperatures remain too high for too long, the corals can die.
 
-
-                
                 <br><br>
             
                 Netflix Video:<a href="https://www.youtube.com/watch?v=aGGBGcjdjXA" target="_blank"> Click here</a>
-            
-               
-
-
             </p>
           </article>
         </section>
@@ -251,7 +212,7 @@
                 eggs is banned, the practice could not be ceased completely. The declination of its population has also resulted due to the degradation of coral reef species which the Hawksbill Turtle 
                 primarily feed on. According to marine conservatives, this family of the turtle is the living representatives of reptiles that have existed in our oceans for the past hundred million years 
                 and these turtles are vital for the existence of seagrass beds and coral reefs. 
-               </p>
+            </p>
           </article>
         </section>
         <section id="lion">
@@ -265,7 +226,7 @@
                 years.<br><br>
             
                 Video:<a href="https://www.youtube.com/watch?v=oiL8tDCqzy4" target="_blank"> Click here</a>
-               </p>
+            </p>
           </article>
         </section>
         <section id="shark">
@@ -283,114 +244,103 @@
             
                  Video:<a href="https://www.youtube.com/watch?v=rG4jSz_2HDY" target="_blank"> Click here</a>
 
-               </p>
+            </p>
             
           </article>
         </section>
       </div>
 
-     
-
-
-
-
-
     </main>
 
-</main>
+
+     <!--Page Footer-->
+    <footer class="footer2">
+      <div class="footer-content">
+          <h3>SeaThePollution</h3>
+          <p>A Site About Pollution In Oceans.</p>
+          <div class="images-href">
+              <a href="../" class="home-foot"><img src="../Images/ho.png" ></a>
+              <a href="/Maps/" class="map-foot"><img src="../Images/ma.png" > </a>
+              <a href="/Information/" class="info-foot"><img src="../Images/if.png" > </a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>Copyright &copy;2021 SeaThePollution. Designed By <span> We-Love-Writing-Linux-Drivers-All-The-Time </p>
+      </div>
+    </footer>
 
 
-<!--Page Footer-->
-   <footer class="footer2">
-    <div class="footer-content">
-        <h3>SeaThePollution</h3>
-        <p>A Site About Pollution In Oceans.</p>
-        <div class="images-href">
-            <a href="../" class="home-foot"><img src="../Images/ho.png" ></a>
-            <a href="/Maps/" class="map-foot"><img src="../Images/ma.png" > </a>
-            <a href="/Information/" class="info-foot"><img src="../Images/if.png" > </a>
-        </div>
+    <!--Scroll button with loding bar effect-->
+
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
     </div>
-    <div class="footer-bottom">
-        <p>Copyright &copy;2021 SeaThePollution. Designed By <span> We-Love-Writing-Linux-Drivers-All-The-Time </p>
-    </div>
-
-</footer>
-
-
-<!--Scroll button with loding bar effect-->
-
-<div class="progress-wrap">
-  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-  </svg>
-</div>
 
 
 
-<script type="text/javascript">
-  window.addEventListener('scroll', reveal);
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
 
-  function reveal(){
-    var reveals = document.querySelectorAll('.reveal');
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
 
-    for(var i = 0; i < reveals.length; i++){
+        for(var i = 0; i < reveals.length; i++){
 
-      var windowheight = window.innerHeight;
-      var revealtop = reveals[i].getBoundingClientRect().top;
-      var revealpoint = 150;
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
 
-      if(revealtop < windowheight - revealpoint){
-        reveals[i].classList.add('active');
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
       }
-      else{
-        reveals[i].classList.remove('active');
-      }
-    }
-  }
-  </script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-          <script>
-              $(document).ready(function() {
-                  var progressPath = document.querySelector('.progress-wrap path');
-                  var pathLength = progressPath.getTotalLength();
-  
-                  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-                  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-                  progressPath.style.strokeDashoffset = pathLength;
-                  progressPath.getBoundingClientRect();
-                  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-  
-                  var updateProgress = function() {
-                      var scroll = $(window).scrollTop();
-                      var height = $(document).height() - $(window).height();
-                      var progress = pathLength - (scroll * pathLength / height);
-                      progressPath.style.strokeDashoffset = progress;
-                  }
-  
-                  updateProgress();
-                  $(window).scroll(updateProgress);
-  
-                  var offset = 50;
-                  var duration = 550;
-  
-                  jQuery(window).on('scroll', function() {
-                      if(jQuery(this).scrollTop() > offset) {
-                          jQuery('.progress-wrap').addClass('active-progress');
-                      } else {
-                          jQuery('.progress-wrap').removeClass('active-progress');
+      </script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+              <script>
+                  $(document).ready(function() {
+                      var progressPath = document.querySelector('.progress-wrap path');
+                      var pathLength = progressPath.getTotalLength();
+      
+                      progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+                      progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+                      progressPath.style.strokeDashoffset = pathLength;
+                      progressPath.getBoundingClientRect();
+                      progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+      
+                      var updateProgress = function() {
+                          var scroll = $(window).scrollTop();
+                          var height = $(document).height() - $(window).height();
+                          var progress = pathLength - (scroll * pathLength / height);
+                          progressPath.style.strokeDashoffset = progress;
                       }
+      
+                      updateProgress();
+                      $(window).scroll(updateProgress);
+      
+                      var offset = 50;
+                      var duration = 550;
+      
+                      jQuery(window).on('scroll', function() {
+                          if(jQuery(this).scrollTop() > offset) {
+                              jQuery('.progress-wrap').addClass('active-progress');
+                          } else {
+                              jQuery('.progress-wrap').removeClass('active-progress');
+                          }
+                      });
+      
+                      jQuery('.progress-wrap').on('click', function(event) {
+                          event.preventDefault();
+                          jQuery('html, body').animate({scrollTop: 0}, duration);
+                          return false;
+                      })
                   });
-  
-                  jQuery('.progress-wrap').on('click', function(event) {
-                      event.preventDefault();
-                      jQuery('html, body').animate({scrollTop: 0}, duration);
-                      return false;
-                  })
-              });
-          </script>
-
-
+              </script>
 
 </body>     
 

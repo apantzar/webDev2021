@@ -1,31 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap'); /*Imports fonts*/
 
 
 body{
-  
-  overflow: overlay;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-
-  width: auto;
+    overflow: overlay;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    width: auto;
 }
+
 iframe{
-  z-index: -1000;
-  position:absolute;
-  scrollbar-color: #000000;
-  scroll-behavior:smooth;
-  background:linear-gradient(#13293e,#001c29,#001c29);
+    z-index: -1000;
+    position:absolute;
+    scrollbar-color: #000000;
+    scroll-behavior:smooth;
+    background:linear-gradient(#13293e,#001c29,#001c29);
 
-  /*overflow: auto;
- -webkit-overflow-scrolling:touch;*/
+    /*overflow: auto;
+  -webkit-overflow-scrolling:touch;*/
 
- scrollbar-width: none;
-
-
+  scrollbar-width: none;
 }
+
 p {
     color: white;
     text-align:left;
@@ -35,9 +30,7 @@ p {
     margin-left: 80px;
     word-spacing: 7px;
     font-family: 'Comfortaa',sans-serif;
-    font-size: 18px;
-    
-    
+    font-size: 18px;   
 }
 
 /*For title with animation*/
@@ -55,77 +48,40 @@ svg{
  
 html {
     scroll-behavior: smooth;
-    background-color: transparent;
-    
-    
-  }
+    background-color: transparent;   
+}
 
 
+#map{
+  scroll-behavior: smooth;
+}
 
+.leaflet-container path {
+  transition: fill 0.1s;
+}
+#map:hover{
+  background-size:auto;
+}
 
-
-
-
-
-
-
-
-  #map{
-    scroll-behavior: smooth;
-    
-    
-  }
-  
-  .leaflet-container path {
-    transition: fill 0.1s;
-  }
-  #map:hover{
-    background-size:auto;
-  }
-  
-  .marker{
-    color: blueviolet;
-  }
-  .frameClass{
-    overflow-y: scroll;
-  }
+.marker{
+  color: blueviolet;
+}
+.frameClass{
+  overflow-y: scroll;
+}
 @font-face {
-	font-family: "ubuntu";
-	font-style: italic;
-	font-weight: 300;
-	src: local("Lato Light Italic"), local("Lato-LightItalic"),
-		url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2)
-			format("woff2");
+font-family: "ubuntu";
+font-style: italic;
+font-weight: 300;
+src: local("Lato Light Italic"), local("Lato-LightItalic"),
+  url("https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2")
+    format("woff2");
 }
+
 a {
-	text-decoration: none;
-	color: #9ca0b1;
+text-decoration: none;
+color: #9ca0b1;
 }
-
-  
-/*
-  .iframe::-webkit-scrollbar {
-    display: none;
-}*/
-/* Hide scrollbar for IE, Edge and Firefox */
-/*.iframe {
-  -ms-overflow-style: none;  /* IE and Edge */
- /* scrollbar-width: none;  /* Firefox */
-/*}
-  */
-
-  /*---For scrollbar style---
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: #dfe6e9;
-}
-::-webkit-scrollbar-track {
-  background: #959797;
-  
-}*/
 
 
 .main {
@@ -136,7 +92,6 @@ a {
 }
 
 .map{
-
   position: absolute; top:80px; bottom: 0%; left: 50%; right: 20%;
 
 }
@@ -176,7 +131,6 @@ a {
     
   }
   
-
   .margin{
     margin-top: -20px;
     left: 0%;
@@ -185,36 +139,16 @@ a {
     margin-right: 0px;
 }
 
-
 p{
   margin-left: 0px;
   margin-right: 0px;
 }
-
 
 main{
   text-align: center;
   overflow-x: inherit;
 
 }
-
-
-
-
-
-
-
-/*
-iframe{
-  
-  overflow:hidden; 
-  position: absolute;
-  display:block; 
-  min-height: 150vh; 
-  border: none;
-  
-
-}*/
 
 }
 
