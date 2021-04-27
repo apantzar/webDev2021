@@ -113,8 +113,6 @@
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(15px);
-		-webkit-transition: all 200ms linear;
-		transition: all 200ms linear;
 	}
 	
 	.progress-wrap.active-progress {
@@ -138,8 +136,6 @@
 		cursor: pointer;
 		display: block;
 		z-index: 1;
-		-webkit-transition: all 200ms linear;
-		transition: all 200ms linear;
 	}
 	
 	.progress-wrap:hover::after {
@@ -165,8 +161,6 @@
 		cursor: pointer;
 		display: block;
 		z-index: 2;
-		-webkit-transition: all 200ms linear;
-		transition: all 200ms linear;
 	}
 	
 	.progress-wrap:hover::before {
