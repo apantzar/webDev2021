@@ -384,13 +384,13 @@
                           if(jQuery(this).scrollTop() > offset) {
                               jQuery('.progress-wrap').addClass('active-progress');
                           } else {
-                              jQuery('.progress-wrap').removeClass('active-progress');
+                              jQuery('.progress-wrap').removeClass('active-progress');//dont do anything
                           }
                       });
       
                       jQuery('.progress-wrap').on('click', function(event) {
                           event.preventDefault();
-                          jQuery('html, body').animate({scrollTop: 0}, duration);
+                          jQuery('html, body').animate({scrollTop: 0}, duration);//once clicked go to top
                           return false;
                       })
                   });
