@@ -374,8 +374,6 @@ a{
   opacity: 0;
   visibility: hidden;
   transform: translateY(15px);
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
 }
 
 .progress-wrap.active-progress {
@@ -399,8 +397,6 @@ a{
   cursor: pointer;
   display: block;
   z-index: 1;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
 }
 
 .progress-wrap:hover::after {
@@ -426,8 +422,6 @@ a{
   cursor: pointer;
   display: block;
   z-index: 2;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
 }
 
 .progress-wrap:hover::before {
@@ -444,8 +438,6 @@ a{
   stroke: #16c2e0;
   stroke-width: 5;
   box-sizing: border-box;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
 }
 /* ----------------------------------------------- */
 

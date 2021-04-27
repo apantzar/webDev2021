@@ -342,7 +342,7 @@
           var revealtop = reveals[i].getBoundingClientRect().top;
           var revealpoint = 150;
   
-          if(revealtop < windowheight - revealpoint){
+          if(revealtop < windowheight - revealpoint){ //limits
             reveals[i].classList.add('active');
           }
           else{
