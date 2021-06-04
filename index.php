@@ -1,12 +1,52 @@
+<?php 
+    $host="localhost";
+    $user="root";
+    $password="";
+    $db="users";
+
+
+    $data=mysqli_connect($host,$user, $password,$db);
+
+    if($data===false){
+       die("connection error");  //This will change to abord
+    }
+
+
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+    }
+
+
+?>
+
+
 <!doctype html>
+
+<style>
+
+
+    <?php include './Menu/Menu.css'; ?>
+    <?php include 'sign.css'; ?>
+    <?php include 'Footer.css'; ?>
+    <?php include './WebDev2021/Images'; ?>
+
+</style>
 <html lang="en">
+<link rel="stylesheet" type="text/css" href="Menu/Menu.css">
+ <link rel="stylesheet" type="text/css" href="../sign.css">
 <head>
+
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeaThePollution</title>
-    <link rel="stylesheet" type="text/css" href="Menu/Menu.css">
-    <link rel="stylesheet" type="text/css" href="../sign.css">
+  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -44,8 +84,8 @@
 
         <div class="popup">
             <div class="popup-content">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
+                <input type="text" placeholder="Username" name="username">
+                <input type="password" placeholder="Password" name="password">
                 <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
                 <button class="signBtnStyle" id="Sign-In">Sign-In</button>
                 <button id="closeBtn" class="close" >x</button>
@@ -165,7 +205,7 @@
 
                 <!-- Button Leading to Maps -->
                 <div style="text-align: center; padding-bottom: 70px;">
-                    <a href="/Maps/" class="learnmore-button">Maps</a>
+                    <a href="././Maps/" class="learnmore-button">Maps</a>
                 </div>
                 <!-- ---------------------------------------------- -->
 
@@ -203,7 +243,7 @@ Many of these pollutants sink to the ocean's depths or float far distances from 
             
             <!-- Button Leading to Information -->
             <div style="text-align: center; ">
-                <a href="/Information/" class="learnmore-button">Learn More ...</a>
+                <a href="././Information/" class="learnmore-button">Learn More ...</a>
             </div>
             <!-- ------------------------------------------------------------- -->
 
@@ -218,8 +258,8 @@ Many of these pollutants sink to the ocean's depths or float far distances from 
             <p>A Site About Pollution In Oceans.</p>
             <div class="images-href">
                 <a href="../" class="home-foot"><img src="../Images/ho.png" alt="Home Icon" ></a>
-                <a href="/Maps/" class="map-foot"><img src="../Images/ma.png" alt="Map Icon" > </a>
-                <a href="/Information/" class="info-foot"><img src="../Images/if.png" alt="Information Icon" > </a>
+                <a href="/WebDev2021/Maps/" class="map-foot"><img src="../Images/ma.png" alt="Map Icon" > </a>
+                <a href="/WebDev2021/Information/" class="info-foot"><img src="../Images/if.png" alt="Information Icon" > </a>
             </div>
         </div>
         <div class="footer-bottom">
