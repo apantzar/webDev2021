@@ -10,7 +10,7 @@
     $data=mysqli_connect($host,$user, $password,$db);
 
     if($data===false){
-       die("connection error");  //This will change to abord
+       die("connection error    ".mysqli_connect_error());  //This will change to abord
     }
 
 
@@ -74,7 +74,7 @@
         <!-- Page Navigator -->
         <div class="nav-container">
             <nav class="navbar">
-                <a href="/"><h1 id="navbar-logo">SeaThePollution</h1></a>
+                <a href="./"><h1 id="navbar-logo">SeaThePollution</h1></a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -82,11 +82,11 @@
                     <span class="bar"></span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="/" class="nav-links">Home</a></li>
+                    <li><a href="./index.php" class="nav-links">Home</a></li>
                     <li><a href="./Maps" class="nav-links">Map</a></li>
                     <li><a href="./Information" class="nav-links">Information</a></li>
-                    <li><a href="../MarineLife/" class="nav-links">Marine Life</a></li>
-                    <li><a href="../Contact/" class="nav-links">Contact Us</a></li>
+                    <li><a href="./MarineLife/" class="nav-links">Marine Life</a></li>
+                    <li><a href="./Contact/" class="nav-links">Contact Us</a></li>
                     <li><a href="#" id="signBtn"class="nav-links nav-links-Button">Sign-In</a></li>
                 </ul>
             </nav>
@@ -171,9 +171,9 @@
 
         <!-- Image Movement at the Top of page -->
         <section class="mainpage">
-            <img src="../Images/DrySand.png" alt="Dry Sand" id="DrySand">
-            <img src="../Images/WetSand.png" alt="Sand" id="Sand">
-            <img src="../Images/SeaW.png" alt="Sea" id="Sea">
+            <img src="./Images/DrySand.png" alt="Dry Sand" id="DrySand">
+            <img src="./Images/WetSand.png" alt="Sand" id="Sand">
+            <img src="./Images/SeaW.png" alt="Sea" id="Sea">
             <h2 id="text1">Sea</h2> 
             <h2 id="text2">The</h2>   
             <h2 id="text3">Pollution</h2>              
@@ -207,7 +207,7 @@
                     <h2 class="centertitle">Ocean</h2>
                 </header>
                 <div class="container-ocean-up">
-                    <img src="/Images/Untitled-6.png" alt="Hand underwater" id="imageoceanup">
+                    <img src="./Images/Untitled-6.png" alt="Hand underwater" id="imageoceanup">
                     <div class="text-ocean-up">
                         <p id="firstParagraph">
                             <br>The ocean is a huge body of saltwater that covers about 71 percent of the Earth’s surface. The planet has one global ocean, though oceanographers and the nations of the world have divided it into distinct geographic regions: the Pacific, Atlantic, Indian, and Arctic oceans. In recent years, some oceanographers have determined that the seas around Antarctica deserve their own designation: the Southern Ocean.
@@ -240,7 +240,7 @@
                 <section  class="split right">
                 </section >
                 <div class="container-image-ocean">
-                    <img id="imageocean" src="/Images/Untitled-5.png" alt="Ocean Images">
+                    <img id="imageocean" src="./Images/Untitled-5.png" alt="Ocean Images">
                     <div id="text-ocean">
 
                         <h2 class="center-title">Ocean Pollution</h2>
@@ -272,9 +272,9 @@ Many of these pollutants sink to the ocean's depths or float far distances from 
             <h3>SeaThePollution</h3>
             <p>A Site About Pollution In Oceans.</p>
             <div class="images-href">
-                <a href="../" class="home-foot"><img src="../Images/ho.png" alt="Home Icon" ></a>
-                <a href="/WebDev2021/Maps/" class="map-foot"><img src="../Images/ma.png" alt="Map Icon" > </a>
-                <a href="/WebDev2021/Information/" class="info-foot"><img src="../Images/if.png" alt="Information Icon" > </a>
+                <a href="./" class="home-foot"><img src="./Images/ho.png" alt="Home Icon" ></a>
+                <a href="/WebDev2021/Maps/" class="map-foot"><img src="./Images/ma.png" alt="Map Icon" > </a>
+                <a href="/WebDev2021/Information/" class="info-foot"><img src="./Images/if.png" alt="Information Icon" > </a>
             </div>
         </div>
         <div class="footer-bottom">
