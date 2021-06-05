@@ -4,6 +4,8 @@
     $password="";
     $db="users";
 
+    session_start();
+
 
     $data=mysqli_connect($host,$user, $password,$db);
 
@@ -17,6 +19,19 @@
 
         $username = $_POST["username"];
         $password = $_POST["password"];
+
+
+        $sql_query = "select * from login where username= '".$username."' AND password= '".$password."' ";
+        $result = mysqli_query($data, $sql_query);
+        $row=mysqli_fetch_array($result);
+
+        if($row["userType"]=="admin"){
+            $_SESSION["username"]=$username;
+           header("location:adminPage.php");
+        }else{
+            echo "My admin knows the password :)";
+        }
+
 
     }
 
@@ -81,7 +96,7 @@
 
 
         <!--This is for popup (Sign-In)-->
-
+        <form action="#" method="POST">
         <div class="popup">
             <div class="popup-content">
                 <input type="text" placeholder="Username" name="username">
