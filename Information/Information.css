@@ -436,30 +436,7 @@ a{
   stroke-width: 5;
   box-sizing: border-box;
 }
-form {
-  position: relative;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	padding: 40px;
-  }
-  textarea{
-    resize: none;
-    min-height: 150px;
-    text-align: center;
-    width:100%;
-  }
-  button{
-    width: 100px;
-    height: 30px;
-    background-color:#16c2e0 ;
-    border:none;
-    color: #fff;
-    font-family: Arial;
-    font-weight: 400;
-    cursor: pointer;
-  }
+
   
   
 /* ----------------------------------------------- */
