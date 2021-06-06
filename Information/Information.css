@@ -436,10 +436,7 @@ a{
   stroke-width: 5;
   box-sizing: border-box;
 }
-body{
-  margin-top:20px;
-  background:#ebeef0;
-}
+
 
 .img-sm {
   width: 46px;
@@ -453,20 +450,15 @@ body{
   margin-bottom: 15px;
 }
 
-.panel .panel-footer, .panel>:last-child {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.panel .panel-heading, .panel>:first-child {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
 
 .panel-body {
   padding: 25px 20px;
 }
 
+.form-control
+{
+  resize: none;
+}
 
 .media-block .media-left {
   display: block;
