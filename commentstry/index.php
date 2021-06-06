@@ -2,6 +2,7 @@
     date_default_timezone_set('Europe/Athens');
     include'dbh.inc.php';
     include'comments.inc.php';
+    
     ?>
 
 
@@ -12,6 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
 <body>
