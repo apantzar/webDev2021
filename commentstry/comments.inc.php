@@ -18,7 +18,7 @@ function setComment($conn){
 function getComment($conn){
     $sql = "SELECT * FROM comments";
     $result = mysqli_query($conn,$sql);
-    while($row = mysqli_fetch_assoc($result)){
+    while($row =$result-> fetch_assoc()){
             echo"<div class='commentBox'><p>'";
             echo $row['UserID'];
             echo "<br>";
