@@ -447,7 +447,6 @@ form {
   textarea{
     resize: none;
     min-height: 150px;
-    text-align: center;
     width:100%;
   }
   button{
