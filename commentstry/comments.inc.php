@@ -14,3 +14,18 @@ function setComment($conn){
 
 
 }
+
+function getComment($conn){
+    $sql = "SELECT * FROM comments";
+    $result = mysqli_query($conn,$sql);
+    while($row = mysqli_fetch_assoc($result)){
+        echo $row['UserID'];
+        echo "<br>";
+        echo $row['Date'];
+        echo "<br>";
+        echo $row['message'];
+        echo "<br><br>";
+    };
+    
+    
+}
