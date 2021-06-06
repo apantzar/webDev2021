@@ -19,10 +19,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
 
 
 </head>
@@ -302,18 +298,12 @@
             </div>
         </div>
       </section>
-      <div class="container bootdey">
-        <div class="col-md-12 bootstrap snippets">
-        <div class="panel">
-          <div class="panel-body">
-            <textarea class="form-control" rows="5" style="resize: none;" placeholder="What are you thinking?"></textarea>
-            <div class="mar-top clearfix">
-              <button class="btn btn-sm btn-primary pull-right" type="submit"><i class="fa fa-pencil fa-fw"></i> Share</button>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
+      <form>
+        <input type='hidden'  name='uid' value='Anonymous'> 
+        <input type='hidden' name='date' value='".date(Y-m-d H:i:s)."'>
+        <textarea rows="4" cols="60" style="margin-top: 20px; resize: none; overflow: hidden;" name='message'></textarea>
+        <button type='sumbit' class="buttonarea" name='sumbit'>Comment</button><br>
+    </form><!-- to value einai anonymous gt den exoyme log in -->
 
       <!-- Footer -->
       <footer class="footer2">
