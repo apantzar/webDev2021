@@ -1,8 +1,23 @@
 <?php 
 
-    session_start();
+    if(!isset($_SESSION['status'])){
+       
+        echo '<script>console.log("I am in if");</script>';
+        exit();
+        
+    }else{
+               session_start(); 
+
+    }
+    
+    
+
+
+   
 
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -19,3 +34,4 @@
 
 </body>
 </html>
+

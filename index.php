@@ -1,9 +1,12 @@
 <?php 
+
+    define('adminAccess', TRUE);
     $host="localhost";
     $user="root";
     $password="";
     $db="users";
 
+    $_SESSION['status']= false;
     session_start();
 
 
@@ -21,13 +24,15 @@
         $password = $_POST["password"];
 
 
-        $sql_query = "select * from login where username= '".$username."' AND password= '".$password."' ";
+        $sql_query = "select * from login where username= '".$username."' AND password= '".$password."'";
         $result = mysqli_query($data, $sql_query);
         $row=mysqli_fetch_array($result);
 
         if($row["userType"]=="admin"){
             $_SESSION["username"]=$username;
-           header("location:adminPage.php");
+            $_SESSION['status'] = true;
+            
+            header("location:adminPage.php");
         }else{
             echo "My admin knows the password :)";
         }
