@@ -30,3 +30,29 @@ function getComment($conn){
     
     
 }
+
+function getLogin($conn){
+    if(isset($_POST['loginSubmit'])){
+        $UserID = $_POST['UserID'];
+        $pass = $_POST['pass']
+
+        $sql = "SELECT * FROM user WHERE UserID = '$UserID' AND pass = '$pass'";
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result)==1){
+            if($row = mysqli_fetch_assoc($result)){
+                $_SESSION['id'] = $row['id']
+                header("Location: index.php? loginsuccess");
+                exit();
+            }
+
+        } else{
+            header("Location: index.php? loginfailed");
+            exit();
+        }
+    }
+    
+}
+
+function userLogoff(){
+
+}

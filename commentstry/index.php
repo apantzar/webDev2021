@@ -2,6 +2,7 @@
     date_default_timezone_set('Europe/Athens');
     include'dbh.inc.php';
     include'comments.inc.php';
+    session_start();
     
     ?>
 
@@ -17,6 +18,17 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+    echo"<form method='POST' action = '".getLogin($conn)."'>
+            <input type='text' name='UserID'>
+            <input type='password' name = 'pass'>
+            <button type='submit' name='loginSubmit'></button>
+        </form>";
+
+    echo"<form method='POST' action = '".userLogoff()."'>
+        <button type='submit' name='logoffSubmit'></button>
+    </form>";
+    ?>
    <?php 
    echo "<form method ='POST' action= '".setComment($conn)."'>
     <input type='hidden' name='UserID' value='Anonymous'>
