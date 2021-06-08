@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="styles.css" />
     <?php
         date_default_timezone_set('Europe/Athens');
+        include'dbh.inc.php';
+        include'comments.inc.php';
     ?>
     <style>
         .leavecomm
@@ -462,67 +464,25 @@
             margin-bottom: 15px">Leave Us a Comment</h2>
         </div>
         <?php
-        echo "<form>
-            <input type='hidden' name='uid' value='Anonymous'>
-            <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
-            <textarea  class='txtarea' placeholder='Add Your Comment'></textarea>
-            <button class='btm' type='submit' name='submit'>Comment</button>
+        echo "<form  method ='POST' action= '".setComment($conn)."'>
+            <input type='hidden' name='UserID' value='Anonymous'>
+            <input type='hidden' name='Date' value='".date('Y-m-d H:i:s')."'>
+            <textarea  name = 'message' class='txtarea' placeholder='Add Your Comment'></textarea>
+            <button class='btm' type='Submit' name='commentSubmit'>Comment</button>
         </form>";
         ?>
       </div>
       <div class="container-comment">
         <div class="be-comment-block">
-            <h1 class="comments-title">Comments (3)</h1>
-            <div class="be-comment">
-                <div class="be-comment-content">
-                    
-                        <span class="be-comment-name">
-                            <a href="blog-detail-2.html">Ravi Sah</a>
-                            </span>
-                        <span class="be-comment-time">
-                            <i class="fa fa-clock-o"></i>
-                            May 27, 2015 at 3:14am
-                        </span>
-        
-                    <p class="be-comment-text">
-                        Pellentesque gravida tristique ultrices. 
-                        Sed blandit varius mauris, vel volutpat urna hendrerit id. 
-                        Curabitur rutrum dolor gravida turpis tristique efficitur.
-                    </p>
-                </div>
-            </div>
-            <div class="be-comment">
+            <h1 class="comments-title">Comments</h1>
 
-                <div class="be-comment-content">
-                    <span class="be-comment-name">
-                        <a href="blog-detail-2.html">Phoenix, the Creative Studio</a>
-                    </span>
-                    <span class="be-comment-time">
-                        <i class="fa fa-clock-o"></i>
-                        May 27, 2015 at 3:14am
-                    </span>
-                    <p class="be-comment-text">
-                        Nunc ornare sed dolor sed mattis. In scelerisque dui a arcu mattis, at maximus eros commodo. Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque. Duis eleifend lorem non ant. Proin ut ornare lectus, vel eleifend est. Fusce hendrerit dui in turpis tristique blandit.
-                    </p>
-                </div>
-            </div>
-            <div class="be-comment">
-                <div class="be-comment-content">
-                    <span class="be-comment-name">
-                        <a href="blog-detail-2.html">Cüneyt ŞEN</a>
-                    </span>
-                    <span class="be-comment-time">
-                        <i class="fa fa-clock-o"></i>
-                        May 27, 2015 at 3:14am
-                    </span>
-                    <p class="be-comment-text">
-                        Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque. Duis eleifend lorem non ant
-                    </p>
-                </div>
-            </div>
-            </div>
-            </div>
 
+            <?php
+            getComment($conn);
+            ?>
+         </div>
+        </div>
+            
 
       <!-- Footer -->
       <footer class="footer2">

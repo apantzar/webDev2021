@@ -19,13 +19,26 @@ function getComment($conn){
     $sql = "SELECT * FROM comments";
     $result = mysqli_query($conn,$sql);
     while($row = mysqli_fetch_assoc($result)){
-            echo"<div class='commentBox'><p>'";
-            echo $row['UserID'];
-            echo "<br>";
-            echo $row['Date'];
-            echo "<br>";
-            echo $row['message'];
-        echo "</p></div>";
+
+
+
+
+        echo"<div class='be-comment'>";
+        echo"<div class='be-comment-content'>";
+                    
+        echo"<span class='be-comment-name'>";
+        echo $row['UserID'];
+        echo "</span>";
+        echo"<span class='be-comment-time'>";
+        echo"<i class='fa fa-clock-o'></i>";
+        echo $row['Date'];
+        echo"</span>";
+        
+        echo"<p class='be-comment-text'>";
+        echo $row['message'];
+        echo"</p>";
+        echo"</div>";
+        echo"</div>";
     }
     
     
