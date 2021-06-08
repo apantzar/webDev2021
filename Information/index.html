@@ -20,6 +20,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <style>
+        .leavecomm
+        {
+            height: 70px;
+            padding-top: 10px;
+        }
         .btm{
             padding: 10px 15px;
             border: none;
@@ -56,6 +61,7 @@
             position:relative;  width: 100%;
             border: 8px solid #333;
             padding: 15px 10px;
+            padding-bottom: 40px;
         }
         .be-comment-block {
     margin-bottom: 50px !important;
@@ -452,8 +458,10 @@
         </div>
       </section>
       <div class="container-form" >
-        <h2 style="    text-align: center;
-        margin-bottom: 15px">Leave Us a Comment</h2>
+        <div class="leavecomm">
+            <h2 style="    text-align: center;
+            margin-bottom: 15px">Leave Us a Comment</h2>
+        </div>
         <form>
             <input type='hidden' name='uid' value='Anonymous'>
             <input type='hidden' name='date' value='".date("Y-m-d H:i:s")."'>
