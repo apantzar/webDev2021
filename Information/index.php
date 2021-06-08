@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
     <?php
-        date_default_timezone_set('Europe/Greece');
+        date_default_timezone_set('Europe/Athens');
     ?>
     <style>
         .leavecomm
@@ -465,8 +465,8 @@
         echo "<form>
             <input type='hidden' name='uid' value='Anonymous'>
             <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
-            <textarea  class="txtarea" placeholder='Add Your Comment'></textarea>
-            <button class="btm" type="submit" name='submit'>Comment</button>
+            <textarea  class='txtarea' placeholder='Add Your Comment'></textarea>
+            <button class='btm' type='submit' name='submit'>Comment</button>
         </form>";
         ?>
       </div>
