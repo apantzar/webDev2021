@@ -1,6 +1,7 @@
 <?php
     include 'dbm.inc.php';
     include 'contact.inc.php';
+    date_default_timezone_set('Europe/Athens');
 
 
 ?>
@@ -158,6 +159,7 @@
 						<input type='text' class='field' name='name' placeholder='Your Name'>
 						<input type='text' class='field' name='email' placeholder='Your Email'>
 						<input type='number' class='field' name='phone' placeholder='Phone'>
+                        <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
 						<textarea placeholder='Message' name='message' class='field'></textarea>
 						<button class='btn' type='Submit' name='messageSubmit'>Send</button>
                         <!-- ----------------------------------- -->
