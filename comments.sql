@@ -4,3 +4,11 @@ CREATE TABLE comments(
     Date datetime not null,
     message TEXT not null
 );
+
+CREATE TABLE users (
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  username varchar(100) NOT NULL,
+  password varchar(100) NOT NULL,
+  email varchar(100) NOT NULL,
+  userType varchar(100) NOT NULL DEFAULT 'user'
+);

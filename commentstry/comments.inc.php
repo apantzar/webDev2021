@@ -33,10 +33,10 @@ function getComment($conn){
 
 function getLogin($conn){
     if(isset($_POST['loginSubmit'])){
-        $UserID = $_POST['UserID'];
-        $pass = $_POST['pass'];
+        $username = $_POST['username'];
+        $password = $_POST['pass'];
 
-        $sql = "SELECT * FROM user WHERE UserID = '$UserID' AND pass = '$pass'";
+        $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)==1){
             if($row = mysqli_fetch_assoc($result)){
