@@ -20,13 +20,13 @@
 <body>
 <?php
     echo"<form method='POST' action = '".getLogin($conn)."'>
-            <input type='text' name='UserID'>
-            <input type='password' name = 'pass'>
-            <button type='submit' name='loginSubmit'></button>
+            <input type='text' name='username'>
+            <input type='password' name = 'password'>
+            <button type='submit' name='loginSubmit'>Login</button>
         </form>";
 
     echo"<form method='POST' action = '".userLogoff()."'>
-        <button type='submit' name='logoffSubmit'></button>
+        <button type='submit' name='logoffSubmit'>Logout</button>
     </form>";
     ?>
    <?php 
