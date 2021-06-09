@@ -76,7 +76,7 @@
     border-radius: 2px;
     padding: 50px 70px;
     border:1px solid #ffffff;
-}
+    }
 
 .comments-title {
     font-size: 16px;
@@ -213,7 +213,7 @@
 
 
         
-        <!--This is for popup (Sign-In)-->
+        <!--This is for popup (Sign-In)----->
 
         <div class="popup">
             <div class="popup-content">
