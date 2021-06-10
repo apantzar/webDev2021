@@ -34,10 +34,10 @@ function getComment($conn){
 function getLogin($conn){
     if(isset($_POST['loginSubmit'])){
         $username = $_POST['username'];
-        $password = $_POST['pass'];
+        $password = $_POST['password'];
 
-        $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
-        $result = mysqli_query($conn,$sql);
+        $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+        $result = $conn -> query($sql);
         if(mysqli_num_rows($result)==1){
             if($row = mysqli_fetch_assoc($result)){
                 $_SESSION['id'] = $row['id'];
@@ -49,10 +49,17 @@ function getLogin($conn){
             header("Location: index.php? loginfailed");
             exit();
         }
+
     }
     
 }
 
 function userLogoff(){
+    if(isset($_POST['logoffSubmit'])){
+        session_start();
+        session_destroy();
+        header("Location: index.php");
+        exit();
 
+    }
 }

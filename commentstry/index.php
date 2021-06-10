@@ -28,7 +28,16 @@
     echo"<form method='POST' action = '".userLogoff()."'>
         <button type='submit' name='logoffSubmit'>Logout</button>
     </form>";
+
+    if(isset($_SESSION['id'])){
+        echo" you are in!";
+    }
+    else{
+        echo "you are not in";
+    }
     ?>
+    <br><br>
+
    <?php 
    echo "<form method ='POST' action= '".setComment($conn)."'>
     <input type='hidden' name='UserID' value='Anonymous'>
