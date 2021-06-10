@@ -8,6 +8,7 @@
 
     $_SESSION['status']= false;
     session_start();
+    ob_start();
 
 
     $data=mysqli_connect($host,$user, $password,$db);
@@ -16,8 +17,10 @@
        die("connection error    ".mysqli_connect_error());  //This will change to abord
     }
 
+    include 'userFunctions.php';
 
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
+
+    /*if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 
         $username = $_POST["username"];
@@ -38,7 +41,7 @@
         }
 
 
-    }
+    }*/
 
 
 ?>
@@ -101,31 +104,42 @@
 
 
         <!--This is for popup (Sign-In)-->
-        <form action="#" method="POST">
-        <div class="popup">
-            <div class="popup-content">
-                <input type="text" placeholder="Username" name="username">
-                <input type="password" placeholder="Password" name="password">
-                <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
-                <button class="signBtnStyle" id="Sign-In">Sign-In</button>
-                <button id="closeBtn" class="close" >x</button>
-                <button class="registerBtn" id="SignUp" style="display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ">Sign-Up</button>
-                <p style="font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; ">You don't have an account? </p>
+            <div class='popup'>
+                <div class='popup-content'>
+                <?php 
+                    echo"<form method='POST' action = '".getLogin($data)."'>
+                    <input type='text' placeholder='Username' name='username'>
+                    <input type='password' placeholder='Password' name='password'>
+                    <!--<a href='#' class ='nav-links nav-links-Button'>Sign-In</a>-->
+                    <button class='signBtnStyle' id='Sign-In' type='Submit' name='loginSubmit'>Sign-In</button>
+                    <button id='closeBtn' class='close' >x</button>
+                    <button class='registerBtn' id='SignUp' style='display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ' >Sign-Up</button>
+                    <p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>
+                    </form>";
+                ?>
+                </div>
             </div>
-        </div>
+            
+            
+        ?>
+        
 
         <!--THIS IS FOR SIGN UP-->
-        <div class="popupSignUp">
-            <div class="Sign-Up-content">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button id="close" class="close" >x</button>
-                <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;">You already have an account?</p>
-            <button class="signBtnStyle" id="signBtn2" style="display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; ">Sign-In</button>
-                <button class="registerBtn" id="SignUp" style="top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;">Sign-Up</button>
-            </div>
-        </div>
+        <?php 
+            echo"
+                <div class='popupSignUp'>
+                <div class='Sign-Up-content'>
+                    <input type='email' placeholder='Email' name='email' >
+                    <input type='text'  placeholder='Username' name='username'>
+                    <input type='password'  placeholder='Password' name='password'>
+                    <button id='close' class='close' >x</button>
+                    <p style='word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;'>You already have an account?</p>
+                    <button class='signBtnStyle' id='signBtn2' style='display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; '>Sign-In</button>
+                    <button class='registerBtn' id='SignUp'  type='Submit' name='signupSubmit' style='top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;'>Sign-Up</button>
+                </div>
+            </div>";
+        ?>
+            
 
         <script>
 
