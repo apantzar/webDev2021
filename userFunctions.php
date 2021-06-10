@@ -40,8 +40,7 @@ function setUser($conn){
         
 
         
-        //$sql = "INSERT INTO 'users' (username,password,email) VALUES ('$username','$password','$email')";
-        $sql ="INSERT INTO users (username,password,email) VALUES ('maria','sarmpel','remel')";
+        $sql = "INSERT INTO users (username,password,email) VALUES ('$username','$password','$email')";
         
         $result = $conn ->query($sql);
     }

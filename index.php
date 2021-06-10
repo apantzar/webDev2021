@@ -104,22 +104,22 @@
 
 
         <!--This is for popup (Sign-In)-->
-            <div class='popup'>
+        <?php 
+            echo"
+            <div class='popup' >
                 <div class='popup-content'>
-                <?php 
-                    echo"<form method='POST' action = '".getLogin($data)."'>
+                <form method='POST' action = '".getLogin($data)."'>
                     <input type='text' placeholder='Username' name='username'>
                     <input type='password' placeholder='Password' name='password'>
                     <!--<a href='#' class ='nav-links nav-links-Button'>Sign-In</a>-->
                     <button class='signBtnStyle' id='Sign-In' type='Submit' name='loginSubmit'>Sign-In</button>
+                    </form>
                     <button id='closeBtn' class='close' >x</button>
                     <button class='registerBtn' id='SignUp' style='display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ' >Sign-Up</button>
                     <p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>
-                    </form>";
-                ?>
                 </div>
             </div>
-            
+            </form>";
             
         ?>
         
@@ -129,13 +129,16 @@
             echo"
                 <div class='popupSignUp'>
                 <div class='Sign-Up-content'>
+                <form method='POST' action = '".setUser($data)."'>
                     <input type='email' placeholder='Email' name='email' >
                     <input type='text'  placeholder='Username' name='username'>
                     <input type='password'  placeholder='Password' name='password'>
+                    <button class='registerBtn' id='SignUp'  type='Submit' name='signupSubmit' style='top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;'>Sign-Up</button>
+                    </form>
                     <button id='close' class='close' >x</button>
                     <p style='word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;'>You already have an account?</p>
                     <button class='signBtnStyle' id='signBtn2' style='display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; '>Sign-In</button>
-                    <button class='registerBtn' id='SignUp'  type='Submit' name='signupSubmit' style='top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;'>Sign-Up</button>
+                    
                 </div>
             </div>";
         ?>
