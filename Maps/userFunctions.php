@@ -45,6 +45,13 @@ function setUser($conn){
         $result = $conn ->query($sql);
     }
 }
+function getUsernameByID($conn){
+    $number=$_SESSION['id'];
+    $sql= "SELECT username FROM users WHERE id= $number";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row['username'];
+}
 
 
 ?>
