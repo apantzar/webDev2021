@@ -1,6 +1,6 @@
 <?php
 
-    //include 'dbm.inc.php';
+    include 'dbm.inc.php';
     include 'userFunctions.php';
     session_start();
     ob_start();
