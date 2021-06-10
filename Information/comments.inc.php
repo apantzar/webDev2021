@@ -64,7 +64,7 @@ function deleteComment($conn){
 
 }
 
-function getLogin($conn){
+/*function getLogin($conn){
     if(isset($_POST['loginSubmit'])){
         $UserID = $_POST['UserID'];
         $pass = $_POST['pass'];
@@ -84,8 +84,4 @@ function getLogin($conn){
         }
     }
     
-}
-
-function userLogoff(){
-
-}
+}*/

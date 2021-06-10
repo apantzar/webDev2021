@@ -9,6 +9,7 @@ function getLogin($conn){
         $result = $conn -> query($sql);
         if(mysqli_num_rows($result)==1){
             if($row = mysqli_fetch_assoc($result)){
+                //session_start();
                 $_SESSION['id'] = $row['id'];
                 header("Location: ./index.php? loginsuccess");
                 exit();

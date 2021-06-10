@@ -2,6 +2,8 @@
         date_default_timezone_set('Europe/Athens');
         include'dbh.inc.php';
         include'comments.inc.php';
+        include'userFunctions.php';
+        session_start();
         ob_start();
 ?>
 
@@ -25,7 +27,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
     <style>
         .leavecomm
         {
@@ -215,30 +216,44 @@
         
         <!--This is for popup (Sign-In)----->
 
-        <div class="popup">
-            <div class="popup-content">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <!--<a href="#" class ="nav-links nav-links-Button">Sign-In</a>-->
-                <button class="signBtnStyle" id="Sign-In">Sign-In</button>
-                <button id="closeBtn" class="close" >x</button>
-                <button class="registerBtn" id="SignUp" style="display: table-cell; vertical-align: middle;  height: 10%; line-height: 2.5%; ">Sign-Up</button>
-                <p style="font-size: 10px; margin-top: 95px; text-align: center;  font-family: 'Comfortaa',sans-serif; ">You don't have an account? </p>
+        <?php 
+            echo"
+            <div class='popup' >
+                <div class='popup-content'>
+                <form method='POST' action = '".getLogin($conn)."'>
+                    <input type='text' placeholder='Username' name='username'>
+                    <input type='password' placeholder='Password' name='password'>
+                    <!--<a href='#' class ='nav-links nav-links-Button'>Sign-In</a>-->
+                    <button class='signBtnStyle' id='Sign-In' type='Submit' name='loginSubmit'>Sign-In</button>
+                    </form>
+                    <button id='closeBtn' class='close' >x</button>
+                    <button class='registerBtn' id='SignUp' style='display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ' >Sign-Up</button>
+                    <p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>
+                </div>
             </div>
-        </div>
+            </form>";
+            
+        ?>
+        
 
         <!--THIS IS FOR SIGN UP-->
-        <div class="popupSignUp">
-            <div class="Sign-Up-content">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button id="close" class="close" >x</button>
-                <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 75px; text-align: center; color: black;">You already have an account?</p>
-            <button class="signBtnStyle" id="signBtn2" style="display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; ">Sign-In</button>
-                <button class="registerBtn" id="SignUp" style="top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;">Sign-Up</button>
-            </div>
-        </div>
+        <?php 
+            echo"
+                <div class='popupSignUp'>
+                <div class='Sign-Up-content'>
+                <form method='POST' action = '".setUser($conn)."'>
+                    <input type='email' placeholder='Email' name='email' >
+                    <input type='text'  placeholder='Username' name='username'>
+                    <input type='password'  placeholder='Password' name='password'>
+                    <button class='registerBtn' id='SignUp'  type='Submit' name='signupSubmit' style='top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;'>Sign-Up</button>
+                    </form>
+                    <button id='close' class='close' >x</button>
+                    <p style='word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;'>You already have an account?</p>
+                    <button class='signBtnStyle' id='signBtn2' style='display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; '>Sign-In</button>
+                    
+                </div>
+            </div>";
+        ?>
 
         <script>
 
@@ -466,12 +481,19 @@
             margin-bottom: 15px">Leave Us a Comment</h2>
         </div>
         <?php
-        echo "<form  method ='POST' action= '".setComment($conn)."'>
-            <input type='hidden' name='UserID' value='Anonymous'>
-            <input type='hidden' name='Date' value='".date('Y-m-d H:i:s')."'>
-            <textarea  name = 'message' class='txtarea' placeholder='Add Your Comment'></textarea>
-            <button class='btm' type='Submit' name='commentSubmit'>Comment</button>
-        </form>";
+
+
+            if(isset($_SESSION['id'])){
+                echo "<form  method ='POST' action= '".setComment($conn)."'>
+                    <input type='hidden' name='UserID' value='Anonymous'>
+                    <input type='hidden' name='Date' value='".date('Y-m-d H:i:s')."'>
+                    <textarea  name = 'message' class='txtarea' placeholder='Add Your Comment'></textarea>
+                    <button class='btm' type='Submit' name='commentSubmit'>Comment</button>
+                </form>";
+            }
+            else{
+                echo"<br> You need to log-in if you want to comment!";
+            }
         ?>
       </div>
       <div class="container-comment">
