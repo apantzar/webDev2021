@@ -90,7 +90,7 @@ if(isset($_SESSION['id'])){
         echo"<!-- Page Navigator -->
         <div class='nav-container'>
             <nav class='navbar'>
-                <a href='../'><h1 id='navbar-logo'>SeaThePollution</h1></a>
+                <a href='./index.php'><h1 id='navbar-logo'>SeaThePollution</h1></a>
                 <div class='menu-toggle' id='mobile-menu'>
                     <span class='bar'></span>
                     <span class='bar'></span>
@@ -98,11 +98,11 @@ if(isset($_SESSION['id'])){
                     <span class='bar'></span>
                 </div>
                 <ul class='nav-menu'>
-                    <li><a href='../' class='nav-links'>Home</a></li>
-                    <li><a href='../Maps' class='nav-links'>Map</a></li>
-                    <li><a href='../Information' class='nav-links'>Information</a></li>
-                    <li><a href='../MarineLife/' class='nav-links'>Marine Life</a></li>
-                    <li><a href='../Contact/' class='nav-links'>Contact Us</a></li>
+                    <li><a href='./index.php' class='nav-links'>Home</a></li>
+                    <li><a href='./Maps' class='nav-links'>Map</a></li>
+                    <li><a href='./Information' class='nav-links'>Information</a></li>
+                    <li><a href='./MarineLife/' class='nav-links'>Marine Life</a></li>
+                    <li><a href='./Contact/' class='nav-links'>Contact Us</a></li>
                     <li><a href='./Users/' id='signBtn' class='nav-links nav-links-Button'>".getUsernameByID($conn)."</a></li>
                 </ul>
             </nav>
@@ -113,7 +113,7 @@ if(isset($_SESSION['id'])){
         echo"<!-- Page Navigator -->
         <div class='nav-container'>
             <nav class='navbar'>
-                <a href='../'><h1 id='navbar-logo'>SeaThePollution</h1></a>
+                <a href='./index.php'><h1 id='navbar-logo'>SeaThePollution</h1></a>
                 <div class='menu-toggle' id='mobile-menu'>
                     <span class='bar'></span>
                     <span class='bar'></span>
@@ -121,11 +121,11 @@ if(isset($_SESSION['id'])){
                     <span class='bar'></span>
                 </div>
                 <ul class='nav-menu'>
-                    <li><a href='../' class='nav-links'>Home</a></li>
-                    <li><a href='../Maps' class='nav-links'>Map</a></li>
-                    <li><a href='../Information' class='nav-links'>Information</a></li>
-                    <li><a href='../MarineLife/' class='nav-links'>Marine Life</a></li>
-                    <li><a href='../Contact/' class='nav-links'>Contact Us</a></li>
+                    <li><a href='./index.php' class='nav-links'>Home</a></li>
+                    <li><a href='./Maps' class='nav-links'>Map</a></li>
+                    <li><a href='./Information' class='nav-links'>Information</a></li>
+                    <li><a href='./MarineLife/' class='nav-links'>Marine Life</a></li>
+                    <li><a href='./Contact/' class='nav-links'>Contact Us</a></li>
                     <li><a href='#' id='signBtn' class='nav-links nav-links-Button'>Sign-In</a></li>
                 </ul>
             </nav>
