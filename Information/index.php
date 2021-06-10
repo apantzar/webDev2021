@@ -14,7 +14,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information</title>
-    <link rel="stylesheet" type="text/css" href="../Menu/Menu.css">
+    <?php
+    if(isset($_SESSION['id'])){
+        echo"<link rel='stylesheet' type='text/css' href='../Menu/Menu.css'>";
+    }else{
+        echo"<link rel='stylesheet' type='text/css' href='../Menu/LoginMenu.css'>";
+    }
+    ?>
     <link rel="stylesheet" type="text/css" href="../sign.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
@@ -187,24 +193,48 @@
 </head>
 <body>
     <header>
-
-        <!-- Page Navigator -->
-        <div class="nav-container">
-            <nav class="navbar">
-                <a href="../"><h1 id="navbar-logo">SeaThePollution</h1></a>
-                <div class="menu-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+    <?php
+    if(isset($_SESSION['id'])){
+        echo"<!-- Page Navigator -->
+        <div class='nav-container'>
+            <nav class='navbar'>
+                <a href='../'><h1 id='navbar-logo'>SeaThePollution</h1></a>
+                <div class='menu-toggle' id='mobile-menu'>
+                    <span class='bar'></span>
+                    <span class='bar'></span>
+                    <span class='bar'></span>
+                    <span class='bar'></span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="../" class="nav-links">Home</a></li>
-                    <li><a href="../Maps" class="nav-links">Map</a></li>
-                    <li><a href="../Information" class="nav-links">Information</a></li>
-                    <li><a href="../MarineLife/" class="nav-links">Marine Life</a></li>
-                    <li><a href="../Contact/" class="nav-links">Contact Us</a></li>
-                    <li><a href="#" id="signBtn" class="nav-links nav-links-Button">Sign-In</a></li>
+                <ul class='nav-menu'>
+                    <li><a href='../' class='nav-links'>Home</a></li>
+                    <li><a href='../Maps' class='nav-links'>Map</a></li>
+                    <li><a href='../Information' class='nav-links'>Information</a></li>
+                    <li><a href='../MarineLife/' class='nav-links'>Marine Life</a></li>
+                    <li><a href='../Contact/' class='nav-links'>Contact Us</a></li>
+                    <li><a href='../Users/' id='signBtn' class='nav-links nav-links-Button'>".getUsernameByID($conn)."</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- ------------------------------------------------------------------------------------- -->";
+        
+    }else{
+        echo"<!-- Page Navigator -->
+        <div class='nav-container'>
+            <nav class='navbar'>
+                <a href='../'><h1 id='navbar-logo'>SeaThePollution</h1></a>
+                <div class='menu-toggle' id='mobile-menu'>
+                    <span class='bar'></span>
+                    <span class='bar'></span>
+                    <span class='bar'></span>
+                    <span class='bar'></span>
+                </div>
+                <ul class='nav-menu'>
+                    <li><a href='../' class='nav-links'>Home</a></li>
+                    <li><a href='../Maps' class='nav-links'>Map</a></li>
+                    <li><a href='../Information' class='nav-links'>Information</a></li>
+                    <li><a href='../MarineLife/' class='nav-links'>Marine Life</a></li>
+                    <li><a href='../Contact/' class='nav-links'>Contact Us</a></li>
+                    <li><a href='#' id='signBtn' class='nav-links nav-links-Button'>Sign-In</a></li>
                 </ul>
             </nav>
         </div>
@@ -216,8 +246,6 @@
         
         <!--This is for popup (Sign-In)----->
 
-        <?php 
-            echo"
             <div class='popup' >
                 <div class='popup-content'>
                 <form method='POST' action = '".getLogin($conn)."'>
@@ -231,14 +259,10 @@
                     <p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>
                 </div>
             </div>
-            </form>";
-            
-        ?>
-        
+            </form>
 
         <!--THIS IS FOR SIGN UP-->
-        <?php 
-            echo"
+
                 <div class='popupSignUp'>
                 <div class='Sign-Up-content'>
                 <form method='POST' action = '".setUser($conn)."'>
@@ -252,50 +276,53 @@
                     <button class='signBtnStyle' id='signBtn2' style='display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; '>Sign-In</button>
                     
                 </div>
-            </div>";
-        ?>
+            </div>
 
         <script>
 
             //Sign in
-            document.getElementById("signBtn").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "flex";
-                console.log("I am in") //TESTING
+            document.getElementById('signBtn').addEventListener('click', function(){
+                document.querySelector('.popup').style.display = 'flex';
+                console.log('I am in') //TESTING
             })
 
 
             
         //sign-In inside 
-        document.getElementById("signBtn2").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "flex";
-            document.querySelector(".popupSignUp").style.display = "none";
-            console.log("I am in") //TESTING
+        document.getElementById('signBtn2').addEventListener('click', function(){
+            document.querySelector('.popup').style.display = 'flex';
+            document.querySelector('.popupSignUp').style.display = 'none';
+            console.log('I am in') //TESTING
 
 
         })
 
 
             //Sign up
-            document.getElementById("SignUp").addEventListener("click", function(){
-                document.querySelector(".popupSignUp").style.display = "flex";
-                document.querySelector(".popup").style.display = "none";
+            document.getElementById('SignUp').addEventListener('click', function(){
+                document.querySelector('.popupSignUp').style.display = 'flex';
+                document.querySelector('.popup').style.display = 'none';
             })
 
             //Close button
             
-            document.querySelector(".close").addEventListener("click", function(){
-                document.querySelector(".popup").style.display = "none";
-                console.log("I am in") //TESTING
+            document.querySelector('.close').addEventListener('click', function(){
+                document.querySelector('.popup').style.display = 'none';
+                console.log('I am in') //TESTING
             })
 
-            document.getElementById("close").addEventListener("click", function(){
-                console.log("I am in") //TESTING
-                document.querySelector(".popupSignUp").style.display = "none";
+            document.getElementById('close').addEventListener('click', function(){
+                console.log('I am in') //TESTING
+                document.querySelector('.popupSignUp').style.display = 'none';
                 
             })
 
             
-        </script>
+        </script>";
+    }
+    ?>
+
+        
 
     <script src="../Menu/Menu.js"></script>
     </header>

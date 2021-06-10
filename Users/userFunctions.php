@@ -53,5 +53,3 @@ function getUsernameByID($conn){
     $row = mysqli_fetch_assoc($result);
     return $row['username'];
 }
-
-?>
