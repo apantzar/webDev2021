@@ -82,7 +82,8 @@ function setEmail($conn){
     if(isset($_POST['setEmail'])){
         $email = $_POST['email'];
         if(empty($email)){
-            $email=getUserEmailByID($conn);
+            header("Location: index.php");
+            exit();
         }
         $id=$_SESSION['id'];
         $username=getUsernameByID($conn);
@@ -102,7 +103,8 @@ function setUsername($conn){
     if(isset($_POST['setUsername'])){
         $username = $_POST['username'];
         if(empty($username)){
-            $username=getUsernameByID($conn);
+            header("Location: index.php");
+            exit();
         }
         $id=$_SESSION['id'];
         $email=getUserEmailByID($conn);
@@ -122,7 +124,8 @@ function setPass($conn){
     if(isset($_POST['password'])){
         $pass = $_POST['password'];
         if(empty($pass)){
-            $pass=getUserPassByID($conn);
+            header("Location: index.php");
+            exit();
         }
         $id=$_SESSION['id'];
         $username=getUsernameByID($conn);
