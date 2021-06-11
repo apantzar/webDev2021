@@ -27,7 +27,7 @@ function userLogoff(){
     if(isset($_POST['logoffSubmit'])){
         session_start();
         session_destroy();
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
 
     }
@@ -53,5 +53,6 @@ function getUsernameByID($conn){
     $row = mysqli_fetch_assoc($result);
     return $row['username'];
 }
+
 
 ?>

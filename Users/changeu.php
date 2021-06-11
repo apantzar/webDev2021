@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?php echo getUsernameByID($conn); ?>
+        Change Username
     </title>
 
     <link rel='stylesheet' type='text/css' href='menu.css'>
@@ -64,22 +64,16 @@
             </div>
             <div class="right">
                 <div class="info">
-                    <h3>Information</h3>
+                    <h3>Change Username:</h3>
                     <div class="info_data"> 
                         <div class="data">
-                            <h4>Email</h4>
-                            <?php echo"<p style='font-size:12px;'>".getUserEmailByID($conn)."</p>";?>   
-                            <a href="./changee.php"><h4>Change <br> Email</h4></a>  
-                        </div>
-                        <div class="data">
-                            <h4>Username</h4>
-                            <?php echo"<p>".getUsernameByID($conn)."</p>";?>  
-                            <a href="./changeu.php"><h4>Change <br> Username</h4></a>   
-                        </div>
-                        <div class="data">
-                            <h4>Password</h4>
-                            <?php echo"<p>".getUserPassByID($conn)."</p>";?>    
-                            <a href="./changep.php"><h4>Change <br> Password</h4></a>
+                            <h4>Current Username:</h4>
+                            <?php echo"<p>".getUsernameByID($conn)."</p>";?>   
+                            <h4>New Email</h4>
+                            <?php echo"<form method='POST' action = '".setUsername($conn)."'>
+                                            <input type='text' placeholder='New Username' name='username' style='background-color: #01dbdf;  margin: 10px 0; display: block; padding: 8px; border: none; background-color: #fff; border-top: 1px solid #fff;border-bottom: 2px solid #01dbdf; outline: none;'>
+                                            <button type='Submit' name='setUsername' style='color: #01dbdf; padding: 8px; background: #fff;border: 1px solid #01dbdf; cursor: pointer; margin-bottom: 25px;'>Change Username</button>"?>
+                            <a href="./index.php"><h4 style="margin-bottom:0px"><-Back</h4></a>
                         </div>
                     </div>
                 </div>

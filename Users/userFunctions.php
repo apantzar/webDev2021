@@ -27,7 +27,7 @@ function userLogoff(){
     if(isset($_POST['logoffSubmit'])){
         session_start();
         session_destroy();
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
 
     }
@@ -53,3 +53,79 @@ function getUsernameByID($conn){
     $row = mysqli_fetch_assoc($result);
     return $row['username'];
 }
+
+
+function getUserRoleByID($conn){
+    $number=$_SESSION['id'];
+    $sql= "SELECT userType FROM users WHERE id= $number";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row['userType'];
+}
+function getUserEmailByID($conn){
+    $number=$_SESSION['id'];
+    $sql= "SELECT email FROM users WHERE id= $number";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row['email'];
+}
+function getUserPassByID($conn){
+    $number=$_SESSION['id'];
+    $sql= "SELECT password FROM users WHERE id= $number";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    $string=$row['password'];
+    return "$string[0]*****$string[-1]";
+}
+
+function setEmail($conn){
+    if(isset($_POST['setEmail'])){
+        $email = $_POST['email'];
+        $id=$_SESSION['id'];
+        $username=getUsernameByID($conn);
+        $pass=getUserPassByID($conn);
+
+        
+        $sql = "DELETE FROM users WHERE id = $id";
+        $result = $conn ->query($sql);
+        $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
+        $result = $conn ->query($sql);
+        header("Location: index.php");
+
+    }
+}
+
+function setUsername($conn){
+    if(isset($_POST['setUsername'])){
+        $username = $_POST['username'];
+        $id=$_SESSION['id'];
+        $email=getUserEmailByID($conn);
+        $pass=getUserPassByID($conn);
+
+        
+        $sql = "DELETE FROM users WHERE id = $id";
+        $result = $conn ->query($sql);
+        $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
+        $result = $conn ->query($sql);
+        header("Location: index.php");
+
+    }
+}
+
+function setPass($conn){
+    if(isset($_POST['password'])){
+        $pass = $_POST['password'];
+        $id=$_SESSION['id'];
+        $username=getUsernameByID($conn);
+        $email=getUserEmailByID($conn);
+
+        
+        $sql = "DELETE FROM users WHERE id = $id";
+        $result = $conn ->query($sql);
+        $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
+        $result = $conn ->query($sql);
+        header("Location: index.php");
+
+    }
+}
+?>
