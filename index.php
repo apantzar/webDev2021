@@ -146,9 +146,24 @@ if(isset($_SESSION['id'])){
                     <!--<a href='#' class ='nav-links nav-links-Button'>Sign-In</a>-->
                     <button class='signBtnStyle' id='Sign-In' type='Submit' name='loginSubmit'>Sign-In</button>
                     </form>
-                    <button id='closeBtn' class='close' >x</button>
-                    <button class='registerBtn' id='SignUp' style='display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ' >Sign-Up</button>
-                    <p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>
+                    <button id='closeBtn' class='close' >x</button>";
+                    if(isset($_GET['error'])){
+                        if($_GET['error']=='loginfailed'){
+                            echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 73px;'>*Wrong Credentials!</h1>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                        }
+                        if($_GET['error']=='FillAllBoxesL'){
+                            echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 73px;'>*Fill All Boxes!</h1>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                        }
+                        else{
+                            echo"<p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>";
+                        }
+                    }
+                    else{
+                        echo"<p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>";
+                    }
+                    echo"<button class='registerBtn' id='SignUp' style='display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ' >Sign-Up</button>
                 </div>
             </div>
             </form>
@@ -165,11 +180,21 @@ if(isset($_SESSION['id'])){
                     </form>
                     <button id='close' class='close' >x</button>";
                     if(isset($_GET['error'])){
-                        if($_GET['error']='FillAllBoxes'){
+                        if($_GET['error']=='FillAllBoxes'){
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 60px;'>*Fill All Boxes!</h1>";
                             echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
                         }
-                        
+                        elseif($_GET['error']=='EmailTaken'){
+                            echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 60px;'>*Email Already Registered!</h1>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                        }
+                        elseif($_GET['error']=='UsernameTaken'){
+                            echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 60px;'>*This Username Exists!</h1>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                        }
+                        else{
+                            echo"<p style='font-size: 10px; margin-top: 80px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                        }
                     }
                     else{
                         echo"<p style='font-size: 10px; margin-top: 80px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
@@ -226,10 +251,18 @@ if(isset($_SESSION['id'])){
 
     <?php
         if(isset($_GET['error'])){
-            echo"<script>
-                document.querySelector('.popupSignUp').style.display = 'flex';
-                document.querySelector('.popup').style.display = 'none';
-            </script>";   
+            if($_GET['error']=='FillAllBoxes' || $_GET['error']=='EmailTaken' ||$_GET['error']=='UsernameTaken' ){
+                echo"<script>
+                        document.querySelector('.popupSignUp').style.display = 'flex';
+                        document.querySelector('.popup').style.display = 'none';
+                    </script>"; 
+
+            }else{
+                echo"<script>
+                    document.querySelector('.popup').style.display = 'flex';
+                    console.log('I am in') //TESTING
+                </script>";
+            } 
         }
     ?>
     

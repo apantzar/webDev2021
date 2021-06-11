@@ -10,11 +10,27 @@ function isUsernameAvailable($conn,$username){
     }
     return false;
 }
+function isEmailAvailable($conn,$email){
+    $sql="SELECT email FROM users WHERE email LIKE '$email'";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    $str=$row['email'];
+    if (empty($str)){
+        return true;
+    }
+    return false;
+}
 
 function getLogin($conn){
     if(isset($_POST['loginSubmit'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
+
+        if(empty($username) || empty($password)){
+            header("Location: ./index.php?error=FillAllBoxesL");
+            exit();
+
+        }
 
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
         $result = $conn -> query($sql);
@@ -53,12 +69,22 @@ function setUser($conn){
             header("Location: ./index.php?error=FillAllBoxes");
             exit();
         }
-        
 
+        if(isUsernameAvailable($conn,$username)){
+            if(isEmailAvailable($conn,$email)){
+                $sql = "INSERT INTO users (username,password,email) VALUES ('$username','$password','$email')";
         
-        $sql = "INSERT INTO users (username,password,email) VALUES ('$username','$password','$email')";
-        
-        $result = $conn ->query($sql);
+                $result = $conn ->query($sql);
+            }
+            else{
+                header("Location: ./index.php?error=EmailTaken");
+                exit();
+            }
+
+        }else{
+            header("Location: ./index.php?error=UsernameTaken");
+            exit();
+        }
     }
 }
 function getUsernameByID($conn){
