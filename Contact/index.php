@@ -33,9 +33,8 @@
         {
             position:relative;
             z-index: 1000;
-            top:14vh;
+            top:11vh;
             color:red;
-            background-color:black;
             
         }
     </style>
@@ -213,71 +212,15 @@
                         document.querySelector('.popup').style.display = 'none';
                     </script>"; 
 
-            }else{
+            }
+            elseif($_GET['error']=='FillAllBoxesL' || $_GET['error']=='loginfailed'){
                 echo"<script>
                     document.querySelector('.popup').style.display = 'flex';
                     console.log('I am in') //TESTING
                 </script>";
-            } 
+            }
         }
     ?>
-
-     <!--THIS IS FOR SIGN UP-->
-     <div class="popupSignUp">
-        <div class="Sign-Up-content">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button id="close" class="close" >x</button>
-            <p style="word-spacing: 1px;font-size: 10px; font-family: 'Comfortaa',sans-serif; margin-top: 80px; text-align: center; color: black;">You already have an account?</p>
-            <button class="signBtnStyle" id="signBtn2" style="display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; ">Sign-In</button>
-            <button class="registerBtn" id="SignUp" style="top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;">Sign-Up</button>
-        </div>
-    </div>
-
-    <script>
-        //Sign in
-        document.getElementById("signBtn").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "flex";
-            document.querySelector(".popupSignUp").style.display = "none";
-            console.log("I am in") //TESTING
-
-
-        })
-
-
-        //sign-In inside 
-        document.getElementById("signBtn2").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "flex";
-            document.querySelector(".popupSignUp").style.display = "none";
-            console.log("I am in") //TESTING
-
-
-        })
-
-         //Sign up
-         document.getElementById("SignUp").addEventListener("click", function(){
-                document.querySelector(".popupSignUp").style.display = "flex";
-                document.querySelector(".popup").style.display = "none";
-            })
-
-        //Close button
-
-        document.querySelector(".close").addEventListener("click", function(){
-            document.querySelector(".popup").style.display = "none";
-            console.log("I am in") //TESTING
-
-
-        })
-
-        document.getElementById("close").addEventListener("click", function(){
-                console.log("I am in") //TESTING
-                document.querySelector(".popupSignUp").style.display = "none";
-                
-            })
-
-        
-    </script>
 
 		<!-- ----------------------------------------------------------------------- -->
 		<script src="../Menu/Menu.js"></script>
@@ -320,9 +263,9 @@
 						</span>
                         <hr>";
                         $Msg= "";
-                        if(isset($_GET['error']))
+                        if($_GET['error']=="FillAllBoxesC")
                         {
-                            $Msg='Fuck off';
+                            $Msg='*Fill All Boxes';
                             echo'<div class="alert" >'.$Msg.'</div>';
         
                         }
