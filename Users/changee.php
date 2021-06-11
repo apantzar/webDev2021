@@ -70,6 +70,11 @@
                             <h4>Current Email:</h4>
                             <?php echo"<p>".getUserEmailByID($conn)."</p>";?>   
                             <h4>New Email:</h4>
+                                <?php
+                                if(isset($_GET['error'])){
+                                    echo "<p style='color:red;'>This Email is Registred</p>";
+                                    }
+                                ?>
                             <?php echo"<form method='POST' action = '".setEmail($conn)."'>
                                             <input type='email' placeholder='New Email' name='email' style='background-color: #01dbdf;  margin: 10px 0; display: block; padding: 8px; border: none; background-color: #fff; border-top: 1px solid #fff;border-bottom: 2px solid #01dbdf; outline: none;'>
                                             <button type='Submit' name='setEmail' style='color: #01dbdf; padding: 8px; background: #fff;border: 1px solid #01dbdf; cursor: pointer; margin-bottom: 25px;' >Change Email</button>"?>

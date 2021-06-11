@@ -69,7 +69,14 @@
                         <div class="data">
                             <h4>Current Username:</h4>
                             <?php echo"<p>".getUsernameByID($conn)."</p>";?>   
-                            <h4>New Email</h4>
+                            <h4>New Username</h4>
+
+                            <?php
+                                if(isset($_GET['error'])){
+                                    echo "<p style='color:red;'>This Username is Taken</p>";
+                                    }
+                                ?>
+
                             <?php echo"<form method='POST' action = '".setUsername($conn)."'>
                                             <input type='text' placeholder='New Username' name='username' style='background-color: #01dbdf;  margin: 10px 0; display: block; padding: 8px; border: none; background-color: #fff; border-top: 1px solid #fff;border-bottom: 2px solid #01dbdf; outline: none;'>
                                             <button type='Submit' name='setUsername' style='color: #01dbdf; padding: 8px; background: #fff;border: 1px solid #01dbdf; cursor: pointer; margin-bottom: 25px;'>Change Username</button>"?>

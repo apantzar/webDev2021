@@ -85,16 +85,20 @@ function setEmail($conn){
             header("Location: index.php");
             exit();
         }
-        $id=$_SESSION['id'];
-        $username=getUsernameByID($conn);
-        $pass=getUserPassByID($conn);
+        if(isEmailAvailable($conn,$email)){
+            $id=$_SESSION['id'];
+            $username=getUsernameByID($conn);
+            $pass=getUserPassByID($conn);
 
-        
-        $sql = "DELETE FROM users WHERE id = $id";
-        $result = $conn ->query($sql);
-        $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
-        $result = $conn ->query($sql);
-        header("Location: index.php");
+            
+            $sql = "DELETE FROM users WHERE id = $id";
+            $result = $conn ->query($sql);
+            $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
+            $result = $conn ->query($sql);
+            header("Location: index.php");
+        }else{
+            header("Location: ./changee.php?error=EmailExists ");
+        }
 
     }
 }
@@ -106,16 +110,21 @@ function setUsername($conn){
             header("Location: index.php");
             exit();
         }
-        $id=$_SESSION['id'];
-        $email=getUserEmailByID($conn);
-        $pass=getUserPassByID($conn);
+        if(isUsernameAvailable($conn,$username)){
+            $id=$_SESSION['id'];
+            $email=getUserEmailByID($conn);
+            $pass=getUserPassByID($conn);
 
-        
-        $sql = "DELETE FROM users WHERE id = $id";
-        $result = $conn ->query($sql);
-        $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
-        $result = $conn ->query($sql);
-        header("Location: index.php");
+            
+            $sql = "DELETE FROM users WHERE id = $id";
+            $result = $conn ->query($sql);
+            $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
+            $result = $conn ->query($sql);
+            header("Location: index.php");
+        }
+        else{
+            header("Location: ./changeu.php?error=UsernameExists ");
+        }
 
     }
 }
@@ -137,7 +146,28 @@ function setPass($conn){
         $sql = "INSERT INTO users (id,username,password,email) VALUES ('$id','$username','$pass','$email')";
         $result = $conn ->query($sql);
         header("Location: index.php");
-
     }
+}
+
+function isUsernameAvailable($conn,$username){
+    $sql="SELECT username FROM users WHERE username LIKE '$username'";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    $str=$row['username'];
+    if (empty($str)){
+        return true;
+    }
+    return false;
+}
+
+function isEmailAvailable($conn,$email){
+    $sql="SELECT email FROM users WHERE email LIKE '$email'";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    $str=$row['email'];
+    if (empty($str)){
+        return true;
+    }
+    return false;
 }
 ?>
