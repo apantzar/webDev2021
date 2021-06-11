@@ -81,6 +81,9 @@ function getUserPassByID($conn){
 function setEmail($conn){
     if(isset($_POST['setEmail'])){
         $email = $_POST['email'];
+        if(empty($email)){
+            $email=getUserEmailByID($conn);
+        }
         $id=$_SESSION['id'];
         $username=getUsernameByID($conn);
         $pass=getUserPassByID($conn);
@@ -98,6 +101,9 @@ function setEmail($conn){
 function setUsername($conn){
     if(isset($_POST['setUsername'])){
         $username = $_POST['username'];
+        if(empty($username)){
+            $username=getUsernameByID($conn);
+        }
         $id=$_SESSION['id'];
         $email=getUserEmailByID($conn);
         $pass=getUserPassByID($conn);
@@ -115,6 +121,9 @@ function setUsername($conn){
 function setPass($conn){
     if(isset($_POST['password'])){
         $pass = $_POST['password'];
+        if(empty($pass)){
+            $pass=getUserPassByID($conn);
+        }
         $id=$_SESSION['id'];
         $username=getUsernameByID($conn);
         $email=getUserEmailByID($conn);
