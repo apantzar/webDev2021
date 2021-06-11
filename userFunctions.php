@@ -1,5 +1,16 @@
 <?php
 
+function isUsernameAvailable($conn,$username){
+    $sql="SELECT username FROM users WHERE username LIKE '$username'";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    $str=$row['username'];
+    if (empty($str)){
+        return true;
+    }
+    return false;
+}
+
 function getLogin($conn){
     if(isset($_POST['loginSubmit'])){
         $username = $_POST['username'];
@@ -9,14 +20,13 @@ function getLogin($conn){
         $result = $conn -> query($sql);
         if(mysqli_num_rows($result)==1){
             if($row = mysqli_fetch_assoc($result)){
-                //session_start();
                 $_SESSION['id'] = $row['id'];
                 header("Location: ./index.php? loginsuccess");
                 exit();
             }
 
         } else{
-            header("Location: ./index.php? loginfailed");
+            header("Location: ./index.php?error=loginfailed");
             exit();
         }
     }
@@ -38,6 +48,11 @@ function setUser($conn){
         $email = $_POST['email'];
         $username = $_POST['username'];
         $password = $_POST['password'];
+
+        if(empty($email) || empty($email) || empty($email)){
+            header("Location: ./index.php?error=FillAllBoxes");
+            exit();
+        }
         
 
         
