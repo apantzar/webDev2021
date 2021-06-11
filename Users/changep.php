@@ -68,7 +68,7 @@
                     <div class="info_data"> 
                         <div class="data">
                             <h4>Current Password:</h4>
-                            <?php echo"<p>".getUserpassByID($conn)."</p>";?>   
+                            <?php echo"<p>".getUserpassDispByID($conn)."</p>";?>   
                             <h4>New Password</h4>
                             <?php echo"<form method='POST' action = '".setPass($conn)."'>
                                             <input type='password' placeholder='New Password' name='password' style='background-color: #01dbdf;  margin: 10px 0; display: block; padding: 8px; border: none; background-color: #fff; border-top: 1px solid #fff;border-bottom: 2px solid #01dbdf; outline: none;'>

@@ -78,7 +78,7 @@
                         </div>
                         <div class="data">
                             <h4>Password</h4>
-                            <?php echo"<p>".getUserPassByID($conn)."</p>";?>    
+                            <?php echo"<p>".getUserPassDispByID($conn)."</p>";?>    
                             <a href="./changep.php"><h4>Change <br> Password</h4></a>
                         </div>
                     </div>

@@ -69,13 +69,21 @@ function getUserEmailByID($conn){
     $row = mysqli_fetch_assoc($result);
     return $row['email'];
 }
-function getUserPassByID($conn){
+function getUserPassdispByID($conn){
     $number=$_SESSION['id'];
     $sql= "SELECT password FROM users WHERE id= $number";
     $result = $conn ->query($sql);
     $row = mysqli_fetch_assoc($result);
     $string=$row['password'];
     return "$string[0]*****$string[-1]";
+}
+function getUserPassByID($conn){
+    $number=$_SESSION['id'];
+    $sql= "SELECT password FROM users WHERE id= $number";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    $string=$row['password'];
+    return $string;
 }
 
 function setEmail($conn){

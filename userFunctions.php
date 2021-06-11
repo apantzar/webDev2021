@@ -75,6 +75,8 @@ function setUser($conn){
                 $sql = "INSERT INTO users (username,password,email) VALUES ('$username','$password','$email')";
         
                 $result = $conn ->query($sql);
+                header("Location: ./index.php?UserCreated");
+                exit();
             }
             else{
                 header("Location: ./index.php?error=EmailTaken");
