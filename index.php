@@ -150,11 +150,11 @@ if(isset($_SESSION['id'])){
                     if(isset($_GET['error'])){
                         if($_GET['error']=='loginfailed'){
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 73px;'>*Wrong Credentials!</h1>";
-                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account?</p>";
                         }
                         if($_GET['error']=='FillAllBoxesL'){
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 73px;'>*Fill All Boxes!</h1>";
-                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account?</p>";
                         }
                         else{
                             echo"<p style='font-size: 10px; margin-top: 100px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </p>";
