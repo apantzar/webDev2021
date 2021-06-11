@@ -1,7 +1,9 @@
+
 <?php
     include 'dbm.inc.php';
     include 'contact.inc.php';
-    date_default_timezone_set('Europe/Athens');
+    date_default_timezone_set('Europe/Athens');  
+    ob_start();
 
 
 ?>
@@ -17,6 +19,17 @@
 	<link rel="stylesheet" type="text/css" href="../Menu/Menu.css">
 	<link rel="stylesheet" href="../Footer/Footer.css">
 	<link rel="stylesheet" type="text/css" href="../sign.css">
+    <style>
+        .alert
+        {
+            position:relative;
+            z-index: 1000;
+            top:14vh;
+            color:red;
+            background-color:black;
+            
+        }
+    </style>
 </head>
 <body>
 	<header>
@@ -152,7 +165,15 @@
 						<span class='contact100-form-title-1'>
 							Contact Us
 						</span>
-					</div>
+                        <hr>";
+                        $Msg= "";
+                        if(isset($_GET['error']))
+                        {
+                            $Msg='Fuck off';
+                            echo'<div class="alert" >'.$Msg.'</div>';
+        
+                        }
+					echo"</div>
 					<form  method='POST' action = '".setMessage($conn)."'>
 
                         <!-- Writing -->

@@ -8,7 +8,15 @@ function setMessage($conn){
         $date = $_POST['date'];
         $message = $_POST['message'];
 
-        $sql = "INSERT INTO contact (name, email, phone,date, message) VALUES ('$name','$email','$phone','$date','$message')";
-        $result = $conn ->query($sql);
+        if(empty($name) || empty($email) || empty($phone) || empty($date) ||empty($message) )
+        {
+            header('location:index.php?error');
+        }
+        else
+        {
+
+            $sql = "INSERT INTO contact (name, email, phone,date, message) VALUES ('$name','$email','$phone','$date','$message')";
+            $result = $conn ->query($sql);
+        }
     }
 }
