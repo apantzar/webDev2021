@@ -182,22 +182,22 @@ if(isset($_SESSION['id'])){
                     if(isset($_GET['error'])){
                         if($_GET['error']=='FillAllBoxes'){
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 60px;'>*Fill All Boxes!</h1>";
-                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account?</p>";
                         }
                         elseif($_GET['error']=='EmailTaken'){
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 60px;'>*Email Already Registered!</h1>";
-                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account?</p>";
                         }
                         elseif($_GET['error']=='UsernameTaken'){
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 60px;'>*This Username Exists!</h1>";
-                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                            echo"<p style='font-size: 10px; margin-top: 10px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account?</p>";
                         }
                         else{
-                            echo"<p style='font-size: 10px; margin-top: 80px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                             echo"<p style='font-size: 10px; margin-top: 80px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account?</p>";
                         }
                     }
                     else{
-                        echo"<p style='font-size: 10px; margin-top: 80px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</p>";
+                        echo"<p style='font-size: 10px; margin-top: 80px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account??</p>";
                     }
                     
                     echo"<button class='signBtnStyle' id='signBtn2' style='display: table-cell; background: #fff;border: 1px solid #0074a9; vertical-align: middle;color:#0074a9 ; height: 10%; top: 270px; line-height: 2.5%; '>Sign-In</button>
