@@ -33,8 +33,9 @@
         {
             position:relative;
             z-index: 1000;
-            top:11vh;
             color:red;
+            left:42%;
+            top:15px;
             
         }
     </style>
@@ -262,16 +263,17 @@
                     echo"<span class='contact100-form-title-1'>
                                 Contact Us
                         </span>";
-                        $Msg= "";
-                        if(!(empty($_GET['error']))){
-                            if($_GET['error']=="FillAllBoxesC")
-                            {
-                                $Msg='*Fill All Boxes';
-                                echo'<div class="alert" >'.$Msg.'</div>';
-            
-                            }
+					echo"</div>";
+                    $Msg= "";
+                    if(!(empty($_GET['error']))){
+                        if($_GET['error']=="FillAllBoxesC")
+                        {
+                            $Msg='*Fill All Boxes';
+                            echo'<div class="alert" >'.$Msg.'</div>';
+        
                         }
-					echo"</div>
+                    }
+                    echo"
 					<form  method='POST' action = '".setMessage($conn)."'>
 
                         <!-- Writing -->
