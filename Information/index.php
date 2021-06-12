@@ -558,13 +558,20 @@
         <div class="leavecomm">
             <h2 style="    text-align: center;
             margin-bottom: 15px">Leave Us a Comment</h2>
+            <?php
+                if(!(empty($_GET['error']))){
+                    if($_GET['error']=='FillAllBoxesC'){
+                        echo"<h2 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 7px;'>*Write A Comment First!</h2>";
+                    }
+                }
+            ?>
         </div>
         <?php
 
 
             if(isset($_SESSION['id'])){
                 echo "<form  method ='POST' action= '".setComment($conn)."'>
-                    <input type='hidden' name='UserID' value='Anonymous'>
+                    <input type='hidden' name='UserID' value='".getUsernameByID($conn)."'>
                     <input type='hidden' name='Date' value='".date('Y-m-d H:i:s')."'>
                     <textarea  name = 'message' class='txtarea' placeholder='Add Your Comment'></textarea>
                     <button class='btm' type='Submit' name='commentSubmit'>Comment</button>

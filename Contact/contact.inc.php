@@ -21,3 +21,4 @@ function setMessage($conn){
         }
     }
 }
+?>

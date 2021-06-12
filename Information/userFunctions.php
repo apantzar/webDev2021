@@ -91,8 +91,13 @@ function getUsernameByID($conn){
     $number=$_SESSION['id'];
     $sql= "SELECT username FROM users WHERE id= $number";
     $result = $conn ->query($sql);
-    $row = mysqli_fetch_assoc($result);
-    return $row['username'];
+    if(!(empty($result))){
+        $row = mysqli_fetch_assoc($result);
+        return $row['username'];
+    }
+    else{
+        return;
+    }
 }
 
 

@@ -258,16 +258,18 @@
 			
 			echo"<div class='contact-box'>
 					<div class='contact100-form-title' style='background-image: url(../Images/octavian-rosca-yX2V4hxo6Vs-unsplash.jpg);'>
-						<span class='contact100-form-title-1'>
-							Contact Us
-						</span>
-                        <hr>";
+						";
+                    echo"<span class='contact100-form-title-1'>
+                                Contact Us
+                        </span>";
                         $Msg= "";
-                        if($_GET['error']=="FillAllBoxesC")
-                        {
-                            $Msg='*Fill All Boxes';
-                            echo'<div class="alert" >'.$Msg.'</div>';
-        
+                        if(!(empty($_GET['error']))){
+                            if($_GET['error']=="FillAllBoxesC")
+                            {
+                                $Msg='*Fill All Boxes';
+                                echo'<div class="alert" >'.$Msg.'</div>';
+            
+                            }
                         }
 					echo"</div>
 					<form  method='POST' action = '".setMessage($conn)."'>

@@ -7,8 +7,16 @@ function setComment($conn){
         $Date = $_POST['Date'];
         $message = $_POST['message'];
 
-        $sql = "INSERT INTO comments (UserID, Date, message) VALUES ('$UserID','$Date','$message')";
-        $result = $conn ->query($sql);
+        if(empty($message)){
+            header("Location: ./index.php?error=FillAllBoxesC");
+            exit();
+        }else{
+            $sql = "INSERT INTO comments (UserID, Date, message) VALUES ('$UserID','$Date','$message')";
+            $result = $conn ->query($sql);
+            header("Location: ./index.php?CommentSet");
+        }
+
+        
     }
     
 
@@ -33,10 +41,14 @@ function getComment($conn){
         echo "</span>";
         echo"<span class='be-comment-time'>";
         echo"<i class='fa fa-clock-o'></i>";
-        echo"<form class='deleteForm' method='POST' action='".deleteComment($conn)."'>
-                <input type='hidden' name='CommentID' value='".$row['CommentID']."'>
-                <button style=' background: none!important; border: none; cursor: pointer; color: #069;' type = 'submit' name='commentDelete'> Delete </button>
-            </form>";
+        if(!(empty(getUsernameByID($conn)))){
+            if(getUsernameByID($conn)==$row['UserID']){
+                echo"<form class='deleteForm' method='POST' action='".deleteComment($conn)."'>
+                        <input type='hidden' name='CommentID' value='".$row['CommentID']."'>
+                        <button style=' background: none!important; border: none; cursor: pointer; color: #069;' type = 'submit' name='commentDelete'> Delete </button>
+                    </form>";
+            }
+        }
         echo $row['Date'];
         echo"</span>";
         
