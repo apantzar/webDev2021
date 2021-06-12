@@ -35,7 +35,7 @@
             z-index: 1000;
             color:red;
             left:42%;
-            top:15px;
+            top:35px;
             
         }
     </style>
