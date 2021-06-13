@@ -149,7 +149,7 @@ body{
 }
 
 .toggle::before{
-    content: '\f0c9';
+    content: '\2630';
     font-family: fontAwesome;
     position: absolute;
     width: 100%;

@@ -33,7 +33,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="admin/style.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous"> -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PV1GOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="anonymous"> 
 
 </head>
 <body>
@@ -43,15 +44,15 @@
          <ul>
             <li>
               <a href="#">
-                <span class="icon"></span>
+                <span class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/seal.png"/></span>
                 <span class="title">SeaThePollution</span>
               </a>
 
             </li>
 
             <li>
-                <a href="#">
-                    <span class="icon"></span>
+                <a href="#" id="dash" >
+                    <span class="icon"><img src="https://img.icons8.com/material/24/ffffff/dashboard-layout.png"/></span>
                     <span class="title">DashBoard</span>
                 </a>
 
@@ -60,8 +61,8 @@
 
             
             <li>
-                <a href="#">
-                    <span class="icon"><i class="fa fa-address-book" aria-hidden="true"></i></span>
+                <a href="admin/usersAdmin.php" id="users">
+                    <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/group.png"/></span>
                     <span class="title">Users</span>
                 </a>
 
@@ -70,8 +71,8 @@
 
             <li>
             
-                <a href="#">
-                    <span class="icon"><i class="fa fa-map" aria-hidden="true"></i></span>
+                <a href="#" id="map">
+                    <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/map--v1.png"/></span>
                     <span class="title">Map</span>
                </a>
 
@@ -79,8 +80,8 @@
 
             
             <li>
-                <a href="#">
-                    <span class="icon"><i class="fa fa-info" aria-hidden="true"></i></span>
+                <a href="#" id="info" >
+                    <span class="icon"><img src="https://img.icons8.com/material-sharp/24/ffffff/info.png"/></span>
                     <span class="title">Information</span>
                </a>
 
@@ -89,7 +90,7 @@
             
             <li>
                 <a href="SignOut.php">
-                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="icon"><img src="https://img.icons8.com/metro/26/ffffff/logout-rounded.png"/></span>
                     <span class="title">SignOut</span>
               </a>
             </li>
@@ -102,7 +103,7 @@
 
 
 
-        <div class="main">
+        <div class="main" id="mainId">
             <div class="topbar" >
                 <div class="toggle" onclick="toggleMenu();"></div>
                     <div class="search">
@@ -140,12 +141,17 @@
             </div>
            
 
+           
+
 
 
         </div>
 
     
     </div>
+
+
+    
 
 
     <script>
@@ -159,7 +165,17 @@
 
 
         }
+
+
+        function usersControl(){
+            alert("Hey");
+        }
+
     </script>
+
+
+
+    
 
 </body>
 </html>
