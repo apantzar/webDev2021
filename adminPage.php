@@ -106,9 +106,9 @@
             <div class="topbar" >
                 <div class="toggle" onclick="toggleMenu();"></div>
                     <div class="search">
-                            <lable>
+                            <label>
                                 <input type="text" placeholder="Search">
-                            </lable>
+                            </label>
 
                        
                            
@@ -128,6 +128,16 @@
             
             
             
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,042</div>
+                        <div class="cardName">Total Users</div>
+                    </div>
+                </div>
+
+            </div>
            
 
 
@@ -142,8 +152,12 @@
         function toggleMenu(){
             let toggle = document.querySelector('.toggle');
             let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
             toggle.classList.toggle('active');
             navigation.classList.toggle('active');
+            main.classList.toggle('active');
+
+
         }
     </script>
 
