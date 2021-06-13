@@ -80,21 +80,21 @@
                             <h4>Email</h4>
                             <?php echo"<p style='font-size:12px;'>".getUserEmailByID($conn)."</p>";?>   
                             <div class="changes">
-                                <a href="./changee.php"><h4 style="color:red;">Change Email</h4></a>  
+                                <a href="./changee.php"><h4 style="color:#01a9ac;">Change <br> Email</h4></a>  
                             </div>
                         </div>
                         <div class="data">
                             <h4>Username</h4>
                             <?php echo"<p>".getUsernameByID($conn)."</p>";?>  
                             <div class="changes">
-                                <a href="./changeu.php"><h4 style="color:red;">Change Username</h4></a>  
+                                <a href="./changeu.php"><h4 style="color:#01a9ac;">Change <br> Username</h4></a>  
                             </div> 
                         </div>
                         <div class="data">
                             <h4>Password</h4>
                             <?php echo"<p>".getUserPassDispByID($conn)."</p>";?>   
                             <div class="changes">
-                                <a href="./changep.php"><h4 style="color:red;">Change Password</h4></a>
+                                <a href="./changep.php"><h4 style="color:#01a9ac;">Change <br> Password</h4></a>
                             </div> 
                         </div>
                     </div>

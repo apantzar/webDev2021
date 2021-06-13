@@ -35,7 +35,7 @@ function getLogin($conn){//synarthsh epiteyksis syndeshs toy xrhsth sto site
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
         $result = $conn -> query($sql);
         if(mysqli_num_rows($result)==1){//elegxos apotelesmatos
-            if($row = mysqli_fetch_assoc($result)){
+            if($row = mysqli_fetch_assoc($result)){//apotelesma (pinakas xristh) sthn metavlith row
                 $_SESSION['id'] = $row['id'];//anathetoume to id tou xristh sto session ths efarmoghs 
                 header("Location: ./index.php? loginsuccess");//epistrofh sxetikou mynhmatos 
                 exit();

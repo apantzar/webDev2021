@@ -64,7 +64,7 @@
 
         <header>
         <?php
-    if(isset($_SESSION['id'])){
+    if(isset($_SESSION['id'])){//an yparxei id xristh (ara xristis sindemenos) emfanizoume thn ekdosi toy menu gia xrhsth (me dynatothta aposyndeshs kai provolhs selidas tou xristh)
         echo"<!-- Page Navigator -->
         <div class='nav-container'>
             <nav class='navbar'>
@@ -87,7 +87,7 @@
         </div>
         <!-- ------------------------------------------------------------------------------------- -->";
         
-    }else{
+    }else{//an den yparxei sindemenos xrisths emfanizoume to menu to geniko (me dinatothta syndeshs)
         echo"<!-- Page Navigator -->
         <div class='nav-container'>
             <nav class='navbar'>
@@ -125,8 +125,8 @@
                     <button class='signBtnStyle' id='Sign-In' type='Submit' name='loginSubmit'>Sign-In</button>
                     </form>
                     <button id='closeBtn' class='close' >x</button>";
-                    if(isset($_GET['error'])){
-                        if($_GET['error']=='loginfailed'){
+                    if(isset($_GET['error'])){//an yparxei error
+                        if($_GET['error']=='loginfailed'){//elexxoume ton typo toy sfalmatos me vash ton kodiko kai emfanizoume to katalhlo mynhma
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 73px;'>*Wrong Credentials!</h1>";
                             echo"<h1 style='font-size: 10px; margin-top: 10px; padding-left:155px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</h1>";
                         }
@@ -134,11 +134,11 @@
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 73px;'>*Fill All Boxes!</h1>";
                             echo"<h1 style='font-size: 10px; margin-top: 10px; padding-left:155px;  font-family: 'Comfortaa',sans-serif;'>You don't have an account?</h1>";
                         }
-                        else{
+                        else{// an den einai kapoio apo ta parapanw lathoi den emfanizoume kapoio mynhma lathous alla mono to klasiko erwtima gia to singup
                             echo"<h1 style='font-size: 10px; margin-top: 100px; padding-left:155px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </h1>";
                         }
                     }
-                    else{
+                    else{//an den yparxei katholou minima lathous pali emfanizoyume mono to erotima gia to sign up
                         echo"<h1 style='font-size: 10px; margin-top: 100px; padding-left:155px;  font-family: 'Comfortaa',sans-serif; '>You don't have an account? </h1>";
                     }
                     echo"<button class='registerBtn' id='SignUp' style='display: table-cell; vertical-align: middle; height: 10%; line-height: 2.5%; ' >Sign-Up</button>
@@ -157,7 +157,7 @@
                     <button class='registerBtn' id='SignUp'  type='Submit' name='signupSubmit' style='top: 190px; color: #fff; background: #0074a9; border: 1px solid #fff;;'>Sign-Up</button>
                     </form>
                     <button id='close' class='close' >x</button>";
-                    if(isset($_GET['error'])){
+                    if(isset($_GET['error'])){// akribos i idia logikh me to log in
                         if($_GET['error']=='FillAllBoxes'){
                             echo"<h1 style='color:red;font-size:12px;possition:relative;text-align:center;margin-top: 60px;'>*Fill All Boxes!</h1>";
                             echo"<h1 style='font-size: 10px; margin-top: 10px; padding-left:155px;  font-family: 'Comfortaa',sans-serif;'>You already have an account?</h1>";
@@ -228,14 +228,14 @@
     ?>     
     
     <?php
-        if(isset($_GET['error'])){
+        if(isset($_GET['error'])){//an kapoio apo ta lathoi pou emfanisthkan einai kapoio pou proirthe apo to signup tote emfanizoume to popup meta to refresh (wste na emfanistei to mynhma latous apefthias)
             if($_GET['error']=='FillAllBoxes' || $_GET['error']=='EmailTaken' ||$_GET['error']=='UsernameTaken' ){
                 echo"<script>
                         document.querySelector('.popupSignUp').style.display = 'flex';
                         document.querySelector('.popup').style.display = 'none';
                     </script>"; 
 
-            }else{
+            }else{//an kapoio apo ta lathoi pou emfanisthkan einai kapoio pou proirthe apo to signin tote emfanizoume to popup meta to refresh (wste na emfanistei to mynhma latous apefthias)
                 echo"<script>
                     document.querySelector('.popup').style.display = 'flex';
                     console.log('I am in') //TESTING

@@ -1,16 +1,16 @@
 <?php
 
 
-function setComment($conn){
+function setComment($conn){//synarthsh kataxorishs sxoleiwn
     if(isset($_POST['commentSubmit'])){
         $UserID = $_POST['UserID'];
         $Date = $_POST['Date'];
         $message = $_POST['message'];
 
-        if(empty($message)){
+        if(empty($message)){// elegxos gia kena pedia kai epistrofh katallhlou error
             header("Location: ./index.php?error=FillAllBoxesC");
             exit();
-        }else{
+        }else{//kataxorish sxolioy sthn vash dedomenon
             $sql = "INSERT INTO comments (UserID, Date, message) VALUES ('$UserID','$Date','$message')";
             $result = $conn ->query($sql);
             header("Location: ./index.php?CommentSet");
@@ -23,10 +23,10 @@ function setComment($conn){
 
 }
 
-function getComment($conn){
+function getComment($conn){ // sinarthsh anagnoshs kai emfanhshs twn comment
     $sql = "SELECT * FROM comments";
     $result = mysqli_query($conn,$sql);
-    while($row = mysqli_fetch_assoc($result)){
+    while($row = mysqli_fetch_assoc($result)){// oso yparxoyn sxoleia sthn fash dedomenwn
 
 
 
@@ -41,8 +41,8 @@ function getComment($conn){
         echo "</span>";
         echo"<span class='be-comment-time'>";
         echo"<i class='fa fa-clock-o'></i>";
-        if(!(empty(getUsernameByID($conn)))){
-            if(getUsernameByID($conn)==$row['UserID']){
+        if(!(empty(getUsernameByID($conn)))){// an yparxei xrisths
+            if(getUsernameByID($conn)==$row['UserID']){//an einai o idios xrhsths pou egrapse to comment me ayton pou einai sindemenos sto site emfanizete h epilogh tou delete
                 echo"<form class='deleteForm' method='POST' action='".deleteComment($conn)."'>
                         <input type='hidden' name='CommentID' value='".$row['CommentID']."'>
                         <button style=' background: none!important; border: none; cursor: pointer; color: #069;' type = 'submit' name='commentDelete'> Delete </button>
@@ -64,7 +64,7 @@ function getComment($conn){
     
 }
 
-function deleteComment($conn){
+function deleteComment($conn){//diagrafh sxoliou apo thn vash dedomenwn
 
     if(isset($_POST['commentDelete'])){
         $CommentID = $_POST['CommentID'];
