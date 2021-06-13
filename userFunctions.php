@@ -1,13 +1,16 @@
 <?php
 
 function isUsernameAvailable($conn,$username){
+    $admin = 'admin';
     $sql="SELECT username FROM users WHERE username LIKE '$username'";
     $result = $conn ->query($sql);
     $row = mysqli_fetch_assoc($result);
     $str=$row['username'];
-    if (empty($str)){
+    if (empty($str) and ($str != $admin)){
         return true;
     }
+
+    
     return false;
 }
 function isEmailAvailable($conn,$email){
@@ -22,6 +25,9 @@ function isEmailAvailable($conn,$email){
 }
 
 function getLogin($conn){
+
+    echo '<script>console.log("I am in getLogin");</script>';
+    $admin='admin';
     if(isset($_POST['loginSubmit'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -30,6 +36,11 @@ function getLogin($conn){
             header("Location: ./index.php?error=FillAllBoxesL");
             exit();
 
+        }else if($username == $admin) {
+
+            echo '<script>console.log("From if (admin)");</script>';
+            iAmTheAdmin();
+
         }
 
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
@@ -37,8 +48,15 @@ function getLogin($conn){
         if(mysqli_num_rows($result)==1){
             if($row = mysqli_fetch_assoc($result)){
                 $_SESSION['id'] = $row['id'];
-                header("Location: ./index.php? loginsuccess");
-                exit();
+                if($row["userType"]==$admin){
+                    $_SESSION["username"]=$username;
+                    $_SESSION['status'] = $admin;
+                    header("location: ./adminPage.php");
+                }else{
+                   header("Location: ./index.php? loginsuccess");
+                 exit(); 
+                }
+                
             }
 
         } else{
@@ -47,6 +65,35 @@ function getLogin($conn){
         }
     }
     
+}
+
+
+function iAmTheAdmin(){
+
+    echo '<script>console.log("I am in iAmTheAdmin");</script>';
+
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+
+        $sql_query = "select * from login where username= '".$username."' AND password= '".$password."'";
+        $result = mysqli_query($data, $sql_query);
+        $row=mysqli_fetch_array($result);
+
+        if($row["userType"]=="admin"){
+            $_SESSION["username"]=$username;
+            $_SESSION['status'] = true;
+            
+            header("location: ./adminPage.php");
+        }else{
+            echo "My admin knows the password :)";
+        }
+
+
+    }
 }
 
 function userLogoff(){

@@ -1,18 +1,28 @@
 <?php
 
 function getLogin($conn){
+    echo '<script>console.log("I am in getLogin");</script>';
+    $admin='admin';
     if(isset($_POST['loginSubmit'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
+       
 
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
         $result = $conn -> query($sql);
         if(mysqli_num_rows($result)==1){
             if($row = mysqli_fetch_assoc($result)){
                 //session_start();//afto kanonika sthn arxh tou site gia na mhn ginete logg off
-                $_SESSION['id'] = $row['id'];
-                header("Location: ./index.php? loginsuccess ");
-                exit();
+                if($row["userType"]==$admin){
+                    $_SESSION["username"]=$username;
+                    $_SESSION['status'] = $admin;
+                    header("location: ./adminPage.php");
+                }else{
+                    $_SESSION['id'] = $row['id'];
+                   header("Location: ./index.php? loginsuccess");
+                 exit(); 
+                }
+               
             }
 
         } else{
@@ -23,11 +33,42 @@ function getLogin($conn){
     
 }
 
+
+function iAmTheAdmin(){
+
+    echo '<script>console.log("I am in iAmTheAdmin");</script>';
+
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+
+
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+
+        $sql_query = "select * from login where username= '".$username."' AND password= '".$password."'";
+        $result = mysqli_query($data, $sql_query);
+        $row=mysqli_fetch_array($result);
+
+        if($row["userType"]=="admin"){
+            $_SESSION["username"]=$username;
+            $_SESSION['status'] = true;
+            
+            header("location:adminPage.php");
+        }else{
+            echo "My admin knows the password :)";
+        }
+
+
+    }
+}
+
 function userLogoff(){
+    $byeAdmin="bye";
     if(isset($_POST['logoffSubmit'])){
         session_start();
         session_destroy();
         header("Location: ../index.php");
+        $_SESSION['status'] = $byeAdmin;
         exit();
 
     }
