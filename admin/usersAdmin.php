@@ -1,5 +1,6 @@
 <?php 
 
+  include 'adminPage.php';
 
 ?>
 
@@ -9,6 +10,7 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="easyui.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="icon.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery.easyui.min.js"></script>
@@ -19,7 +21,7 @@
     <title>Document</title>
 </head>
 <body>
-<table id="dg" title="Users Management" class="easyui-datagrid" url="getData.php" toolbar="#toolbar" pagination="true" rownumbers="true" fitColumns="true" singleSelect="true" style="width:100%;height:350px;">
+<table id="dg" title="Users Management" class="easyui-datagrid" url="getData.php" toolbar="#toolbar" pagination="true" rownumbers="true" fitColumns="true" singleSelect="true" style="height:350px;margin-left:300px;">
     <thead>
         <tr>
             <th field="username" width="50">Username</th>

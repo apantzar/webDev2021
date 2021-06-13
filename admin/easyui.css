@@ -59,8 +59,9 @@
 }
 .panel {
   overflow: hidden;
+  width: calc(100% - 300px);
   text-align: left;
-  margin: 0;
+  margin-left: 300px;
   border: 0;
   -moz-border-radius: 0 0 0 0;
   -webkit-border-radius: 0 0 0 0;
@@ -362,7 +363,7 @@
   filter: none;
 }
 .accordion .accordion-header-selected {
-  background: #ffe48d;
+  background: #93ddff;
 }
 .accordion .accordion-header-selected .panel-title {
   color: #000000;
