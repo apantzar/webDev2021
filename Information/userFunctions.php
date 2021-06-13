@@ -88,7 +88,12 @@ function setUser($conn){
     }
 }
 function getUsernameByID($conn){
-    $number=$_SESSION['id'];
+    if (!(empty($_SESSION['id']))){
+        $number=$_SESSION['id'];
+    }
+    else{
+        return;
+    }
     $sql= "SELECT username FROM users WHERE id= $number";
     $result = $conn ->query($sql);
     if(!(empty($result))){
@@ -96,7 +101,7 @@ function getUsernameByID($conn){
         return $row['username'];
     }
     else{
-        return;
+        return ;
     }
 }
 

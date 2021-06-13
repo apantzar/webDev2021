@@ -359,6 +359,10 @@ Many of these pollutants sink to the ocean's depths or float far distances from 
                 <a href="./" class="home-foot"><img src="./Images/ho.png" alt="Home Icon" ></a>
                 <a href="/WebDev2021/Maps/" class="map-foot"><img src="./Images/ma.png" alt="Map Icon" > </a>
                 <a href="/WebDev2021/Information/" class="info-foot"><img src="./Images/if.png" alt="Information Icon" > </a>
+                <a href="./MarineLife" class="map-foot"><img src="./Images/mar.png" ></a>
+                <a href="./Contact" class="info-foot"><img src="./Images/em.png" ></a>
+                <a href="https://www.facebook.com/Sea-The-Pollution-105774651733564"target="_blank" class="map-foot"><img src="./Images/fa.png" ></a>
+                <a href="https://instagram.com/sea_the_pollution?utm_medium=copy_link" target="_blank" class="info-foot"><img src="./Images/in.png" ></a>
             </div>
         </div>
         <div class="footer-bottom">
