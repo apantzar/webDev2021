@@ -24,6 +24,16 @@
     <link rel="stylesheet" href="../Footer/Footer.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .changes
+        {
+            
+            border-radius: 8px;
+            font-size:12px;
+        }
+
+    
+    </style>
 
 </head>
 <body>
@@ -69,17 +79,23 @@
                         <div class="data">
                             <h4>Email</h4>
                             <?php echo"<p style='font-size:12px;'>".getUserEmailByID($conn)."</p>";?>   
-                            <a href="./changee.php"><h4>Change <br> Email</h4></a>  
+                            <div class="changes">
+                                <a href="./changee.php"><h4 style="color:red;">Change Email</h4></a>  
+                            </div>
                         </div>
                         <div class="data">
                             <h4>Username</h4>
                             <?php echo"<p>".getUsernameByID($conn)."</p>";?>  
-                            <a href="./changeu.php"><h4>Change <br> Username</h4></a>   
+                            <div class="changes">
+                                <a href="./changeu.php"><h4 style="color:red;">Change Username</h4></a>  
+                            </div> 
                         </div>
                         <div class="data">
                             <h4>Password</h4>
-                            <?php echo"<p>".getUserPassDispByID($conn)."</p>";?>    
-                            <a href="./changep.php"><h4>Change <br> Password</h4></a>
+                            <?php echo"<p>".getUserPassDispByID($conn)."</p>";?>   
+                            <div class="changes">
+                                <a href="./changep.php"><h4 style="color:red;">Change Password</h4></a>
+                            </div> 
                         </div>
                     </div>
                 </div>
