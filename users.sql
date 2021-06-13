@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Εξυπηρετητής: 127.0.0.1
--- Χρόνος δημιουργίας: 05 Ιουν 2021 στις 12:34:02
+-- Χρόνος δημιουργίας: 13 Ιουν 2021 στις 14:31:35
 -- Έκδοση διακομιστή: 10.4.19-MariaDB
 -- Έκδοση PHP: 7.3.28
 
@@ -39,7 +39,7 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`id`, `text`, `images`, `title`) VALUES
-(1, 'This is a text for home page!', '', 'Test From db');
+(1, 'The ocean is a huge body of saltwater that covers about 71 percent of the Earth’s surface. The planet has one global ocean, though oceanographers and the nations of the world have divided it into distinct geographic regions: the Pacific, Atlantic, Indian, and Arctic oceans. In recent years, some oceanographers have determined that the seas around Antarctica deserve their own designation: the Southern Ocean. An estimated 97 percent of the world’s water is found in the ocean. Because of this, the ocean has considerable impact on weather, temperature, and the food supply of humans and other organisms. Despite its size and impact on the lives of every organism on Earth, the ocean remains a mystery. More than 80 percent of the ocean has never been mapped, explored, or even seen by humans. A far greater percentage of the surfaces of the moon and the planet Mars have been mapped and studied than our own ocean floor has.It is unknown how many different species call the ocean their home. With many marine ecosystems suffering from rising sea temperatures, pollution, and other problems, some oceanographers believe the number of species is dropping. Still, there may be many positive surprises awaiting oceanographers in the years ahead. It could be that more than 90 percent of the ocean’s species are still undiscovered, with some scientists estimating that there are anywhere between a few hundred thousand to a few million more to be discovered. Currently, scientists know of around 226,000 ocean species.\r\n\r\nWrecked ships pollute the ocean through the release of oil, fuel, acidic components, asbestos, plastic, and radioactive materials, some of these are based on ship cargo contents. Some materials aboard sunken ships such as stainless steel or wood do not pollute the ocean.Of course, all pollution should be addressed. But it’s common to hear of many sunken ships …or “shipwrecks” occurring.From the many ships sunk during the second world war, to many more that have happened since. In fact, often ships these days are intentionally sunk too. Many ships are sunk intentionally simply to provide for “great diving spots”. Because divers enjoy diving into and around sunken ships! However, aside from human enjoyment at the cost of the planet, shipwrecks and sunken ships are a great potential pollution source.', '', 'Ocean');
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `username`, `password`, `userType`) VALUES
-(1, 'admin', '5@yB&RK#HRSu', 'admin');
+(1, 'admin', '660dd10155865dc861bf169f7e6d30c97125a5aea6874c795bf312998666bba3', 'admin');
 
 -- --------------------------------------------------------
 
@@ -95,35 +95,6 @@ CREATE TABLE `marine_life` (
   `text` text NOT NULL,
   `images` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-CREATE TABLE users (
-  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  username varchar(50) NOT NULL,
-  password varchar(50) NOT NULL,
-  email varchar(100) NOT NULL,
-  userType varchar(100) NOT NULL DEFAULT 'user'
-);
-
-CREATE TABLE comments(
-	CommentID int(11) not null AUTO_INCREMENT PRIMARY KEY,
-    UserID Varchar(128) not null,
-    Date datetime not null,
-    message TEXT not null
-);
-
-CREATE TABLE contact (
-    messageID int(11) not null AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) not null,
-    email VARCHAR(100) not null,
-    phone INTEGER(15) not null,
-    Date datetime not null,
-    message VARCHAR(300) not null
- );
-
-
-
-
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
