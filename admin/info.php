@@ -1,6 +1,6 @@
 <?php 
 
-  include 'menu.php';
+ 
   date_default_timezone_set('Europe/Athens');
 
 ?>
@@ -22,6 +22,119 @@
     <title>Information [root] </title>
 </head>
 <body>
+
+<div class="container">
+        <div class="navigation">
+         <ul>
+            <li>
+              <a href="#">
+                <span class="icon"><img src="https://img.icons8.com/ios-filled/50/ffffff/seal.png"/></span>
+                <span class="title">SeaThePollution</span>
+              </a>
+
+            </li>
+
+            <li>
+                <a href="adminPage.php" id="dash" >
+                    <span class="icon"><img src="https://img.icons8.com/material/24/ffffff/dashboard-layout.png"/></span>
+                    <span class="title">DashBoard</span>
+                </a>
+
+            </li>
+
+
+            
+            <li>
+                <a href="usersAdmin.php" id="users">
+                    <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/group.png"/></span>
+                    <span class="title">Users</span>
+                </a>
+
+            </li>
+
+
+            <li>
+            
+                <a href="#" id="map">
+                    <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/map--v1.png"/></span>
+                    <span class="title">Map</span>
+               </a>
+
+            </li>
+
+            
+            <li>
+                <a href="info.php" id="info" >
+                    <span class="icon"><img src="https://img.icons8.com/material-sharp/24/ffffff/info.png"/></span>
+                    <span class="title">Information</span>
+               </a>
+
+            </li>
+
+            
+            <li>
+                <a href="SignOut.php">
+                    <span class="icon"><img src="https://img.icons8.com/metro/26/ffffff/logout-rounded.png"/></span>
+                    <span class="title">SignOut</span>
+              </a>
+            </li>
+        
+
+        
+         </ul>
+        
+        </div>
+
+
+
+        <div class="main" id="mainId">
+            <div class="topbar" >
+                <div class="toggle" onclick="toggleMenu();"></div>
+                 
+                         <div class="user">
+                                <img src="admin.png">
+
+                            </div>          
+
+            </div> 
+            
+            
+            
+
+            <!-- <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,042</div>
+                        <div class="cardName">Total Users</div>
+                    </div>
+                </div>
+
+            </div> -->
+           
+
+           
+
+
+
+      
+
+
+    
+
+
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+
+
+        }
+
+    </script>
 <table id="dg" title="Comments Management" class="easyui-datagrid" url="getComments.php" toolbar="#toolbar" pagination="true" rownumbers="true" fitColumns="true" singleSelect="true" style="height:350px;margin-left:300px;">
     <thead>
         <tr>
@@ -150,7 +263,10 @@ function deleteComment(){
 }
 </script>
 
+</div>
 
+    
+</div>
 
 
 </body>

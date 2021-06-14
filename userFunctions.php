@@ -51,7 +51,7 @@ function getLogin($conn){//synarthsh epiteyksis syndeshs toy xrhsth sto site
                 if($row["userType"]==$admin){
                     $_SESSION["username"]=$username;
                     $_SESSION['status'] = $admin;
-                    header("location: ./adminPage.php");
+                    header("location: ./admin/adminPage.php");
                 }else{
                    header("Location: ./index.php? loginsuccess");//epistrofh sxetikou mynhmatos 
                  exit(); 
@@ -87,7 +87,7 @@ function iAmTheAdmin(){
             $_SESSION["username"]=$username;
             $_SESSION['status'] = true;
             
-            header("location: ./adminPage.php");
+            header("location: ./admin/adminPage.php");
         }else{
             echo "My admin knows the password :)";
         }

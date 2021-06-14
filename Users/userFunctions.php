@@ -52,7 +52,7 @@ function iAmTheAdmin(){
             $_SESSION["username"]=$username;
             $_SESSION['status'] = true;
             
-            header("location:adminPage.php");
+            header("location: ./admin/adminPage.php");
         }else{
             echo "My admin knows the password :)";
         }
