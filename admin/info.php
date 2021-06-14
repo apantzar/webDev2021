@@ -53,15 +53,6 @@
             </li>
 
 
-            <li>
-            
-                <a href="#" id="map">
-                    <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/map--v1.png"/></span>
-                    <span class="title">Map</span>
-               </a>
-
-            </li>
-
             
             <li>
                 <a href="info.php" id="info" >
@@ -100,21 +91,6 @@
             
             
             
-
-            <!-- <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="numbers">1,042</div>
-                        <div class="cardName">Total Users</div>
-                    </div>
-                </div>
-
-            </div> -->
-           
-
-           
-
-
 
       
 
