@@ -93,7 +93,7 @@
                             }
                             $rowImg=mysqli_fetch_assoc($resultImg);
                                 if($rowImg['status']==0){
-                                    echo"<img src='../Users/uploads/profile".getIDbyID($conn,$id).".jpg'  width='100'> ";
+                                    echo"<img src='../Users/uploads/profile".$id.".jpg'  width='100'> ";
                                 }
                                 else{
                                     echo"<img src='../Images/user-2517433.png' alt='user' width='100'>";
