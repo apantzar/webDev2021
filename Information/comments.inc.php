@@ -23,22 +23,7 @@ function setComment($conn){//synarthsh kataxorishs sxoleiwn
 
 }
 
-function getIDbyUsername($conn,$username){
-    $sql="SELECT id FROM users WHERE username='$username'";
-    $result = $conn ->query($sql);
-    $row = mysqli_fetch_assoc($result);
-    return $row['id'];
-}
-function getuid($conn,$username){
-    $un=$username;
 
-    $userid1=getIDbyUsername($conn,$un);
-    $sql="SELECT userid FROM profileimg WHERE userid=$userid1";
-    $result = $conn ->query($sql);
-    $row = mysqli_fetch_assoc($result);
-    return $row['userid'];
-
-}
 
 function getComment($conn){ // sinarthsh anagnoshs kai emfanhshs twn comment
     $sql = "SELECT * FROM comments";
@@ -58,30 +43,6 @@ function getComment($conn){ // sinarthsh anagnoshs kai emfanhshs twn comment
     while($row = mysqli_fetch_assoc($result)){// oso yparxoyn sxoleia sthn fash dedomenwn
 
 
-
-//apo edw pare 
-        echo"<div class='be-img-comment'> 
-        <a href='blog-detail-2.html'>";
-        if(!(empty(getUsernameByID($conn)))){
-                if($rowImg['status']==0){
-                    echo"<img src='../Users/uploads/profile".getuid($conn,$row['UserID']).".jpg'  class='be-ava-comment'> ";
-                }
-                else{
-                    echo"<img src='../Images/user-2517433.png' class='be-ava-comment'>";
-                }
-                echo"</a>
-                </div>";
-        }else{
-
-                if($rowImg['status']==0){
-                    echo"<img src='../Users/Images/profile".getuid($conn,$row['UserID']).".jpg'  class='be-ava-comment'> ";
-                }
-                else{
-                    echo"<img src='../Images/user-2517433.png' class='be-ava-comment'>";
-                }
-                echo"</a>
-                </div>";
-        }
 
         echo"<div class='be-comment'>";
         echo"<div class='be-comment-content'>";

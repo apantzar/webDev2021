@@ -187,12 +187,7 @@
 {
     border: 6px solid #333;
 }
-.be-img-comment {
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin-top: 50px;
-}
+
 
     </style>
 
