@@ -1,6 +1,6 @@
 <?php
 
-function getLogin($conn){
+function getLogin($conn){//synarthsh epiteyksis syndeshs toy xrhsth sto site
     echo '<script>console.log("I am in getLogin");</script>';
     $admin='admin';
     if(isset($_POST['loginSubmit'])){
@@ -12,7 +12,6 @@ function getLogin($conn){
         $result = $conn -> query($sql);
         if(mysqli_num_rows($result)==1){
             if($row = mysqli_fetch_assoc($result)){
-                //session_start();//afto kanonika sthn arxh tou site gia na mhn ginete logg off
                 if($row["userType"]==$admin){
                     $_SESSION["username"]=$username;
                     $_SESSION['status'] = $admin;
@@ -62,12 +61,12 @@ function iAmTheAdmin(){
     }
 }
 
-function userLogoff(){
+function userLogoff(){//sunarthsh aposyndeshs
     $byeAdmin="bye";
     if(isset($_POST['logoffSubmit'])){
-        session_start();
-        session_destroy();
-        header("Location: ../index.php");
+        session_start();//gia par endexomeno ksekinaei ksana to session
+        session_destroy();//kai katastrefete
+        header("Location: ../index.php");//kai adeiazoume to header
         $_SESSION['status'] = $byeAdmin;
         exit();
 
@@ -87,7 +86,7 @@ function setUser($conn){
         $result = $conn ->query($sql);
     }
 }
-function getUsernameByID($conn){
+function getUsernameByID($conn){//epistrofh tou username ths parousas sindesis
     $number=$_SESSION['id'];
     $sql= "SELECT username FROM users WHERE id= $number";
     $result = $conn ->query($sql);
@@ -96,21 +95,21 @@ function getUsernameByID($conn){
 }
 
 
-function getUserRoleByID($conn){
+function getUserRoleByID($conn){//epistrofh tou role ths parousas sindesis
     $number=$_SESSION['id'];
     $sql= "SELECT userType FROM users WHERE id= $number";
     $result = $conn ->query($sql);
     $row = mysqli_fetch_assoc($result);
     return $row['userType'];
 }
-function getUserEmailByID($conn){
+function getUserEmailByID($conn){//epistrofh tou email ths parousas sindesis
     $number=$_SESSION['id'];
     $sql= "SELECT email FROM users WHERE id= $number";
     $result = $conn ->query($sql);
     $row = mysqli_fetch_assoc($result);
     return $row['email'];
 }
-function getUserPassdispByID($conn){
+function getUserPassdispByID($conn){//epistrofh tou password ws display mode ths parousas sindesis
     $number=$_SESSION['id'];
     $sql= "SELECT password FROM users WHERE id= $number";
     $result = $conn ->query($sql);
@@ -118,7 +117,7 @@ function getUserPassdispByID($conn){
     $string=$row['password'];
     return "$string[0]*****$string[-1]";
 }
-function getUserPassByID($conn){
+function getUserPassByID($conn){//epistrofh tou password ths parousas sindesis
     $number=$_SESSION['id'];
     $sql= "SELECT password FROM users WHERE id= $number";
     $result = $conn ->query($sql);
@@ -127,7 +126,7 @@ function getUserPassByID($conn){
     return $string;
 }
 
-function setEmail($conn){
+function setEmail($conn){// sinarthsh alaghs email ths parousas syndesis
     if(isset($_POST['setEmail'])){
         $email = $_POST['email'];
         if(empty($email)){
@@ -152,7 +151,7 @@ function setEmail($conn){
     }
 }
 
-function setUsername($conn){
+function setUsername($conn){// sinarthsh alaghs username ths parousas syndesis
     if(isset($_POST['setUsername'])){
         $username = $_POST['username'];
         if(empty($username)){
@@ -178,7 +177,7 @@ function setUsername($conn){
     }
 }
 
-function setPass($conn){
+function setPass($conn){// sinarthsh alaghs password ths parousas syndesis
     if(isset($_POST['password'])){
         $pass = $_POST['password'];
         if(empty($pass)){
@@ -198,7 +197,7 @@ function setPass($conn){
     }
 }
 
-function isUsernameAvailable($conn,$username){
+function isUsernameAvailable($conn,$username){// synarthsh anazhthshs username sthn vash dedomenwn (xrisi sql gia anazhthsh)
     $sql="SELECT username FROM users WHERE username LIKE '$username'";
     $result = $conn ->query($sql);
     $row = mysqli_fetch_assoc($result);
@@ -209,7 +208,7 @@ function isUsernameAvailable($conn,$username){
     return false;
 }
 
-function isEmailAvailable($conn,$email){
+function isEmailAvailable($conn,$email){//idia logikh me thn synarthsh gia to username apla gia to email tou xristi
     $sql="SELECT email FROM users WHERE email LIKE '$email'";
     $result = $conn ->query($sql);
     $row = mysqli_fetch_assoc($result);
