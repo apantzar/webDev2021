@@ -223,3 +223,7 @@ body{
     margin-top: 75px;
 }
 
+.combobox-item-selected {
+    background-color: #95d5ff;
+    color: #000000;
+  }

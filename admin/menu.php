@@ -61,7 +61,7 @@
 
             
             <li>
-                <a href="admin/usersAdmin.php" id="users">
+                <a href="usersAdmin.php" id="users">
                     <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/group.png"/></span>
                     <span class="title">Users</span>
                 </a>
@@ -80,7 +80,7 @@
 
             
             <li>
-                <a href="admin/info.php" id="info" >
+                <a href="info.php" id="info" >
                     <span class="icon"><img src="https://img.icons8.com/material-sharp/24/ffffff/info.png"/></span>
                     <span class="title">Information</span>
                </a>
@@ -106,31 +106,18 @@
         <div class="main" id="mainId">
             <div class="topbar" >
                 <div class="toggle" onclick="toggleMenu();"></div>
-                    <div class="search">
-                            <label>
-                                <input type="text" placeholder="Search">
-                            </label>
-
-                       
-                           
-
-
-                     </div>
                  
+                         <div class="user">
+                                <img src="admin.png">
 
-                          <div class="user">
-                                <img src="./Images/admin.png">
-
-                            </div>
-
-                      
+                            </div>          
 
             </div> 
             
             
             
 
-            <div class="cardBox">
+            <!-- <div class="cardBox">
                 <div class="card">
                     <div>
                         <div class="numbers">1,042</div>
@@ -138,7 +125,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
            
 
            
@@ -166,16 +153,7 @@
 
         }
 
-
-        function usersControl(){
-            alert("Hey");
-        }
-
     </script>
-
-
-
-    
 
 </body>
 </html>
