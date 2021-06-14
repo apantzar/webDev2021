@@ -52,15 +52,7 @@
             </li>
 
 
-            <li>
-            
-                <a href="#" id="map">
-                    <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/map--v1.png"/></span>
-                    <span class="title">Map</span>
-               </a>
-
-            </li>
-
+    
             
             <li>
                 <a href="info.php" id="info" >

@@ -32,7 +32,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin/style.css">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
      integrity="sha384-wvfXpqpZZVQGK6TAh5PV1GOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="anonymous"> 
 
@@ -51,7 +51,7 @@
             </li>
 
             <li>
-                <a href="adminPage.php" id="dash" >
+                <a href="#" id="dash" >
                     <span class="icon"><img src="https://img.icons8.com/material/24/ffffff/dashboard-layout.png"/></span>
                     <span class="title">DashBoard</span>
                 </a>
@@ -61,7 +61,7 @@
 
             
             <li>
-                <a href="usersAdmin.php" id="users">
+                <a href="admin/usersAdmin.php" id="users">
                     <span class="icon"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/group.png"/></span>
                     <span class="title">Users</span>
                 </a>
@@ -80,7 +80,7 @@
 
             
             <li>
-                <a href="info.php" id="info" >
+                <a href="admin/info.php" id="info" >
                     <span class="icon"><img src="https://img.icons8.com/material-sharp/24/ffffff/info.png"/></span>
                     <span class="title">Information</span>
                </a>
@@ -106,18 +106,31 @@
         <div class="main" id="mainId">
             <div class="topbar" >
                 <div class="toggle" onclick="toggleMenu();"></div>
-                 
-                         <div class="user">
-                                <img src="admin.png">
+                    <div class="search">
+                            <label>
+                                <input type="text" placeholder="Search">
+                            </label>
 
-                            </div>          
+                       
+                           
+
+
+                     </div>
+                 
+
+                          <div class="user">
+                                <img src="./Images/admin.png">
+
+                            </div>
+
+                      
 
             </div> 
             
             
             
 
-            <!-- <div class="cardBox">
+            <div class="cardBox">
                 <div class="card">
                     <div>
                         <div class="numbers">1,042</div>
@@ -125,7 +138,7 @@
                     </div>
                 </div>
 
-            </div> -->
+            </div>
            
 
            
@@ -153,7 +166,16 @@
 
         }
 
+
+        function usersControl(){
+            alert("Hey");
+        }
+
     </script>
+
+
+
+    
 
 </body>
 </html>

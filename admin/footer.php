@@ -9,17 +9,13 @@
 </head>
 <body>
     <footer>
-        <div class="footer-content" style="margin-top:523px;background-color: white; ">
+        <div class="footer-content" style="margin-top:172px;background-color: white; ">
             <h3>SeaThePollution</h3>
             <p>A Site About Pollution In Oceans.</p>
             <div class="images-href">
                 <a href="../" class="home-foot"><img src="../Images/ho.png" ></a>
-                <a href="../Maps/" class="map-foot"><img src="../Images/ma.png" ></a>
-                <a href="../" class="info-foot"><img src="../Images/if.png" ></a>
-                <a href="../Maps/" class="map-foot"><img src="../Images/mar.png" ></a>
-                <a href="../" class="info-foot"><img src="../Images/em.png" ></a>
-                <a href="../Maps/" class="map-foot"><img src="../Images/fa.png" ></a>
-                <a href="../" class="info-foot"><img src="../Images/in.png" ></a>
+                <a href="../Users/index.php" class="map-foot"><img src="../Images/key.png" ></a>
+                
             </div>
         </div>
         <div class="footer-bottom" style = "background-color: white;">
