@@ -31,6 +31,12 @@
             border-radius: 8px;
             font-size:12px;
         }
+        .image-upload>input {
+            display: none;
+        }
+        .inpt{
+            background-color:#01a9ac;
+        }
 
     
     </style>
@@ -57,7 +63,8 @@
                     <li>
                     <?php 
                         echo"<form method='POST' action = '".userLogoff($conn)."'>
-                        <button id='signBtn' name='logoffSubmit' class='nav-links nav-links-Button'>Log-Out</button>";
+                        <button id='signBtn' name='logoffSubmit' class='nav-links nav-links-Button'>Log-Out</button>
+                        </form>";
                     ?>
                     </li>
                 </ul>
@@ -65,12 +72,43 @@
         </div>
         <script src="../Menu/Menu.js"></script>
     </header>
+    </body>
+    <?php
+        $id=$_SESSION['id'];
+        $sqlImg="SELECT * FROM profileimg WHERE userid=$id ";
+        $resultImg= mysqli_query($conn,$sqlImg);
+    ?>
     <main class="re">
         <div class="wrapper">
             <div class="left">
-                <img src="../Images/user-2517433.png" alt="user" width="100">
-                <?php echo"<h4>".getUsernameByID($conn)."</h4>";?>
+            <form action="uploads.php" method="post" enctype="multipart/form-data">
+                <div class="image-upload">
+                    <label for="file-input">
+                        <?php
+                            function getIDbyID($conn,$id){
+                                $sql= "SELECT id FROM profileimg WHERE userid = $id";
+                                $result = $conn ->query($sql);
+                                $row = mysqli_fetch_assoc($result);
+                                return $row['id'];
+                            }
+                            $rowImg=mysqli_fetch_assoc($resultImg);
+                                if($rowImg['status']==0){
+                                    echo"<img src='../Users/uploads/profile".getIDbyID($conn,$id).".jpg'  width='100'> ";
+                                }
+                                else{
+                                    echo"<img src='../Images/user-2517433.png' alt='user' width='100'>";
+                                }
+                            
+                        ?>
+                    </label>
+
+                    <input id="file-input" type="file" name="file" />
+                </div>
+                <?php echo"<h4>".getUsernameByID($conn)."</h4>";?> 
                 <?php echo"<p>".getUserRoleByID($conn)."<p>";?>
+                <br>
+                <button class="inpt" type="submit"  name="submit">Save new image</button>
+            </form>
             </div>
             <div class="right">
                 <div class="info">
