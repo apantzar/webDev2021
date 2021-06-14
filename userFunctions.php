@@ -143,5 +143,13 @@ function getUsernameByID($conn){//epistrofh tou username ths parousas sindesis
     $row = mysqli_fetch_assoc($result);
     return $row['username'];
 }
+function getUserIDByUrn($conn,$username){
+    $sql= "SELECT id FROM users WHERE username = $username";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row['id'];
+
+}
+
 
 ?>
