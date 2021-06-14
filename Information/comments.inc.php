@@ -26,10 +26,35 @@ function setComment($conn){//synarthsh kataxorishs sxoleiwn
 function getComment($conn){ // sinarthsh anagnoshs kai emfanhshs twn comment
     $sql = "SELECT * FROM comments";
     $result = mysqli_query($conn,$sql);
+    function getIDbyID($conn,$id){
+        $sql= "SELECT id FROM profileimg WHERE userid = $id";
+        $result = $conn ->query($sql);
+        $row = mysqli_fetch_assoc($result);
+        return $row['id'];
+    }
+    if(!empty($_SESSION['id'])){
+        $id=$_SESSION['id'];
+        $sqlImg="SELECT * FROM profileimg WHERE userid=$id ";
+        $resultImg= mysqli_query($conn,$sqlImg);
+    }
+    
     while($row = mysqli_fetch_assoc($result)){// oso yparxoyn sxoleia sthn fash dedomenwn
 
 
 
+//apo edw pare 
+        echo"<div class='be-img-comment'> 
+        <a href='blog-detail-2.html'>";
+        $rowImg=mysqli_fetch_assoc($resultImg);
+        if($rowImg['status']==0){
+            echo"<img src='../Users/uploads/profile".getIDbyID($conn,$id).".jpg'  class='be-ava-comment'> ";
+        }
+        else{
+            echo"<img src='../Images/user-2517433.png' class='be-ava-comment'>";
+        }
+        echo"</a>
+         </div>";
+        //mexri edw
 
         echo"<div class='be-comment'>";
         echo"<div class='be-comment-content'>";

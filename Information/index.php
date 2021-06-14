@@ -107,7 +107,7 @@
 .be-comment-content span {
     display: inline-block;
     width: 49%;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
 }
 
 .be-comment-name {
@@ -187,6 +187,13 @@
 {
     border: 6px solid #333;
 }
+.be-img-comment {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-top: 50px;
+}
+
     </style>
 
 
