@@ -75,6 +75,9 @@ function setUser($conn){//sinarthsh eggrafhs xristh
                 $sql = "INSERT INTO users (username,password,email) VALUES ('$username','$password','$email')";
         
                 $result = $conn ->query($sql);
+                $userid=getUserIDByUrn($conn,$username);
+                $sql2="INSERT INTO profileimg (userid,status) VALUES ('$userid',1)";
+                $result2 = $conn ->query($sql2);
                 header("Location: ./index.php?UserCreated");//se periptosh pou einai username kai email diathesima kataxoroume ton xristh
                 exit();
             }
@@ -95,6 +98,13 @@ function getUsernameByID($conn){//epistrofh tou username ths parousas sindesis
     $result = $conn ->query($sql);
     $row = mysqli_fetch_assoc($result);
     return $row['username'];
+}
+function getUserIDByUrn($conn,$username){
+    $sql= "SELECT id FROM users WHERE username = '$username'";
+    $result = $conn ->query($sql);
+    $row = mysqli_fetch_assoc($result);
+    return $row['id'];
+
 }
 
 ?>
