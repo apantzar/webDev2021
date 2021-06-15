@@ -29,12 +29,19 @@ CREATE TABLE contact (
     message VARCHAR(300) not null
  );
 
+
+
  CREATE TABLE comments(
 	CommentID int(11) not null AUTO_INCREMENT PRIMARY KEY,
     UserID Varchar(128) not null,
     Date datetime not null,
     message TEXT not null
 );
+
+INSERT INTO comments (CommentID,UserID,Date,message) VALUES (1,'Nicolas','2021-06-15 01:28:40','Hello Guys! From Beautifull Island Of Pafos!');
+INSERT INTO comments (CommentID,UserID,Date,message) VALUES (2,'Emily','2021-06-15 01:28:49','Hello Nicolas How Are You Doing There?!');
+INSERT INTO comments (CommentID,UserID,Date,message) VALUES (3,'Papadopoulos','2021-06-15 01:31:28','Come And Visit Bahames (Hola Hola)!');
+INSERT INTO comments (CommentID,UserID,Date,message) VALUES (4,'K.Katakouzinos','2021-06-15 02:02:32','Oh Guys Have You Ever Heard How Sewerage System Was Working At Byzantium?');
 
 CREATE TABLE users (
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -44,11 +51,22 @@ CREATE TABLE users (
   userType varchar(100) NOT NULL DEFAULT 'user'
 );
 
+INSERT INTO users (id,username,password,email,userType) VALUES (1,'Nicolas','12345678','NicolasCage@hollywood.com','user');
+INSERT INTO users (id,username,password,email,userType) VALUES (2,'Emily','87654321','EmilyRatajkowski@hollywood.com','user');
+INSERT INTO users (id,username,password,email,userType) VALUES (3,'Papadopoulos','qwerty','ADreamComeTrue@hollywood.com','user');
+INSERT INTO users (id,username,password,email,userType) VALUES (4,'K.Katakouzinos','Byzan','KKatakouzinos@Byzantiologists.gr','user');
+
+
 CREATE TABLE profileimg(
   id int(11) not null PRIMARY KEY AUTO_INCREMENT,
   userid int(11) not null,
   status int(11) not null
 );
+
+INSERT INTO profileimg (id,userid,status) VALUES (1,1,0);
+INSERT INTO profileimg (id,userid,status) VALUES (2,2,0);
+INSERT INTO profileimg (id,userid,status) VALUES (3,3,1);
+INSERT INTO profileimg (id,userid,status) VALUES (4,4,0);
 
 
 
