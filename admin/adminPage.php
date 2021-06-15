@@ -1,13 +1,27 @@
 <?php 
 
+    /*
+        The dashboard that contains menu, statistics about users & comments
+
+        ex. : Total users, total comments  & diagram
+
+    */
 
 
 
+
+
+
+
+
+
+
+    //Database connection with extra php file
 
         require_once 'dbConnect.php';  
-        $result = $db->query("SELECT id FROM users where userType='user' order by id"); 
+        $result = $db->query("SELECT id FROM users where userType='user' order by id"); //for total users
         $row = mysqli_num_rows($result);
-        $resultC = $db->query("SELECT CommentID FROM comments order by CommentID"); 
+        $resultC = $db->query("SELECT CommentID FROM comments order by CommentID"); //for total comments
         $rowC = mysqli_num_rows($resultC);
 
 
@@ -24,7 +38,7 @@
         
         */
         
-               session_start(); 
+               session_start(); //to start this session
 
    // }
     
@@ -51,14 +65,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../Footer/Footer.css">
 
-     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" -->
-     <!-- integrity="sha384-wvfXpqpZZVQGK6TAh5PV1GOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossorigin="anonymous">  -->
-     <!-- <link rel="stylesheet" href="sb-admin-2.css"> -->
-     <!-- <link rel="stylesheet" href="sb-admin-2.min.css">  -->
+
 
 </head>
 <body>
+<!-- This section is for slide menu:
 
+-------------[MENU]---------<<<<
+
+            [*] Title
+            [*] DashBoard 
+            [*] Users
+            [*] Information
+            [*] SignOut
+            
+            -->
 <div class="container">
         <div class="navigation">
          <ul>
@@ -116,30 +137,25 @@
 
 
 
+        <!-- This div contains the 'panel' of statistics -->
         <div class="main" id="mainId">
             <div class="topbar" >
                 <div class="toggle" onclick="toggleMenu();"></div>
                  
-                         <div class="user">
-                                <img src="admin.png">
+                    <!-- Admin default image :) -->
+                        <div class="user">
+                             <img src="admin.png">
 
-                            </div>          
+                         </div>          
 
             </div> 
             
             
-            
 
-        
-
-
-  
+            <div class="row" style="margin-top:30px; margin-left:100px;">
 
 
-                                <div class="row" style="margin-top:30px; margin-left:100px;">
-
-
-                    <div class="col-xl-3 col-md-6 mb-4">
+             <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-primary shadow h-100 py-2">
                         <div class="card-body">
                         <div class="row no-gutters align-items-center">
@@ -148,16 +164,15 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                
 
-                            <?php 
+                                <?php 
+                                        //For db connection
+                                        require_once 'dbConnect.php';  
+                                        $result = $db->query("SELECT id FROM users where userType='user' order by id"); //query to get the total users
+                                        $row = mysqli_num_rows($result);
+                                        echo '<h1> '.$row.' </h1>'; //to print the result inside card
 
-                                    require_once 'dbConnect.php';  
-                                    $result = $db->query("SELECT id FROM users where userType='user' order by id"); 
-                                    $row = mysqli_num_rows($result);
-                                    
-                                    echo '<h1> '.$row.' </h1>';
 
-
-                            ?>
+                                ?>
 
                            
 
@@ -181,12 +196,12 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                     <?php 
-
+                                        //For db connection
                                         require_once 'dbConnect.php';  
-                                        $resultC = $db->query("SELECT CommentID FROM comments order by CommentID"); 
+                                        $resultC = $db->query("SELECT CommentID FROM comments order by CommentID"); //query to get the total comments
                                         $rowC = mysqli_num_rows($resultC);
 
-                                        echo '<h1> '.$rowC.' </h1>';
+                                        echo '<h1> '.$rowC.' </h1>'; //to print the result inside card
 
 
                                     ?>
@@ -201,6 +216,8 @@
                         </div>
                     </div>
                     </div>
+
+                    <!-- Admin tip -->
 
                     <div class="tip" style="width: 650px;">
                                         <div class="card border-left-warning shadow h-100 py-2">
@@ -234,12 +251,13 @@
                                     google.charts.load('current', {'packages':['corechart']});
                                     google.charts.setOnLoadCallback(drawChart);
 
+                                    // For diagram
                                     function drawChart() {
 
-                                        var userV = parseInt('<?php echo $row; ?>');
-                                        var commentsV = parseInt('<?php echo $rowC; ?>');
+                                        var userV = parseInt('<?php echo $row; ?>'); //parse the value of users (int)
+                                        var commentsV = parseInt('<?php echo $rowC; ?>'); //parse the value of comments (int)
                                           
-
+                                        //Diagram using google visualization {Total users - Total comments}
                                         var data = new google.visualization.DataTable();
                                             data.addColumn('number', 'Total Users');
                                             data.addColumn('number', 'Total Comments');
@@ -291,21 +309,19 @@
                   
 
 
-                            
+                            <!-- Footer using extra php file -->
 
                                 <?php 
-
-                                include'footer.php';
-
+                                    include'footer.php';
 
                                 ?>
 
        
 
         
- </div>
+    </div>
 
-        </div>
+ </div>
 
     
   
@@ -314,6 +330,8 @@
    
     
 
+
+ <!-- Menu's animation(Slide in/out) -->
 
     <script>
         function toggleMenu(){
@@ -328,23 +346,14 @@
         }
 
 
-        function usersControl(){
-            alert("Hey");
-        }
+        // function usersControl(){
+        //     alert("Hey");
+        // }
 
     </script>
 
 
-
-
-
-      
-    
-
 </body>
-
-  
-
 </html>
 
 

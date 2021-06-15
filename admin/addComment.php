@@ -1,7 +1,7 @@
 <?php 
 $response = array( 
     'status' => 0, 
-    'msg' => 'Some problems occurred, please try again.' 
+    'msg' => 'Error: Some problems occurred, please try again later.' 
 ); 
 if(!empty($_REQUEST['UserID']) && !empty($_REQUEST['Date']) && !empty( $_REQUEST['message'])){ 
     $username = $_REQUEST['UserID']; 
@@ -9,18 +9,18 @@ if(!empty($_REQUEST['UserID']) && !empty($_REQUEST['Date']) && !empty( $_REQUEST
     $message = $_REQUEST['message']; 
    
      
-    // Include the database config file 
+    // For databse connection
     require_once 'dbConnect.php'; 
      
-    $sql = "INSERT INTO comments(UserID, Date, message) VALUES ('$username','$date','$message')"; 
+    $sql = "INSERT INTO comments(UserID, Date, message) VALUES ('$username','$date','$message')"; //query to insert new comment to databse 
     $insert = $db->query($sql); 
      
     if($insert){ 
         $response['status'] = 1; 
-        $response['msg'] = 'Comment has been added successfully!'; 
+        $response['msg'] = 'Comment has been added successfully! :)'; 
     } 
 }else{ 
-    $response['msg'] = 'Please fill all the mandatory fields.'; 
+    $response['msg'] = 'Please fill all the  fields.'; 
 } 
  
-echo json_encode($response);
+echo json_encode($response);//json with data

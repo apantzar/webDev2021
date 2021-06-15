@@ -1,7 +1,7 @@
 <?php 
 $response = array( 
     'status' => 0, 
-    'msg' => 'Some problems occurred, please try again.' 
+    'msg' => 'Error: Some problems occurred, please try again later.' 
 ); 
 if(!empty($_REQUEST['username']) && !empty($_REQUEST['password']) && !empty( $_REQUEST['email'])){ 
     $username = $_REQUEST['username']; 
@@ -10,18 +10,18 @@ if(!empty($_REQUEST['username']) && !empty($_REQUEST['password']) && !empty( $_R
     $usertype = "user";
    
      
-    // Include the database config file 
+    // For database connection
     require_once 'dbConnect.php'; 
      
-    $sql = "INSERT INTO users(username, password, email, userType) VALUES ('$username','$thepassword','$email' , '$usertype')"; 
+    $sql = "INSERT INTO users(username, password, email, userType) VALUES ('$username','$thepassword','$email' , '$usertype')"; //The insert query in order to add new user
     $insert = $db->query($sql); 
      
     if($insert){ 
         $response['status'] = 1; 
-        $response['msg'] = 'User data has been added successfully!'; 
+        $response['msg'] = 'User has been added successfully :)!'; 
     } 
 }else{ 
-    $response['msg'] = 'Please fill all the mandatory fields.'; 
+    $response['msg'] = 'Please fill all the fields.'; 
 } 
  
-echo json_encode($response);
+echo json_encode($response); //json file with data

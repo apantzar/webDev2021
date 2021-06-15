@@ -1,15 +1,15 @@
 <?php 
 $response = array( 
     'status' => 0, 
-    'msg' => 'Some problems occurred, please try again.' 
+    'msg' => 'Erros: Some problems occurred, please try again later :/.' 
 ); 
 if(!empty($_REQUEST['CommentID'])){ 
     $id = intval($_REQUEST['CommentID']); 
      
-    // Include the database config file 
+    //For db connection 
     require_once 'dbConnect.php'; 
      
-    $sql = "DELETE FROM comments WHERE CommentID = $id"; 
+    $sql = "DELETE FROM comments WHERE CommentID = $id";  //query for deletion
     $delete = $db->query($sql); 
      
     if($delete){ 

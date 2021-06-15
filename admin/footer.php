@@ -13,8 +13,8 @@
             <h3>SeaThePollution</h3>
             <p>A Site About Pollution In Oceans.</p>
             <div class="images-href">
-                <a href="../" class="home-foot"><img src="../Images/ho.png" ></a>
-                <a href="../Users/index.php" class="map-foot"><img src="../Images/key.png" ></a>
+                <a href="../" class="home-foot"><img src="../Images/ho.png" ></a> <!--Button for Home-->
+                <a href="../Users/index.php" class="map-foot"><img src="../Images/key.png" ></a> <!--Opens user config page -->
                 
             </div>
         </div>

@@ -11,19 +11,19 @@ if(!empty($_REQUEST['UserID']) && !empty($_REQUEST['Date']) && !empty( $_REQUEST
     if(!empty($_REQUEST['CommentID'])){ 
         $id = intval($_REQUEST['CommentID']); 
          
-        // Include the database config file 
+        // For database connection
         require_once 'dbConnect.php'; 
          
-        $sql = "UPDATE comments SET UserID='$username', Date='$date', message='$message' WHERE CommentID = $id"; 
+        $sql = "UPDATE comments SET UserID='$username', Date='$date', message='$message' WHERE CommentID = $id"; //query to update comment in db
         $update = $db->query($sql); 
          
         if($update){ 
             $response['status'] = 1; 
-            $response['msg'] = 'Comment\'s data has been updated successfully!'; 
+            $response['msg'] = 'Comment has been updated successfully!'; 
         } 
     } 
 }else{ 
-    $response['msg'] = 'Please fill all the mandatory fields.'; 
+    $response['msg'] = 'Please fill all the fields.'; 
 } 
  
-echo json_encode($response);
+echo json_encode($response); //json with data

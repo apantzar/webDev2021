@@ -1,5 +1,12 @@
 <?php 
 
+
+    /*
+        For users managment:
+            Includes function for insert, delete, edit, search.
+        Menu is included!
+
+    */
   
 
 ?>
@@ -18,7 +25,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Management</title>
 </head>
 <body>
 
@@ -78,34 +85,19 @@
 
 
 
+        <!-- For slide menu -->
         <div class="main" id="mainId">
             <div class="topbar" >
                 <div class="toggle" onclick="toggleMenu();"></div>
                  
                          <div class="user">
                                 <img src="admin.png">
-
-                            </div>          
+                         </div>          
 
             </div> 
-            
-            
-            
-
-            <!-- <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="numbers">1,042</div>
-                        <div class="cardName">Total Users</div>
-                    </div>
-                </div>
-
-            </div> -->
-           
 
 
-    
-
+<!-- Menu's animation(Slide in/out) -->
 
     <script>
         function toggleMenu(){
@@ -128,6 +120,7 @@
 <table id="dg" title="Users Management" class="easyui-datagrid" url="getData.php" toolbar="#toolbar" pagination="true" rownumbers="true" fitColumns="true" singleSelect="true" style="height:350px;margin-left:300px;">
     <thead>
         <tr>
+        <!-- For the DataGridView -->
             <th field="username" width="50">Username</th>
             <th field="password" width="50">Password</th>
             <th field="email" width="50">Email</th>
@@ -137,12 +130,16 @@
 </table>
 
 
+
+<!-- Search section -->
 <div id="toolbar">
     <div id="tb">
         <input id="term" placeholder="Type keywords...">
         <a href="javascript:void(0);" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
     </div>
     <div id="tb2" style="">
+
+        <!-- Control buttons (New, Edit, Remove) -->
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New User</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove User</a>
@@ -150,6 +147,8 @@
 </div>
 
 
+
+<!-- For pop-up box to insert, edit -->
 
 <div id="dlg" class="easyui-dialog" style="width:450px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
     <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
@@ -171,6 +170,17 @@
     <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close');" style="width:90px;">Cancel</a>
 </div>
 
+
+
+
+
+<!-- In order to insert, remove, save this file has those function
+
+            1)newUser:     function to add new user
+            2)editUser:    function to edit user 
+            3)saveUser:    collaboration with add, edit in order to save new user/ modifications
+            4)destroyUser: function to remove user from db
+ -->
 
 
 

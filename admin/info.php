@@ -1,7 +1,11 @@
 <?php 
+  /*
+        For users managment:
+            Includes function for insert, delete, edit, search.
+        Menu is included!
 
- 
-  date_default_timezone_set('Europe/Athens');
+    */
+
 
 ?>
 
@@ -15,14 +19,23 @@
     <link rel="stylesheet" type="text/css" href="icon.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery.easyui.min.js"></script>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information [root] </title>
 </head>
 <body>
+<!-- This section is for slide menu:
 
+-------------[MENU]---------<<<<
+
+            [*] Title
+            [*] DashBoard 
+            [*] Users
+            [*] Information
+            [*] SignOut
+            
+            -->
 <div class="container">
         <div class="navigation">
          <ul>
@@ -77,7 +90,7 @@
         </div>
 
 
-
+ <!-- For slide menu -->
         <div class="main" id="mainId">
             <div class="topbar" >
                 <div class="toggle" onclick="toggleMenu();"></div>
@@ -94,7 +107,7 @@
 
       
 
-
+<!-- Menu's animation(Slide in/out) -->
     
 
 
@@ -114,6 +127,7 @@
 <table id="dg" title="Comments Management" class="easyui-datagrid" url="getComments.php" toolbar="#toolbar" pagination="true" rownumbers="true" fitColumns="true" singleSelect="true" style="height:350px;margin-left:300px;">
     <thead>
         <tr>
+        <!-- For the DataGridView -->
             <th field="UserID" width="50">User</th>
             <th field="Date" width="50">Date</th>
             <th field="message" width="50">Comment</th>
@@ -122,20 +136,21 @@
     </thead>
 </table>
 
-
+<!-- Search section -->
 <div id="toolbar">
     <div id="tb">
         <input id="term" placeholder="Type keywords...">
         <a href="javascript:void(0);" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
     </div>
     <div id="tb2" style="">
+    <!-- Control buttons (New, Edit, Remove) -->
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newComment()">New Comment</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editComment()">Edit Comment</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="deleteComment()">Remove Comment</a>
     </div>
 </div>
 
-
+<!-- For pop-up box to insert, edit -->
 
 <div id="dlg" class="easyui-dialog" style="width:450px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
     <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
@@ -160,6 +175,14 @@
 
 
 
+<!-- In order to insert, remove, save this file has those function
+
+            1)newComment:     function to add new commet
+            2)editComment:    function to edit comment 
+            3)saveComment:    collaboration with add, edit in order to save new user/ modifications
+            4)deleteComment:  function to remove comment from db
+            5)doSearch:       function to search
+ -->
 
 
 <script type="text/javascript">
